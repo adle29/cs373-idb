@@ -16,13 +16,15 @@
     # homeTeamId #connected to teams
     # awayTeamId  #connected to teams
     # Result
-#
+
+
 # Teams
     # Team_id
     # Name
     # Logo_url
     # List of player ids #connected to player
     # List of games ids #contect to Games
+
 
 # Player
     # Player_id

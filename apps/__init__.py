@@ -9,20 +9,20 @@ def index(name=None):
     return render_template('index.html', name=name)
 
 @app.route('/players')
-def players():
-    return 'player'
+def players(name=None):
+    return render_template('players.html', name=name)
 
 @app.route('/teams')
-def teams():
-    return 'team'
+def teams(name=None):
+    return render_template('teams.html', name=name)
 
 @app.route('/seasons')
-def seasons():
-    return 'seasons'
+def seasons(name=None):
+    return render_template('seasons.html', name=name)
 
 @app.route('/about')
 def about(name=None):
-    return render_template('static/about.html', name=name)
+    return render_template('about.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)

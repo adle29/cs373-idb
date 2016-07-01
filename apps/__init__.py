@@ -16,9 +16,13 @@ def players():
 def teams():
     return 'team'
 
-@app.route('/leagues')
-def leagues():
-    return 'leagues'
+@app.route('/seasons')
+def seasons():
+    return 'seasons'
+
+@app.route('/about')
+def about(name=None):
+    return render_template('static/about.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)

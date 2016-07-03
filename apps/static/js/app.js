@@ -92,34 +92,42 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
     var res = response.data;
 
     console.log(res);
-    var standings = res.standing;
+    var standings;
+    var matchDay = res.matchday;
 
     $scope.leagueCaption = res.leagueCaption;
     $scope.groups = [];
 
+    console.log( matchDay );
 
+    if( matchDay == 1 ) {
+      var standings = res.standing;
 
-    if( typeof standings == "undefined" ) {
       var group = {
-        letter: groupLetter,
+        letter: 'A',
         teams: []
       };
 
+      console.log(standings);
+
       for (var i in standings){
         var team = standings[i];
-        console.log( i );
-        var newTeam = {
-          logo:team["crestURI"],
-          name:team["team"],
-          id:team["teamId"],
-          rank:team["rank"]
-        };
-        group.teams.push(newTeam);
+        if (team["team"] != ""){
+
+          var newTeam = {
+            logo:team["crestURI"],
+            name:team["team"],
+            id:team["teamId"],
+            rank:team["rank"]
+          };
+          group.teams.push(newTeam);
+        }
       }
 
       $scope.groups.push(group);
     }
     else {
+      var standings = res.standings;
       for (var groupLetter in standings) {
 
         var rawGroupData = standings[groupLetter];

@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="starter-template">
+      <h1>Games</h1>
+      <p class="lead">Soccer is Life. </p>
+    </div>
+
+    <div class="container">
+      <table class="table table-inverse">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Away Team</th>
+          <th>Home Team</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="game in games">
+            <th scope="row">{{$index}}</th>
+            <td>{{game.date | date:'yyyy-MM-dd'}}</td>
+            <td>{{game.date | date:'HH:mm:ss'}}</td>
+            <td>{{game.awayTeamName}}</td>
+            <td>{{game.homeTeamName}}</td>
+          </tr>
+        </tbody>
+        </table>
+
+    </div>
+
+</div><!-- /.container -->

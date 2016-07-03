@@ -1,0 +1,49 @@
+
+
+  <section class="jumbotron text-xs-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Golazo</h1>
+        <p class="lead text-muted">Soccer is Life.</p>
+      </div>
+    </section>
+
+    <div class="album text-muted">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="card" ng-repeat="game in games">
+            <img class="card-img" src="/static/img/vs.png" alt="Card image cap">
+            <div class="card-text">
+              <p><strong>Today:</strong> {{game.awayTeamName}} vs {{game.homeTeamName}}</p>
+            </div>
+          </div>
+
+          <div class="card" ng-if="show_card">
+            <img class="card-img" src="/static/img/ball.png" alt="Card image cap">
+            <div class="card-text">
+              <p>Teams</p>
+            </div>
+          </div>
+
+          <div class="card" ng-if="show_card">
+            <!-- <img class="card-img" src="/static/img/ball.png" alt="Card image cap"> -->
+            <div class="card-text">
+              <object  width='200' height='300' id='flashLatestNews' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'>
+              <param name='movie' value='http://www.fifa.com/flash/widgets/newsreader/app.swf?lang='en'/>
+              <param name='bgcolor' value='#ffffff'/>
+              <param name='quality' value='high'/>
+              <param name='wmode' value='transparent'/>
+              <param name='flashvars' value='lang=en'>
+              <embed width='200' height='300' flashvars='lang=en' wmode='transparent' quality='high' bgcolor='#ffffff' name='flashLatestNews' id='flashLatestNews' src=http://www.fifa.com/flash/widgets/newsreader/app.swf?lang='en type='application/x-shockwave-flash'/>
+              </object>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+  </div>

@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="starter-template">
+      <h1>Season</h1>
+      <p class="lead">{{leagueCaption}} </p>
+    </div>
+
+<div ng-repeat="group in groups" class="container">
+  <h2> Group {{group.letter}}</h2>
+
+  <table class="table table-inverse">
+    <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Team Banner</th>
+      <th>Team Name</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="team in group.teams">
+        <th scope="row">{{team.rank}}</th>
+        <td><img class="img" src="{{team.logo}}"/></td>
+        <td> <a class="link" href="/#/team/{{team.id}}">{{team.name}}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>

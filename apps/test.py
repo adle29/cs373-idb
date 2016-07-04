@@ -72,7 +72,7 @@ def test_teams_readable_3(self):
 
 # Tests that every game is readable
 def test_games_readable_1(self):
-    db.session.add(self.player)
+    db.session.add(self.game)
     db.session.commit()
 
     euroSemi1 = Games.query.get(1)
@@ -83,7 +83,7 @@ def test_games_readable_1(self):
     self.assertEqual(euroSemi1.awayTeam, "Wales")
 
 def test_games_readable_2(self):
-    db.session.add(self.player)
+    db.session.add(self.game)
     db.session.commit()
 
     euroSemi2 = Games.query.get(2)
@@ -94,7 +94,7 @@ def test_games_readable_2(self):
     self.assertEqual(euroSemi2.awayTeam, "Italy")
 
 def test_games_readable_3(self):
-    db.session.add(self.player)
+    db.session.add(self.game)
     db.session.commit()
 
     psgOpener = Games.query.get(3)

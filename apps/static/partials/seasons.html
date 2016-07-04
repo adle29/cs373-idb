@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="starter-template">
+      <h1>Seasons</h1>
+      <p class="lead">Soccer is Life. </p>
+    </div>
+
+    <div class="container">
+      <table class="table table-inverse">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Season Name</th>
+          <th>League</th>
+          <th>Year</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="season in seasons">
+            <th scope="row">{{$index}}</th>
+            <td><a class="link" href="/#/season/{{season.id}}">{{season.name}}</a></td>
+            <td>{{season.league}}</td>
+            <td>{{season.year}}</td>
+          </tr>
+        </tbody>
+        </table>
+
+    </div>
+
+</div><!-- /.container -->

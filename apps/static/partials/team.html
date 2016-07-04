@@ -6,6 +6,54 @@
       <p class="lead">{{team.name}} </p>
     </div>
 
+    <div class="container">
+      <h3>Players</h3>
+
+      <table class="table table-inverse">
+        <thead>
+        <tr>
+          <th style="width:250px;">Name </th>
+          <th>Nationality </th>
+          <th>Date of Birth </th>
+          <th>Position </th>
+          <th>Jersey # </th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="player in players">
+            <td> {{player.name}} </td>
+            <td> {{player.nationality}}</td>
+            <td> {{player.dateOfBirth}}</td>
+            <td> {{player.position}}</td>
+            <td> {{player.jerseyNumber}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Games</h3>
+
+      <table class="table table-inverse">
+        <thead>
+        <tr>
+          <th>Matchday </th>
+          <th>Away Team </th>
+          <th>Home Team </th>
+          <th>Date </th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="game in games">
+            <td> {{game.matchday}} </td>
+            <td> {{game.awayTeamName}}</td>
+            <td> {{game.homeTeamName}}</td>
+            <td> {{game.date | date:'yyyy-MM-dd'}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
 
 
 </div><!-- /.container -->

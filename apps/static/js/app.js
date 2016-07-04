@@ -65,22 +65,62 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
   var id = $routeParams.id;
 
   var fetchPlayers = function(team_id){
-    $http.get("/players/"+team_id).then(function(response){
-     console.log(response);
+    $http.get("/team/"+team_id+"/players").then(function(response){
+       var res = response.data;
+       var players = res.players;
+       $scope.players = [];
+
+       for(var i in players){
+         var player = players[i];
+         var newPlayer = {
+           name: player.name,
+           nationality: player.nationality,
+           position: player.position,
+           jerseyNumber: player.jerseyNumber,
+           dateOfBirth: player.dateOfBirth
+         };
+         $scope.players.push(newPlayer);
+       }
+
    });
- };
+  };
 
-  $http.get('/team/'+id).then(function(response){
-    var res = response.data;
-    console.log(res);
-    $scope.team = {
-      name:res.name,
-      logo:res.crestUrl
-    };
+  var fetchGames = function(team_id){
+    $http.get("/team/"+team_id+"/fixtures").then(function(response){
+      console.log(response.data);
 
-    fetchPlayers(id);
+      var res = response.data;
+      var games = res.fixtures;
+      $scope.games = [];
 
-  });
+      for(var i in games){
+        var game = games[i];
+        var newGame = {
+          matchday: game.matchday,
+          awayTeamName: game.awayTeamName,
+          homeTeamName: game.homeTeamName,
+          date: game.date,
+          id: game.id
+        };
+        $scope.games.push(newGame);
+      }
+      console.log($scope.games);
+    });
+  };
+
+  var fetchTeam = function(team_id){
+    $http.get('/team/'+id).then(function(response){
+      var res = response.data;
+      $scope.team = {
+        name:res.name,
+        logo:res.crestUrl
+      };
+    });
+  };
+
+  fetchTeam(id);
+  fetchGames(id);
+  fetchPlayers(id);
 
 }]);
 
@@ -132,7 +172,7 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
 
         var rawGroupData = standings[groupLetter];
         var group = {
-          letter: groupLetter,
+          letter: String(groupLetter).trim(),
           teams: []
         };
 
@@ -143,7 +183,12 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
             logo:team.crestURI,
             name:team.team,
             id:team.teamId,
-            rank:team.rank
+            rank:String(team.rank).trim(),
+            playedGames: team.playedGames,
+            goalsAgainst: team.goalsAgainst,
+            goals: team.goals,
+            pts: team.points
+
           };
 
           group.teams.push(newTeam);
@@ -161,7 +206,6 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
 routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   $scope.seasons = [];
-
 
   $http.get('/seasons').then(function(response){
     console.log(response);

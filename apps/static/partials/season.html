@@ -6,21 +6,27 @@
     </div>
 
 <div ng-repeat="group in groups" class="container">
-  <h2> Group {{group.letter}}</h2>
-
   <table class="table table-inverse">
     <thead>
     <tr>
-      <th>Rank</th>
-      <th>Team Banner</th>
-      <th>Team Name</th>
+      <th style="width:250px;">Group {{group.letter}} </th>
+      <th>MP </th>
+      <th>GF </th>
+      <th>GA </th>
+      <th>Pts </th>
     </tr>
     </thead>
     <tbody>
       <tr ng-repeat="team in group.teams">
-        <th scope="row">{{team.rank}}</th>
-        <td><img class="img" src="{{team.logo}}"/></td>
-        <td> <a class="link" href="/#/team/{{team.id}}">{{team.name}}</a></td>
+        <td>
+          {{team.rank}}
+          <img class="img" src="{{team.logo}}"/>
+          <a class="link" href="/#/team/{{team.id}}">{{team.name}}</a>
+        </td>
+        <td> {{team.playedGames}}</td>
+        <td> {{team.goals}}</td>
+        <td> {{team.goalsAgainst}}</td>
+        <td> {{team.pts}}</td>
       </tr>
     </tbody>
   </table>

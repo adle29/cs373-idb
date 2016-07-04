@@ -27,6 +27,16 @@ def team(team_id):
     r = requests.get('http://api.football-data.org/v1/teams/'+team_id, headers=headers)
     return r.text
 
+@app.route('/team/<team_id>/players')
+def team_players(team_id):
+    r = requests.get('http://api.football-data.org/v1/teams/'+team_id+'/players', headers=headers)
+    return r.text
+
+@app.route('/team/<team_id>/fixtures')
+def team_fixtures(team_id):
+    r = requests.get('http://api.football-data.org/v1/teams/'+team_id+'/fixtures', headers=headers)
+    return r.text
+
 @app.route('/players/<team_id>')
 def players(team_id):
     r = requests.get('http://api.football-data.org/v1/teams/'+team_id+'/players', headers=headers)
@@ -36,14 +46,6 @@ def players(team_id):
 def games():
     r = requests.get('http://api.football-data.org/v1/fixtures/', headers=headers)
     return r.text
-#
-# @app.route('/seasons')
-# def seasons(name=None):
-#     return render_template('seasons.html', name=name)
-#
-# @app.route('/about')
-# def about(name=None):
-#     return render_template('about.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)

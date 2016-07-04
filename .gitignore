@@ -91,3 +91,5 @@ ENV/
 # idiom scrap endings
 *.tmp
 *.temp
+
+.DS_Store

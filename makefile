@@ -26,8 +26,4 @@ status:
 	git remote -v
 	git status
 
-<<<<<<< HEAD
 test: 
-=======
-test: 
->>>>>>> 769c3be519916983f641b77fce0769f2689c2f2e

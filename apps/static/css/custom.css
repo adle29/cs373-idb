@@ -1,5 +1,13 @@
 body {
   padding-top: 3rem;
+  /*background-image: url("../img/wall/wall.jpg");
+    background-color: #cccccc;*/
+    /*background-color:gray !important;*/
+    background-color: #f7f7f7;
+}
+
+.b1 {
+  background-image: url("../img/wall/grass.jpg");
 }
 .starter-template {
   padding: 3rem 1.5rem;
@@ -16,6 +24,14 @@ body {
   height:30px;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.img-big{
+  width: 200px;
+  height:200px;
+  margin: 10px;
+  margin-bottom: 20px;
+  float:left;
 }
 
 .link{
@@ -93,10 +109,11 @@ body {
 
 .card {
   float: left;
-  width: 300px;
-  height: 300px;
+  width: 24%;
+  height: 250px;
   padding: 5px;
   margin: 5px;
+  margin-top:10px;
   border: 0;
 }
 
@@ -109,8 +126,14 @@ body {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+}
+
+.match{
+  background: black;
+  color:white;
+  margin-top:5px;
 }
 
 .card-text{

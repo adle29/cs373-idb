@@ -1,19 +1,32 @@
 <div class="container">
 
     <div class="starter-template">
-      <h1>Season</h1>
+      <h1><span ng-if="completed">Final </span>Season Standings</h1>
       <p class="lead">{{leagueCaption}} </p>
+
+      <table class="table">
+          <tbody>
+            <tr>
+              <td><strong> #games</strong></td><td> {{numberOfGames}}</td>
+              <td><strong> #match day</strong></td><td> {{matchDay + "/" +numberOfMatches}}</td>
+            </tr>
+          </tbody>
+      </table>
     </div>
+
+
 
 <div ng-repeat="group in groups" class="container">
   <table class="table table-inverse">
     <thead>
     <tr>
-      <th style="width:250px;">Group {{group.letter}} </th>
-      <th>MP </th>
-      <th>GF </th>
-      <th>GA </th>
-      <th>Pts </th>
+      <th style="width:250px;"><span ng-if="!completed">Group {{group.letter}}</span> <span ng-if="completed">Final Rank</span></th>
+      <span>
+        <th>MP </th>
+        <th>GF </th>
+        <th>GA </th>
+        <th>Pts </th>
+      </span>
     </tr>
     </thead>
     <tbody>
@@ -23,6 +36,7 @@
           <img class="img" src="{{team.logo}}"/>
           <a class="link" href="/#/team/{{team.id}}">{{team.name}}</a>
         </td>
+
         <td> {{team.playedGames}}</td>
         <td> {{team.goals}}</td>
         <td> {{team.goalsAgainst}}</td>

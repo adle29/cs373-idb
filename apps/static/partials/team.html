@@ -1,20 +1,33 @@
 <div class="container">
 
-    <div class="starter-template">
-      <h1>Team</h1>
-      <img class="img" src="{{team.logo}}"/>
-      <p class="lead">{{team.name}} </p>
+    <div class="container">
+      <br>
+
+      <div class="col-lg-4">  <img class="img-big" src="{{team.logo}}"/> </div>
+
+      <!-- <p class="lead">{{team.name}} </p> -->
+      <div class="col-lg-8 ">
+
+        <h1> {{team.name}}</h1>
+      <table class="table table-bordered">
+          <tbody>
+            <tr>  <td><strong> Market Value</strong></td><td> {{team.squadMarketValue}}</td>  </tr>
+            <tr>  <td><strong> Short Name</strong></td><td> {{team.shortName}}</td></tr>
+          </tbody>
+      </table>
+    </div>
+
     </div>
 
     <div class="container">
-      <h3>Players</h3>
+      <h3>PLAYERS</h3>
 
-      <table class="table table-inverse">
+      <table class="table table-bordered table-inverse">
         <thead>
         <tr>
           <th style="width:250px;">Name </th>
           <th>Nationality </th>
-          <th>Date of Birth </th>
+          <th>DOB </th>
           <th>Position </th>
           <th>Jersey # </th>
         </tr>
@@ -30,12 +43,12 @@
         </tbody>
       </table>
 
-      <h3>Games</h3>
+      <h3>GAMES</h3>
 
-      <table class="table table-inverse">
+      <table class="table table-bordered table-inverse">
         <thead>
         <tr>
-          <th>Matchday </th>
+          <th>MD </th>
           <th>Away Team </th>
           <th>Home Team </th>
           <th>Date </th>

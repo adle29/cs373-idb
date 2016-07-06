@@ -4,7 +4,7 @@
 # cs373-idb/app/models.py
 #
 # JASON DIMITRIOU
-# CLARK CLAYTON
+# CLARK CLAYTONst
 # KALEB ALANIS
 # HASSAN SHEIKH
 # Abraham Adberstein
@@ -14,7 +14,7 @@
 import os
 import sys
 from collections import OrderedDict
-from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstraint, Boolean
+from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -127,9 +127,9 @@ class Standing(Base):
     goalsAgainst = Column(Integer)
     #relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-    Rseason = relationship("Season", back_populates=Sstanding) #many to 1 
+    Rseason = relationship("Season") #many to 1 
     team_id = Column(Integer, ForeignKey('team_id'))
-    Rteam = relationship("Team", back_populates=Tstanding) #many to 1
+    Rteam = relationship("Team") #many to 1
 
 
     def __init__(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
@@ -308,7 +308,7 @@ class Player(Base):
     jerseyNum = Column(Integer)
     #relationships
     team_id = Column(Integer, ForeignKey('team_id'))
-    Pteam = relationship("Team", back_populates=Tplayer) #many to 1
+    Pteam = relationship("Team") #many to 1
 
 
     def __init__(self, id, name, nation, birth, pos, jerseyNum):
@@ -353,11 +353,4 @@ class Player(Base):
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
 #Base.metadata.create_all(engine)
-
-
-
-
-
-
-
 

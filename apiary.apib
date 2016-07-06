@@ -1,0 +1,260 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# golazo
+
+Golazo is a simple API allowing consumers to view soccer seasons, games, teams and players.
+
+## Seasons [/seasons]
+
+### List All Seasons [GET]
+
++ Response 200 (application/json)
+
+        [{ "id":398,
+           "seasonName":"Premier League 2015/16",
+           "league":"PL",
+           "year":"2015",
+           "curMatchday":38,
+           "numMatchdays":38,
+           "numTeams":20,
+           "numGames":380
+         },
+         { "id":399,
+           "seasonName":"Primera Division 2015/16",
+           "league":"PD",
+           "year":"2015",
+           "curMatchday":38,
+           "numMatchdays":38,
+           "numTeams":20,
+           "numGames":380
+         }]
+          
+## Filter Seasons [/seasons/{season_id}/{year}]
+     
+### List all seasons in a Year [GET]
+
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+    + year (number) - year of the season in the form of an integer
+
++ Response 200 (application/json)
+
+        [{ "id":398,
+           "seasonName":"Premier League 2015/16",
+           "league":"PL",
+           "year":"2015",
+           "curMatchday":38,
+           "numMatchdays":38,
+           "numTeams":20,
+           "numGames":380
+         },
+         { "id":399,
+           "seasonName":"Primera Division 2015/16",
+           "league":"PD",
+           "year":"2015",
+           "curMatchday":38,
+           "numMatchdays":38,
+           "numTeams":20,
+           "numGames":380
+         }]
+
+## Season [/season/{season_id}]
+      
+### View a specific Seasons [GET]
+
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+
++ Response 200 (application/json)
+
+         [{ "id":398,
+            "seasonName":"Premier League 2015/16",
+            "league":"PL",
+            "year":"2015",
+            "curMatchday":38,
+            "numMatchdays":38,
+            "numTeams":20,
+            "numGames":380
+          },
+          { "id":399,
+            "seasonName":"Primera Division 2015/16",
+            "league":"PD",
+            "year":"2015",
+            "curMatchday":38,
+            "numMatchdays":38,
+            "numTeams":20,
+            "numGames":380
+          }]
+
+
+## Standings [/season/{season_id}/standings]
+
+### List standings in a season [GET]
+ 
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "leagueCaption": "1. Bundesliga 2015/16",
+            "matchday": 34,
+            "standing": [{
+                "rank": 1,
+                "team": "Bayern",
+                "id": 5,
+                "matchesPlayed": 34,
+                "logoURL": "http://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg",
+                "points": 88,
+                "goalsFor": 80,
+                "goalsAgainst": 17
+            }, {
+                "rank": 2,
+                "team": "Dortmund",
+                "id": 4,
+                "matchesPlayed": 34,
+                "logoURL": "http://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg",
+                "points": 78,
+                "goalsFor": 82,
+                "goalsAgainst": 34
+            }, {
+                "rank": 3,
+                "team": "Leverkusen",
+                "id": 3,
+                "matchesPlayed": 34,
+                "logoURL": "http://upload.wikimedia.org/wikipedia/de/9/95/Bayer_04_Leverkusen_Logo.svg",
+                "points": 60,
+                "goalsFor": 56,
+                "goalsAgainst": 40
+            }]
+        }
+
+## Specific Standing [/standing/{standing_id}]
+     
+### View a specific standing [GET]
+
++ Parameters
+    + standing_id (number) - ID of the standing in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "rank": 1,
+            "team": "Bayern",
+            "id": 5,
+            "matchesPlayed": 34,
+            "logoUrl": "http://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg",
+            "points": 88,
+            "goalsFor": 80,
+            "goalsAgainst": 17
+        }
+        
+## Games [/games]
+
+### List recent/upcoming games [GET]
+
++ Response 200 (application/json)
+
+        {
+            "timeFrameStart": "2016-07-06",
+            "timeFrameEnd": "2016-07-12",
+            "count": 2,
+            "fixtures": [{
+                "id": 153663,
+                "competitionId": 424,
+                "date": "2016-07-06T19:00:00Z",
+                "matchDay": 6,
+                "homeTeamName": "Portugal",
+                "awayTeamName": "Wales",
+                "awayTeamScore": null,
+                "homeTeamScore": null
+ 
+            }, {
+                "id": 153664,
+                "date": "2016-07-07T19:00:00Z",
+                "matchDay": 6,
+                "homeTeamName": "Germany",
+                "awayTeamName": "France",
+                "awayTeamScore": null,
+                "homeTeamScore": null
+            }]
+        }
+
+## Game [/game/{game_id}]
+
+### View a specific game [GET]
+ 
++ Parameters
+    + game_id (number) - ID of the game in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": 153663,
+            "date": "2016-07-06T19:00:00Z",
+            "matchDay": 6,
+            "homeTeamName": "Portugal",
+            "homeTeamId": 765,
+            "awayTeamName": "Wales",
+            "awayTeamId": 833,
+            "awayTeamScore": null,
+            "homeTeamScore": null
+       
+        }
+
+## Teams [/season/{season_id}/teams]
+
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+    
+### List teams playing in a season [GET]
+
++ Response 200 (application/json)
+        
+        {
+            "count": 20,
+            "teams": [{
+                "id": 66,
+                "name": "Manchester United FC",
+                "nickname": "ManU",
+                "marketVal": "394,550,000 €",
+                "logoURL": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg"
+            }, {
+                "id": 73,
+                "name": "Tottenham Hotspur FC",
+                "nickname": "Spurs",
+                "marketVal": "278,000,000 €",
+                "logoURL": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg"
+            }, {
+                "id": 1044,
+                "name": "AFC Bournemouth",
+                "nickname": "Bournemouth",
+                "marketVal": "88,800,000 €",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/de/4/41/Afc_bournemouth.svg"
+            }, {
+                "id": 58,
+                "name": "Aston Villa FC",
+                "nickname": "Aston Villa",
+                "marketVal": "114,750,000 €",
+                "logoURL": "http://upload.wikimedia.org/wikipedia/de/9/9f/Aston_Villa_logo.svg"
+            }]
+        }
+
+
+## Team [/team/{team_id}]
+
+### View a specific game [GET]
+ 
++ Parameters
+    + team_id (number) - ID of the team in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": 338,
+            "name": "Leicester City FC",
+            "nickname": "Foxes",
+            "marketVal": "95,500,000 €",
+            "logoURL": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png"
+        }

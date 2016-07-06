@@ -1,4 +1,6 @@
-from sqlalchemy.ext.declarative import declarative_base
+#!/usr/bin/env python3
+
+
 import os
 import sys
 from collections import OrderedDict
@@ -6,7 +8,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstra
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
-
+ 
 Base = declarative_base()
 
 #for yUML model
@@ -29,6 +31,10 @@ team_game = Table('team_game', Base.metadata,
 
 
 class Season(Base):
+    """
+    Season has everything related to a season in soccer with the name, number of games, 
+    number of teams, year and has relationships to teams, standings, and games
+    """
     __tablename__ = 'season'
     # Here we define columns for the table Season
     # Notice that each column is also a normal Python instance attribute.
@@ -47,6 +53,17 @@ class Season(Base):
 
 
     def __init__(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
+        """
+        itializes everything in the Seasons class
+        :param self:
+        :param id:
+        :param league:
+        :param numTeams:
+        :param numGames:
+        :param numMatchdays:
+        :param curMatchday:
+        """
+
         self.id = id
         self.seasonName = seasonName
         self.league = league
@@ -57,6 +74,12 @@ class Season(Base):
         self.curMatchday = curMatchday
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
+
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['seasonName'] = self.seasonName.title()
@@ -72,6 +95,10 @@ class Season(Base):
 
 
 class Standing(Base):
+    """
+    Standing has everything related to a standing in soccer with the rank, matchesPlayed, 
+    points, goalsFor, and goalsAgainst
+    """
     __tablename__ = 'standing'
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
@@ -85,7 +112,7 @@ class Standing(Base):
     goalsAgainst = Column(Integer)
     #relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-    Rseason = relationship("Season", back_populates=Sstanding) #many to 1
+    Rseason = relationship("Season", back_populates=Sstanding) #many to 1 
     team_id = Column(Integer, ForeignKey('team_id'))
     Rteam = relationship("Team", back_populates=Tstanding) #many to 1
 
@@ -101,6 +128,11 @@ class Standing(Base):
         self.goalsAgainst =goalsAgainst
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['matchday'] = self.matchday
@@ -116,6 +148,9 @@ class Standing(Base):
 
 
 class Team(Base):
+    """
+    Team has everything related to a team in soccer with the name, nickname, logo, and marketVal
+    """
     __tablename__ = 'team'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -139,6 +174,11 @@ class Team(Base):
         self.marketVal = marketVal
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['teamName'] = self.teamName.title()
@@ -152,6 +192,9 @@ class Team(Base):
 
 
 class Game(Base):
+    """
+    Game has everything related to a game in soccer with the date, time, homeTeam, awayTeam, and result
+    """
     __tablename__ = 'game'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -179,6 +222,11 @@ class Game(Base):
         self.matchday = matchday
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['season_name'] = self.season_name.title()
@@ -192,6 +240,9 @@ class Game(Base):
 
 
 class Player(Base):
+    """
+    Player has everything related to a player in soccer with the name, nation, date of birth, position, and jersey number
+    """
     __tablename__ = 'player'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -215,6 +266,11 @@ class Player(Base):
         self.jerseyNum = jerseyNum
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['name'] = self.name.title()
@@ -225,11 +281,19 @@ class Player(Base):
         return displayDict
 
 
-
+ 
 # Create an engine that stores data in the local directory's
 # sqlalchemy_example.db file.
 #engine = create_engine('sqlite:///sqlalchemy_example.db')
-
+ 
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
 #Base.metadata.create_all(engine)
+
+
+
+
+
+
+
+

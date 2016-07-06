@@ -28,9 +28,9 @@ var routes = myApp.config(['$httpProvider', function($httpProvider) {
       templateUrl: '/static/partials/seasons.html',
       controller: 'seasons'
     })
-    .when('/season/:id',{
-      templateUrl: '/static/partials/season.html',
-      controller: 'season'
+    .when('/standings/:id',{
+      templateUrl: '/static/partials/standings.html',
+      controller: 'standings'
     })
     .when('/team/:id',{
       templateUrl: '/static/partials/team.html',
@@ -87,7 +87,6 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
 
   var fetchGames = function(team_id){
     $http.get("/team/"+team_id+"/fixtures").then(function(response){
-      console.log(response.data);
 
       var res = response.data;
       var games = res.fixtures;
@@ -104,16 +103,18 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
         };
         $scope.games.push(newGame);
       }
-      console.log($scope.games);
     });
   };
 
   var fetchTeam = function(team_id){
     $http.get('/team/'+id).then(function(response){
       var res = response.data;
+      console.log(res);
       $scope.team = {
         name:res.name,
-        logo:res.crestUrl
+        logo:res.crestUrl,
+        shortName: res.shortName,
+        squadMarketValue: res.squadMarketValue
       };
     });
   };
@@ -124,31 +125,31 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
 
 }]);
 
-routes.controller('season',['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+routes.controller('standings',['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
   var id = $routeParams.id;
 
-  $http.get('/season/'+id).then(function(response){
+  //# change route to '/season/'+id later
+  $http.get('/data/season_'+id+".json").then(function(response){
 
     var res = response.data;
-
-    console.log(res);
     var standings;
     var matchDay = res.matchday;
 
     $scope.leagueCaption = res.leagueCaption;
+    $scope.matchDay = res.matchday;
+    $scope.numberOfMatches = res.numberOfMatchdays;
+    $scope.numberOfGames = res.numberOfGames;
+    $scope.completed = $scope.numberOfMatches == $scope.matchDay;
     $scope.groups = [];
 
-    console.log( matchDay );
-
-    if( matchDay == 1 ) {
+    if( $scope.matchDay == 1 || $scope.completed ) {
+      $scope.seasonFinished = true;
       var standings = res.standing;
 
       var group = {
         letter: 'A',
         teams: []
       };
-
-      console.log(standings);
 
       for (var i in standings){
         var team = standings[i];
@@ -158,7 +159,11 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
             logo:team["crestURI"],
             name:team["team"],
             id:team["teamId"],
-            rank:team["rank"]
+            rank:team["rank"],
+            playedGames: team["playedGames"],
+            goalsAgainst: team["goalsAgainst"],
+            goals: team["goals"],
+            pts: team["points"]
           };
           group.teams.push(newTeam);
         }
@@ -168,6 +173,9 @@ routes.controller('season',['$scope', '$http', '$routeParams', function($scope, 
     }
     else {
       var standings = res.standings;
+
+      console.log(res);
+
       for (var groupLetter in standings) {
 
         var rawGroupData = standings[groupLetter];
@@ -207,7 +215,8 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   $scope.seasons = [];
 
-  $http.get('/seasons').then(function(response){
+  //later change to url = /seasons
+  $http.get('/data/seasons.json').then(function(response){
     console.log(response);
     var res = response.data;
     for (var i = 0; i < res.length; i++) {
@@ -215,6 +224,11 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
         var season = {
           name: element.caption,
           league: element.league,
+          numberOfTeams: element.numberOfTeams,
+          numberOfGames: element.numberOfGames,
+          numberOfMatchdays: element.numberOfMatchdays,
+          currentMatchday: element.currentMatchday,
+          completed: element.currentMatchday == element.numberOfMatchdays,
           id: element.id,
           year: element.year
         };
@@ -224,8 +238,9 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
 }]);
 
-routes.controller('games',['$scope', '$http', function($scope, $http){
+routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
   $scope.games = [];
+  $timeout = twttr.widgets.load();
 
   $http.get('/games').then(function(response){
     console.log(response);

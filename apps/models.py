@@ -1,7 +1,20 @@
+#!/usr/bin/env python3
+
+# ---------------------------
+# cs373-idb/app/models.py
+#
+# JASON DIMITRIOU
+# CLARK CLAYTON
+# KALEB ALANIS
+# HASSAN SHEIKH
+# Abraham Adberstein
+# ---------------------------
+
+
 import os
 import sys
 from collections import OrderedDict
-from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstraint, Boolean
+from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -26,8 +39,15 @@ team_game = Table('team_game', Base.metadata,
 
 
 
+# --------------
+# Season
+# --------------
 
 class Season(Base):
+    """
+    Season has everything related to a season in soccer with the name, number of games, 
+    number of teams, year and has relationships to teams, standings, and games
+    """
     __tablename__ = 'season'
     # Here we define columns for the table Season
     # Notice that each column is also a normal Python instance attribute.
@@ -46,6 +66,16 @@ class Season(Base):
 
 
     def __init__(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
+        """
+        itializes everything in the Season class
+        :param self:
+        :param id: Integer
+        :param league: String
+        :param numTeams: Integer
+        :param numGames: Integer
+        :param numMatchdays: Integer
+        :param curMatchday: Integer
+        """
         self.id = id
         self.seasonName = seasonName
         self.league = league
@@ -56,6 +86,12 @@ class Season(Base):
         self.curMatchday = curMatchday
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
+
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['seasonName'] = self.seasonName.title()
@@ -69,8 +105,15 @@ class Season(Base):
         return displayDict
 
 
+# --------------
+# Standing
+# --------------
 
 class Standing(Base):
+    """
+    Standing has everything related to a standing in soccer with the rank, matchesPlayed, 
+    points, goalsFor, and goalsAgainst
+    """
     __tablename__ = 'standing'
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
@@ -84,12 +127,24 @@ class Standing(Base):
     goalsAgainst = Column(Integer)
     #relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-    Rseason = relationship("Season", back_populates=Sstanding) #many to 1 
+    Rseason = relationship("Season") #many to 1 
     team_id = Column(Integer, ForeignKey('team_id'))
-    Rteam = relationship("Team", back_populates=Tstanding) #many to 1
+    Rteam = relationship("Team") #many to 1
 
 
     def __init__(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
+        """
+        itializes everything in the Standing class
+        :param self:
+        :param id: Integer
+        :param matchday: Integer
+        :param group: String
+        :param rank: Integer
+        :param matchesPlayed: Integer
+        :param points: Integer
+        :param goalsFor: Integer
+        :param goalsAgainst: Integer
+        """
         self.id = id
         self.matchday = matchday
         self.group = group
@@ -100,6 +155,11 @@ class Standing(Base):
         self.goalsAgainst =goalsAgainst
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['matchday'] = self.matchday
@@ -113,8 +173,14 @@ class Standing(Base):
         return displayDict
 
 
+# --------------
+# Team
+# --------------
 
 class Team(Base):
+    """
+    Team has everything related to a team in soccer with the name, nickname, logo, and marketVal
+    """
     __tablename__ = 'team'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -131,6 +197,15 @@ class Team(Base):
 
 
     def __init__(self, id, teamName, logoURL, nickname, marketVal):
+        """
+        itializes everything in the Team class
+        :param self:
+        :param id: Integer
+        :param teamName: String
+        :param logoURL: String
+        :param nickname: String
+        :param marketVal: String
+        """
         self.id = id
         self.teamName = teamName
         self.logoURL = logoURL
@@ -138,6 +213,11 @@ class Team(Base):
         self.marketVal = marketVal
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['teamName'] = self.teamName.title()
@@ -148,9 +228,14 @@ class Team(Base):
         displayDict['games'] = [game_id for game in self.Tgame]
         return displayDict
 
-
+# --------------
+# Game
+# --------------
 
 class Game(Base):
+    """
+    Game has everything related to a game in soccer with the date, time, homeTeam, awayTeam, and result
+    """
     __tablename__ = 'game'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -168,16 +253,32 @@ class Game(Base):
     Gteam = relationship("Team", secondary=team_game, back_populates="Tgame") #many to many
 
     def __init__(self, id, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday):
+        """
+        itializes everything in the Game class
+        :param self:
+        :param id: Integer
+        :param date: String
+        :param time: String
+        :param awayTeam: String
+        :param homeTeam: String
+        :param awayTeamScore: Integer
+        :param hometeamScore Integer
+        """
         self.id = id
         self.date = date
         self.time = time
         self.awayTeam = awayTeam
         self.homeTeam = homeTeam
         self.awayTeamScore = awayTeamScore
-        self.homeTeamScore = homteeamScore
+        self.homeTeamScore = homeTeamScore
         self.matchday = matchday
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['season_name'] = self.season_name.title()
@@ -188,9 +289,14 @@ class Game(Base):
         displayDict['matchday'] = self.matchday
         return displayDict
 
-
+# --------------
+# Player
+# --------------
 
 class Player(Base):
+    """
+    Player has everything related to a player in soccer with the name, nation, date of birth, position, and jersey number
+    """
     __tablename__ = 'player'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
@@ -202,10 +308,20 @@ class Player(Base):
     jerseyNum = Column(Integer)
     #relationships
     team_id = Column(Integer, ForeignKey('team_id'))
-    Pteam = relationship("Team", back_populates=Tplayer) #many to 1
+    Pteam = relationship("Team") #many to 1
 
 
     def __init__(self, id, name, nation, birth, pos, jerseyNum):
+        """
+        itializes everything in the player class
+        :param self:
+        :param id: Integer
+        :param name: String
+        :param nation: String
+        :param birth: String
+        :param pos: String
+        :param jerseyNum: Integer
+        """
         self.id = id
         self.name = name
         self.nation = nation
@@ -214,6 +330,11 @@ class Player(Base):
         self.jerseyNum = jerseyNum
 
     def display(self):
+        """
+        :param self:
+        :return: displayDict
+        :rtype: OrderedDict
+        """
         displayDict = OrderedDict()
         displayDict['id'] = self.id
         displayDict['name'] = self.name.title()
@@ -232,11 +353,4 @@ class Player(Base):
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
 #Base.metadata.create_all(engine)
-
-
-
-
-
-
-
 

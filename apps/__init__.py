@@ -14,13 +14,29 @@ def index():
 
 @app.route('/seasons')
 def seasons():
-    r = requests.get('http://api.football-data.org/v1/competitions/?season=2016', headers=headers)
+    r = requests.get('http://api.football-data.org/v1/competitions/?season=2015', headers=headers)
     return r.text
 
 @app.route('/season/<season_id>')
 def season(season_id):
     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
     return r.text
+
+@app.route('/season/<season_id>/teams')
+def season_teams(season_id):
+    r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/teams', headers=headers)
+    return r.text
+
+# @app.route('/season/players/<season_id>')
+# def season_players(season_id):
+#     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
+#     return r.text
+
+@app.route('/data/<filename>')
+def data(filename):
+    print("[+]Returning JSON file.")
+    print( send_file("static/js/data/"+filename) )
+    return send_file("static/js/data/"+filename)
 
 @app.route('/team/<team_id>')
 def team(team_id):

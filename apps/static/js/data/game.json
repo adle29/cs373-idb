@@ -1,0 +1,56 @@
+{
+  "timeFrameStart": "2016-07-06",
+  "timeFrameEnd": "2016-07-12",
+  "count": 2,
+  "fixtures": [
+    {
+      "id": 153663,
+      "competitionId": 424,
+      "date": "2016-07-06T19:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 6,
+      "homeTeamName": "Portugal",
+      "homeTeamId": 765,
+      "awayTeamName": "Wales",
+      "awayTeamId": 833,
+      "result": {
+        "goalsHomeTeam": 2,
+        "goalsAwayTeam": 0,
+        "halfTime": {
+          "goalsHomeTeam": 0,
+          "goalsAwayTeam": 0
+        }
+      }
+    },
+    {
+      "id": 153664,
+      "competitionId": 424,
+      "date": "2016-07-07T19:00:00Z",
+      "status": "TIMED",
+      "matchday": 6,
+      "homeTeamName": "Germany",
+      "homeTeamId": 759,
+      "awayTeamName": "France",
+      "awayTeamId": 773,
+      "result": {
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null
+      }
+    },
+    {
+      "id": 153664,
+      "competitionId": 424,
+      "date": "2016-08-07T19:00:00Z",
+      "status": "TIMED",
+      "matchday": 6,
+      "homeTeamName": "Mexico",
+      "homeTeamId": 759,
+      "awayTeamName": "USA",
+      "awayTeamId": 773,
+      "result": {
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null
+      }
+    }
+  ]
+}

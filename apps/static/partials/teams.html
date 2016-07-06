@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="starter-template">
+      <h1>Teams</h1>
+      <p class="lead">Soccer is Life. </p>
+    </div>
+
+    <div class="container">
+      <h3>TEAMS</h3>
+
+      <table class="table table-bordered table-inverse">
+        <thead>
+        <tr>
+          <th>Name </th>
+          <th>Short Name </th>
+          <th>Market Value </th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="team in teams">
+            <td> <img class="img" src="{{team.logo}}" /> <a class ="link" href="/#/team/{{team.id}}">{{team.name}}</a></td>
+            <td> {{team.shortName}}</td>
+            <td> {{team.squadMarketValue}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+</div><!-- /.container -->

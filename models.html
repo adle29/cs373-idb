@@ -1,0 +1,420 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module models</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/clarkc/CS373/cs373-idb/apps/models.py">/v/filer4b/v38q001/clarkc/CS373/cs373-idb/apps/models.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;---------------------------<br>
+#&nbsp;cs373-idb/app/models.py<br>
+#<br>
+#&nbsp;JASON&nbsp;DIMITRIOU<br>
+#&nbsp;CLARK&nbsp;CLAYTONst<br>
+#&nbsp;KALEB&nbsp;ALANIS<br>
+#&nbsp;HASSAN&nbsp;SHEIKH<br>
+#&nbsp;Abraham&nbsp;Adberstein<br>
+#&nbsp;---------------------------</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial">sqlalchemy.ext.declarative.api.Base(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="models.html#Game">Game</a>
+</font></dt><dt><font face="helvetica, arial"><a href="models.html#Player">Player</a>
+</font></dt><dt><font face="helvetica, arial"><a href="models.html#Season">Season</a>
+</font></dt><dt><font face="helvetica, arial"><a href="models.html#Standing">Standing</a>
+</font></dt><dt><font face="helvetica, arial"><a href="models.html#Team">Team</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Game">class <strong>Game</strong></a>(sqlalchemy.ext.declarative.api.Base)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Game">Game</a>&nbsp;has&nbsp;everything&nbsp;related&nbsp;to&nbsp;a&nbsp;game&nbsp;in&nbsp;soccer&nbsp;with&nbsp;the&nbsp;date,&nbsp;time,&nbsp;homeTeam,&nbsp;awayTeam,&nbsp;and&nbsp;result<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Game">Game</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Base</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, id, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday)</dt><dd><tt>itializes&nbsp;everything&nbsp;in&nbsp;the&nbsp;<a href="#Game">Game</a>&nbsp;class<br>
+:param&nbsp;self:<br>
+:param&nbsp;id:&nbsp;Integer<br>
+:param&nbsp;date:&nbsp;String<br>
+:param&nbsp;time:&nbsp;String<br>
+:param&nbsp;awayTeam:&nbsp;String<br>
+:param&nbsp;homeTeam:&nbsp;String<br>
+:param&nbsp;awayTeamScore:&nbsp;Integer<br>
+:param&nbsp;hometeamScore&nbsp;Integer</tt></dd></dl>
+
+<dl><dt><a name="Game-display"><strong>display</strong></a>(self)</dt><dd><tt>:param&nbsp;self:<br>
+:return:&nbsp;displayDict<br>
+:rtype:&nbsp;OrderedDict</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Gseason</strong></dt>
+</dl>
+<dl><dt><strong>Gteam</strong></dt>
+</dl>
+<dl><dt><strong>awayTeam</strong></dt>
+</dl>
+<dl><dt><strong>awayTeamScore</strong></dt>
+</dl>
+<dl><dt><strong>date</strong></dt>
+</dl>
+<dl><dt><strong>homeTeam</strong></dt>
+</dl>
+<dl><dt><strong>homeTeamScore</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>matchDay</strong></dt>
+</dl>
+<dl><dt><strong>season_id</strong></dt>
+</dl>
+<dl><dt><strong>time</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7f8f87133210; Game&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('game', MetaData(bind=None), Column('id', ...eignKey('season_id'), table=&lt;game&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'game'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Player">class <strong>Player</strong></a>(sqlalchemy.ext.declarative.api.Base)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Player">Player</a>&nbsp;has&nbsp;everything&nbsp;related&nbsp;to&nbsp;a&nbsp;player&nbsp;in&nbsp;soccer&nbsp;with&nbsp;the&nbsp;name,&nbsp;nation,&nbsp;date&nbsp;of&nbsp;birth,&nbsp;position,&nbsp;and&nbsp;jersey&nbsp;number<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Player">Player</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Base</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Player-__init__"><strong>__init__</strong></a>(self, id, name, nation, birth, pos, jerseyNum)</dt><dd><tt>itializes&nbsp;everything&nbsp;in&nbsp;the&nbsp;player&nbsp;class<br>
+:param&nbsp;self:<br>
+:param&nbsp;id:&nbsp;Integer<br>
+:param&nbsp;name:&nbsp;String<br>
+:param&nbsp;nation:&nbsp;String<br>
+:param&nbsp;birth:&nbsp;String<br>
+:param&nbsp;pos:&nbsp;String<br>
+:param&nbsp;jerseyNum:&nbsp;Integer</tt></dd></dl>
+
+<dl><dt><a name="Player-display"><strong>display</strong></a>(self)</dt><dd><tt>:param&nbsp;self:<br>
+:return:&nbsp;displayDict<br>
+:rtype:&nbsp;OrderedDict</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Pteam</strong></dt>
+</dl>
+<dl><dt><strong>birth</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>jerseyNum</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<dl><dt><strong>nation</strong></dt>
+</dl>
+<dl><dt><strong>pos</strong></dt>
+</dl>
+<dl><dt><strong>team_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7f8f8713f850; Player&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('player', MetaData(bind=None), Column('id'...eignKey('team_id'), table=&lt;player&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'player'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Season">class <strong>Season</strong></a>(sqlalchemy.ext.declarative.api.Base)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Season">Season</a>&nbsp;has&nbsp;everything&nbsp;related&nbsp;to&nbsp;a&nbsp;season&nbsp;in&nbsp;soccer&nbsp;with&nbsp;the&nbsp;name,&nbsp;number&nbsp;of&nbsp;games,&nbsp;<br>
+number&nbsp;of&nbsp;teams,&nbsp;year&nbsp;and&nbsp;has&nbsp;relationships&nbsp;to&nbsp;teams,&nbsp;standings,&nbsp;and&nbsp;games<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Season">Season</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Base</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Season-__init__"><strong>__init__</strong></a>(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday)</dt><dd><tt>itializes&nbsp;everything&nbsp;in&nbsp;the&nbsp;<a href="#Season">Season</a>&nbsp;class<br>
+:param&nbsp;self:<br>
+:param&nbsp;id:&nbsp;Integer<br>
+:param&nbsp;league:&nbsp;String<br>
+:param&nbsp;numTeams:&nbsp;Integer<br>
+:param&nbsp;numGames:&nbsp;Integer<br>
+:param&nbsp;numMatchdays:&nbsp;Integer<br>
+:param&nbsp;curMatchday:&nbsp;Integer</tt></dd></dl>
+
+<dl><dt><a name="Season-display"><strong>display</strong></a>(self)</dt><dd><tt>:param&nbsp;self:<br>
+:return:&nbsp;displayDict<br>
+:rtype:&nbsp;OrderedDict</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Sgame</strong></dt>
+</dl>
+<dl><dt><strong>Sstanding</strong></dt>
+</dl>
+<dl><dt><strong>Steam</strong></dt>
+</dl>
+<dl><dt><strong>curMatchday</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>league</strong></dt>
+</dl>
+<dl><dt><strong>numGames</strong></dt>
+</dl>
+<dl><dt><strong>numMatchdays</strong></dt>
+</dl>
+<dl><dt><strong>numTeams</strong></dt>
+</dl>
+<dl><dt><strong>seasonName</strong></dt>
+</dl>
+<dl><dt><strong>year</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7f8f8716c9d0; Season&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('season', MetaData(bind=None), Column('id'...tchday', Integer(), table=&lt;season&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'season'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Standing">class <strong>Standing</strong></a>(sqlalchemy.ext.declarative.api.Base)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Standing">Standing</a>&nbsp;has&nbsp;everything&nbsp;related&nbsp;to&nbsp;a&nbsp;standing&nbsp;in&nbsp;soccer&nbsp;with&nbsp;the&nbsp;rank,&nbsp;matchesPlayed,&nbsp;<br>
+points,&nbsp;goalsFor,&nbsp;and&nbsp;goalsAgainst<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Standing">Standing</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Base</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Standing-__init__"><strong>__init__</strong></a>(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst)</dt><dd><tt>itializes&nbsp;everything&nbsp;in&nbsp;the&nbsp;<a href="#Standing">Standing</a>&nbsp;class<br>
+:param&nbsp;self:<br>
+:param&nbsp;id:&nbsp;Integer<br>
+:param&nbsp;matchday:&nbsp;Integer<br>
+:param&nbsp;group:&nbsp;String<br>
+:param&nbsp;rank:&nbsp;Integer<br>
+:param&nbsp;matchesPlayed:&nbsp;Integer<br>
+:param&nbsp;points:&nbsp;Integer<br>
+:param&nbsp;goalsFor:&nbsp;Integer<br>
+:param&nbsp;goalsAgainst:&nbsp;Integer</tt></dd></dl>
+
+<dl><dt><a name="Standing-display"><strong>display</strong></a>(self)</dt><dd><tt>:param&nbsp;self:<br>
+:return:&nbsp;displayDict<br>
+:rtype:&nbsp;OrderedDict</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Rseason</strong></dt>
+</dl>
+<dl><dt><strong>Rteam</strong></dt>
+</dl>
+<dl><dt><strong>goalsAgainst</strong></dt>
+</dl>
+<dl><dt><strong>goalsFor</strong></dt>
+</dl>
+<dl><dt><strong>group</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>matchday</strong></dt>
+</dl>
+<dl><dt><strong>matchesPlayed</strong></dt>
+</dl>
+<dl><dt><strong>points</strong></dt>
+</dl>
+<dl><dt><strong>rank</strong></dt>
+</dl>
+<dl><dt><strong>season_id</strong></dt>
+</dl>
+<dl><dt><strong>team_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7f8f87111610; Standing&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('standing', MetaData(bind=None), Column('i...gnKey('team_id'), table=&lt;standing&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'standing'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Team">class <strong>Team</strong></a>(sqlalchemy.ext.declarative.api.Base)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Team">Team</a>&nbsp;has&nbsp;everything&nbsp;related&nbsp;to&nbsp;a&nbsp;team&nbsp;in&nbsp;soccer&nbsp;with&nbsp;the&nbsp;name,&nbsp;nickname,&nbsp;logo,&nbsp;and&nbsp;marketVal<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Team">Team</a></dd>
+<dd>sqlalchemy.ext.declarative.api.Base</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Team-__init__"><strong>__init__</strong></a>(self, id, teamName, logoURL, nickname, marketVal)</dt><dd><tt>itializes&nbsp;everything&nbsp;in&nbsp;the&nbsp;<a href="#Team">Team</a>&nbsp;class<br>
+:param&nbsp;self:<br>
+:param&nbsp;id:&nbsp;Integer<br>
+:param&nbsp;teamName:&nbsp;String<br>
+:param&nbsp;logoURL:&nbsp;String<br>
+:param&nbsp;nickname:&nbsp;String<br>
+:param&nbsp;marketVal:&nbsp;String</tt></dd></dl>
+
+<dl><dt><a name="Team-display"><strong>display</strong></a>(self)</dt><dd><tt>:param&nbsp;self:<br>
+:return:&nbsp;displayDict<br>
+:rtype:&nbsp;OrderedDict</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>Tgame</strong></dt>
+</dl>
+<dl><dt><strong>Tplayer</strong></dt>
+</dl>
+<dl><dt><strong>Tseason</strong></dt>
+</dl>
+<dl><dt><strong>Tstanding</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>logoURL</strong></dt>
+</dl>
+<dl><dt><strong>marketVal</strong></dt>
+</dl>
+<dl><dt><strong>nickname</strong></dt>
+</dl>
+<dl><dt><strong>teamName</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x7f8f8711dd10; Team&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('team', MetaData(bind=None), Column('id', ..., String(length=250), table=&lt;team&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'team'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.ext.declarative.api.Base:<br>
+<dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>season_team</strong> = Table('season_team', MetaData(bind=None), Column...ey('team.id'), table=&lt;season_team&gt;), schema=None)<br>
+<strong>team_game</strong> = Table('team_game', MetaData(bind=None), Column('...nKey('game.id'), table=&lt;team_game&gt;), schema=None)</td></tr></table>
+</body></html>

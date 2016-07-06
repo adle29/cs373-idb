@@ -210,3 +210,11 @@ def test_standings_readable_3(self):
     self.assertEqual(rmStand.points, 0)
     self.assertEqual(rmStand.goalsFor, 0)
     self.assertEqual(rmStand.goalsAgainst, 0)
+
+"""
+pylintrc results for test.py
+
+
+
+
+"""

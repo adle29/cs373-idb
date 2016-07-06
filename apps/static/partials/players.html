@@ -6,38 +6,28 @@
     </div>
 
     <div class="container">
+      <h3>PLAYERS</h3>
 
-      <table class="table table-inverse">
+      <table class="table table-bordered table-inverse">
         <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th style="width:250px;">Name </th>
+          <th>Nationality </th>
+          <th>DOB </th>
+          <th>Position </th>
+          <th>Jersey # </th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+          <tr ng-repeat="player in players">
+            <td> {{player.name}} </td>
+            <td> {{player.nationality}}</td>
+            <td> {{player.dateOfBirth}}</td>
+            <td> {{player.position}}</td>
+            <td> {{player.jerseyNumber}}</td>
+          </tr>
         </tbody>
-        </table>
-
+      </table>
     </div>
 
 

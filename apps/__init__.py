@@ -22,10 +22,10 @@ def season(season_id):
     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
     return r.text
 
-# @app.route('/season/team/<season_id>')
-# def season_team(season_id):
-#     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
-#     return r.text
+@app.route('/season/<season_id>/teams')
+def season_teams(season_id):
+    r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/teams', headers=headers)
+    return r.text
 
 # @app.route('/season/players/<season_id>')
 # def season_players(season_id):

@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
 
+# ---------------------------
+# cs373-idb/app/models.py
+#
+# JASON DIMITRIOU
+# CLARK CLAYTON
+# KALEB ALANIS
+# HASSAN SHEIKH
+# Abraham Adberstein
+# ---------------------------
+
 
 import os
 import sys
@@ -29,6 +39,9 @@ team_game = Table('team_game', Base.metadata,
 
 
 
+# --------------
+# Season
+# --------------
 
 class Season(Base):
     """
@@ -54,16 +67,15 @@ class Season(Base):
 
     def __init__(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
         """
-        itializes everything in the Seasons class
+        itializes everything in the Season class
         :param self:
-        :param id:
-        :param league:
-        :param numTeams:
-        :param numGames:
-        :param numMatchdays:
-        :param curMatchday:
+        :param id: Integer
+        :param league: String
+        :param numTeams: Integer
+        :param numGames: Integer
+        :param numMatchdays: Integer
+        :param curMatchday: Integer
         """
-
         self.id = id
         self.seasonName = seasonName
         self.league = league
@@ -93,6 +105,9 @@ class Season(Base):
         return displayDict
 
 
+# --------------
+# Standing
+# --------------
 
 class Standing(Base):
     """
@@ -118,6 +133,18 @@ class Standing(Base):
 
 
     def __init__(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
+        """
+        itializes everything in the Standing class
+        :param self:
+        :param id: Integer
+        :param matchday: Integer
+        :param group: String
+        :param rank: Integer
+        :param matchesPlayed: Integer
+        :param points: Integer
+        :param goalsFor: Integer
+        :param goalsAgainst: Integer
+        """
         self.id = id
         self.matchday = matchday
         self.group = group
@@ -146,6 +173,9 @@ class Standing(Base):
         return displayDict
 
 
+# --------------
+# Team
+# --------------
 
 class Team(Base):
     """
@@ -167,6 +197,15 @@ class Team(Base):
 
 
     def __init__(self, id, teamName, logoURL, nickname, marketVal):
+        """
+        itializes everything in the Team class
+        :param self:
+        :param id: Integer
+        :param teamName: String
+        :param logoURL: String
+        :param nickname: String
+        :param marketVal: String
+        """
         self.id = id
         self.teamName = teamName
         self.logoURL = logoURL
@@ -189,7 +228,9 @@ class Team(Base):
         displayDict['games'] = [game_id for game in self.Tgame]
         return displayDict
 
-
+# --------------
+# Game
+# --------------
 
 class Game(Base):
     """
@@ -212,13 +253,24 @@ class Game(Base):
     Gteam = relationship("Team", secondary=team_game, back_populates="Tgame") #many to many
 
     def __init__(self, id, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday):
+        """
+        itializes everything in the Game class
+        :param self:
+        :param id: Integer
+        :param date: String
+        :param time: String
+        :param awayTeam: String
+        :param homeTeam: String
+        :param awayTeamScore: Integer
+        :param hometeamScore Integer
+        """
         self.id = id
         self.date = date
         self.time = time
         self.awayTeam = awayTeam
         self.homeTeam = homeTeam
         self.awayTeamScore = awayTeamScore
-        self.homeTeamScore = homteeamScore
+        self.homeTeamScore = homeTeamScore
         self.matchday = matchday
 
     def display(self):
@@ -237,7 +289,9 @@ class Game(Base):
         displayDict['matchday'] = self.matchday
         return displayDict
 
-
+# --------------
+# Player
+# --------------
 
 class Player(Base):
     """
@@ -258,6 +312,16 @@ class Player(Base):
 
 
     def __init__(self, id, name, nation, birth, pos, jerseyNum):
+        """
+        itializes everything in the player class
+        :param self:
+        :param id: Integer
+        :param name: String
+        :param nation: String
+        :param birth: String
+        :param pos: String
+        :param jerseyNum: Integer
+        """
         self.id = id
         self.name = name
         self.nation = nation

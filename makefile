@@ -26,4 +26,7 @@ status:
 	git remote -v
 	git status
 
+models.html: apps/models.py
+	pydoc3 -w models
+
 test: 

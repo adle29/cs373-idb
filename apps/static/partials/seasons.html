@@ -10,16 +10,34 @@
         <thead>
         <tr>
           <!-- <th>#</th> -->
-          <th>Season Name</th>
-          <th>League</th>
-          <th>Year</th>
-          <th>Teams</th>
-          <th>Games </th>
-          <th>Matches</th>
+          <th class="link"  ng-click="propertyName = 'name'; sortReverse = !sortReverse">Season Name
+            <span ng-show="propertyName == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link"  ng-click="propertyName = 'league'; sortReverse = !sortReverse">League
+            <span ng-show="propertyName == 'league' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'league' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link"  ng-click="propertyName = 'year'; sortReverse = !sortReverse">Year
+            <span ng-show="propertyName == 'year' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'year' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link"  ng-click="propertyName = 'numberOfTeams'; sortReverse = !sortReverse">Teams
+            <span ng-show="propertyName == 'numberOfTeams' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'numberOfTeams' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link"  ng-click="propertyName = 'numberOfGames'; sortReverse = !sortReverse">Games
+            <span ng-show="propertyName == 'numberOfGames' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'numberOfGames' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link"  ng-click="propertyName = 'currentMatchday'; sortReverse = !sortReverse">Matches
+            <span ng-show="propertyName == 'currentMatchday' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'currentMatchday' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
         </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="season in seasons">
+          <tr ng-repeat="season in seasons | orderBy:propertyName:sortReverse ">
             <!-- <th scope="row">{{$index}}</th> -->
             <td><a class="link" href="/#/standings/{{season.id}}">{{season.name}}</a></td>
             <td>{{season.league}}</td>

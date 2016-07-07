@@ -11,15 +11,30 @@
       <table class="table table-bordered table-inverse">
         <thead>
         <tr>
-          <th style="width:250px;">Name </th>
-          <th>Nationality </th>
-          <th>DOB </th>
-          <th>Position </th>
-          <th>Jersey # </th>
+          <th class="link" style="width:250px;" ng-click="propertyName = 'name'; sortReverse = !sortReverse">Name
+            <span ng-show="propertyName == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link" ng-click="propertyName = 'nationality'; sortReverse = !sortReverse">Nationality
+            <span ng-show="propertyName == 'nationality' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'nationality' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link" ng-click="propertyName = 'dateOfBirth'; sortReverse = !sortReverse">DOB
+            <span ng-show="propertyName == 'dateOfBirth' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'dateOfBirth' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link" ng-click="propertyName = 'position'; sortReverse = !sortReverse">Position
+            <span ng-show="propertyName == 'position' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'position' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
+          <th class="link" ng-click="propertyName = 'jerseyNumber'; sortReverse = !sortReverse">Jersey #
+            <span ng-show="propertyName == 'jerseyNumber' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="propertyName == 'jerseyNumber' && sortReverse" class="fa fa-caret-up"></span>
+          </th>
         </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="player in players">
+          <tr ng-repeat="player in players | orderBy:propertyName:sortReverse">
             <td> {{player.name}} </td>
             <td> {{player.nationality}}</td>
             <td> {{player.dateOfBirth}}</td>

@@ -126,11 +126,7 @@ class Standing(Base):
     goalsAgainst = Column(Integer)
     # relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-<<<< << < HEAD
     Rseason = relationship("Season")  # many to 1
-== == == =
-    Rseason = relationship("Season")  # many to 1
->>>>>> > dev
     team_id = Column(Integer, ForeignKey('team_id'))
     Rteam = relationship("Team")  # many to 1
 

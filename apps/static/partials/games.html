@@ -6,20 +6,29 @@
     </div>
 
     <div class="container">
-
+      {{propertyName}}
       <div class="col-lg-8">
         <table class="table table-inverse">
           <thead>
           <tr>
             <th>#</th>
-            <th>Date</th>
+            <th class="link" ng-click="propertyName = 'date'; sortReverse = !sortReverse">Date
+              <span ng-show="propertyName == 'date' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="propertyName == 'date' && sortReverse" class="fa fa-caret-up"></span>
+            </th>
             <th>Time</th>
-            <th>Away Team</th>
-            <th>Home Team</th>
+            <th class="link" ng-click="propertyName = 'awayTeamName'; sortReverse = !sortReverse">Away Team
+              <span ng-show="propertyName == 'awayTeamName' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="propertyName == 'awayTeamName' && sortReverse" class="fa fa-caret-up"></span>
+            </th>
+            <th class="link" ng-click="propertyName = 'homeTeamName'; sortReverse = !sortReverse">Home Team
+              <span ng-show="propertyName == 'homeTeamName' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="propertyName == 'homeTeamName' && sortReverse" class="fa fa-caret-up"></span>
+            </th>
           </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="game in games">
+            <tr ng-repeat="game in games | orderBy:propertyName:sortReverse">
               <th scope="row">{{$index}}</th>
               <td>{{game.date | date:'yyyy-MM-dd'}}</td>
               <td>{{game.date | date:'HH:mm:ss'}}</td>

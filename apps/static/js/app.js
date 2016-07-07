@@ -226,6 +226,8 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
 routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   $scope.seasons = [];
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
 
   //later change to url = /seasons
   $http.get('/data/seasons.json').then(function(response){
@@ -254,6 +256,9 @@ routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http
   $scope.games = [];
   $timeout = twttr.widgets.load();
 
+  $scope.propertyName = 'date'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+
   $http.get('/data/game.json').then(function(response){
     console.log(response);
     var res = response.data.fixtures;
@@ -272,6 +277,10 @@ routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http
 
 routes.controller('players',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
   $scope.games = [];
+
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+
   $http.get('/data/players.json').then(function(response){
     console.log(response);
     var res = response.data;
@@ -294,6 +303,9 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
 }]);
 
 routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
 
   $http.get('/data/teams.json').then(function(response){
     console.log(response);

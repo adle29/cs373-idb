@@ -217,7 +217,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(rmStand.goalsAgainst, 0)
 
 """
-pylintrc results for test.py
+pylint3 results for test.py
 ---------------------------------------------------
 Report
 ======

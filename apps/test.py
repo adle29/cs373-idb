@@ -6,6 +6,7 @@ import models
 import datetime
 import app
 
+
 class DBTestCases(unittest.TestCase):
 
     # Tests that every player is readable
@@ -134,7 +135,8 @@ class DBTestCases(unittest.TestCase):
         euro16 = Seasons.query.get(1)
 
         self.assertEqual(euro16.id, 1)
-        self.assertEqual(euro16.seasonName, "European Championships France 2016")
+        self.assertEqual(
+            euro16.seasonName, "European Championships France 2016")
         self.assertEqual(euro16.league, "EC")
         self.assertEqual(euro16.year, 2016)
         self.assertEqual(euro16.numTeams, 24)
@@ -173,7 +175,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(ligue1.curMatchDay, 1)
 
     # Tests that every standing is readable
-    
+
     def test_standings_readable_1(self):
         db.session.add(self.standings)
         db.session.commit()

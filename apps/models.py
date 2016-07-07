@@ -20,29 +20,28 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-#for yUML model
-#http://yuml.me/edit/a541cdb0
-#http://yuml.me/ba69937b
+# for yUML model
+# http://yuml.me/edit/a541cdb0
+# http://yuml.me/ba69937b
 
-#many to many relationships
-#seasons to teams
+# many to many relationships
+# seasons to teams
 season_team = Table('season_team', Base.metadata,
-    Column('season_id', Integer, ForeignKey('season.id')),
-    Column('team_id', Integer, ForeignKey('team.id'))
-)
-#games to teams
+                    Column('season_id', Integer, ForeignKey('season.id')),
+                    Column('team_id', Integer, ForeignKey('team.id'))
+                    )
+# games to teams
 team_game = Table('team_game', Base.metadata,
-    Column('team_id', Integer, ForeignKey('team.id')),
-    Column('game_id', Integer, ForeignKey('game.id'))
-)
-
+                  Column('team_id', Integer, ForeignKey('team.id')),
+                  Column('game_id', Integer, ForeignKey('game.id'))
+                  )
 
 
 # --------------
 # Season
 # --------------
-
 class Season(Base):
+
     """
     Season has everything related to a season in soccer with the name, number of games,
     number of teams, year and has relationships to teams, standings, and games
@@ -58,11 +57,11 @@ class Season(Base):
     numGames = Column(Integer)
     numMatchdays = Column(Integer)
     curMatchday = Column(Integer)
-    #relationships
-    Sgame = relationship("Game", back_populates="Gseason") #1 to many
-    Sstanding = relationship("Standing", back_populates="Rseason") #1 to many
-    Steam = relationship("Team", secondary=season_team, back_populates="Tseason") #many to many
-
+    # relationships
+    Sgame = relationship("Game", back_populates="Gseason")  # 1 to many
+    Sstanding = relationship("Standing", back_populates="Rseason")  # 1 to many
+    Steam = relationship(
+        "Team", secondary=season_team, back_populates="Tseason")  # many to many
 
     def __init__(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
         """
@@ -109,6 +108,7 @@ class Season(Base):
 # --------------
 
 class Standing(Base):
+
     """
     Standing has everything related to a standing in soccer with the rank, matchesPlayed,
     points, goalsFor, and goalsAgainst
@@ -124,16 +124,15 @@ class Standing(Base):
     points = Column(Integer)
     goalsFor = Column(Integer)
     goalsAgainst = Column(Integer)
-    #relationships
+    # relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-<<<<<<< HEAD
-    Rseason = relationship("Season") #many to 1 
-=======
-    Rseason = relationship("Season") #many to 1
->>>>>>> dev
+<<<< << < HEAD
+    Rseason = relationship("Season")  # many to 1
+== == == =
+    Rseason = relationship("Season")  # many to 1
+>>>>>> > dev
     team_id = Column(Integer, ForeignKey('team_id'))
-    Rteam = relationship("Team") #many to 1
-
+    Rteam = relationship("Team")  # many to 1
 
     def __init__(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
         """
@@ -155,7 +154,7 @@ class Standing(Base):
         self.matchesPlayed = matchesPlayed
         self.points = points
         self.goalsFor = goalsFor
-        self.goalsAgainst =goalsAgainst
+        self.goalsAgainst = goalsAgainst
 
     def display(self):
         """
@@ -181,6 +180,7 @@ class Standing(Base):
 # --------------
 
 class Team(Base):
+
     """
     Team has everything related to a team in soccer with the name, nickname, logo, and marketVal
     """
@@ -192,12 +192,13 @@ class Team(Base):
     logoURL = Column(String(250))
     nickname = Column(String(250))
     marketVal = Column(String(250))
-    #relationships
-    Tseason = relationship("Season", secondary=season_team, back_populates="Steam") #many to many
-    Tstanding = relationship("Standing", back_populates="Rteam") #1 to many
-    Tplayer = relationship("Player", back_populates="Pteam") #1 to many
-    Tgame = relationship("Game", secondary=team_game, back_populates="Gteam") #many to many
-
+    # relationships
+    Tseason = relationship(
+        "Season", secondary=season_team, back_populates="Steam")  # many to many
+    Tstanding = relationship("Standing", back_populates="Rteam")  # 1 to many
+    Tplayer = relationship("Player", back_populates="Pteam")  # 1 to many
+    Tgame = relationship(
+        "Game", secondary=team_game, back_populates="Gteam")  # many to many
 
     def __init__(self, id, teamName, logoURL, nickname, marketVal):
         """
@@ -235,7 +236,9 @@ class Team(Base):
 # Game
 # --------------
 
+
 class Game(Base):
+
     """
     Game has everything related to a game in soccer with the date, time, homeTeam, awayTeam, and result
     """
@@ -250,10 +253,11 @@ class Game(Base):
     awayTeamScore = Column(Integer)
     homeTeamScore = Column(Integer)
     matchDay = Column(Integer)
-    #relationships
+    # relationships
     season_id = Column(Integer, ForeignKey('season_id'))
-    Gseason = relationship("Season", back_populates="Sgame") #many to 1
-    Gteam = relationship("Team", secondary=team_game, back_populates="Tgame") #many to many
+    Gseason = relationship("Season", back_populates="Sgame")  # many to 1
+    Gteam = relationship(
+        "Team", secondary=team_game, back_populates="Tgame")  # many to many
 
     def __init__(self, id, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday):
         """
@@ -296,7 +300,9 @@ class Game(Base):
 # Player
 # --------------
 
+
 class Player(Base):
+
     """
     Player has everything related to a player in soccer with the name, nation, date of birth, position, and jersey number
     """
@@ -309,10 +315,9 @@ class Player(Base):
     birth = Column(String(250))
     pos = Column(String(250))
     jerseyNum = Column(Integer)
-    #relationships
+    # relationships
     team_id = Column(Integer, ForeignKey('team_id'))
-    Pteam = relationship("Team") #many to 1
-
+    Pteam = relationship("Team")  # many to 1
 
     def __init__(self, id, name, nation, birth, pos, jerseyNum):
         """
@@ -351,8 +356,8 @@ class Player(Base):
 
 # Create an engine that stores data in the local directory's
 # sqlalchemy_example.db file.
-#engine = create_engine('sqlite:///sqlalchemy_example.db')
+# engine = create_engine('sqlite:///sqlalchemy_example.db')
 
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
-#Base.metadata.create_all(engine)
+# Base.metadata.create_all(engine)

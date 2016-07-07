@@ -221,6 +221,6 @@ pylintrc results for test.py
 ---------------------------------------------------
 No config file found, using default configuration
 ************* Module apps.test
-E: 12, 0: expected an indented block (syntax-error)
+E: 177, 0: invalid syntax (syntax-error)
 ---------------------------------------------------
 """

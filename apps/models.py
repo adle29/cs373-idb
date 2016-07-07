@@ -10,7 +10,6 @@
 # Abraham Adberstein
 # ---------------------------
 
-
 import os
 import sys
 from collections import OrderedDict
@@ -18,7 +17,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Table, UniqueConstra
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
- 
+
 Base = declarative_base()
 
 #for yUML model
@@ -45,7 +44,7 @@ team_game = Table('team_game', Base.metadata,
 
 class Season(Base):
     """
-    Season has everything related to a season in soccer with the name, number of games, 
+    Season has everything related to a season in soccer with the name, number of games,
     number of teams, year and has relationships to teams, standings, and games
     """
     __tablename__ = 'season'
@@ -111,7 +110,7 @@ class Season(Base):
 
 class Standing(Base):
     """
-    Standing has everything related to a standing in soccer with the rank, matchesPlayed, 
+    Standing has everything related to a standing in soccer with the rank, matchesPlayed,
     points, goalsFor, and goalsAgainst
     """
     __tablename__ = 'standing'
@@ -127,7 +126,11 @@ class Standing(Base):
     goalsAgainst = Column(Integer)
     #relationships
     season_id = Column(Integer, ForeignKey('season_id'))
+<<<<<<< HEAD
     Rseason = relationship("Season") #many to 1 
+=======
+    Rseason = relationship("Season") #many to 1
+>>>>>>> dev
     team_id = Column(Integer, ForeignKey('team_id'))
     Rteam = relationship("Team") #many to 1
 
@@ -345,12 +348,11 @@ class Player(Base):
         return displayDict
 
 
- 
+
 # Create an engine that stores data in the local directory's
 # sqlalchemy_example.db file.
 #engine = create_engine('sqlite:///sqlalchemy_example.db')
- 
+
 # Create all tables in the engine. This is equivalent to "Create Table"
 # statements in raw SQL.
 #Base.metadata.create_all(engine)
-

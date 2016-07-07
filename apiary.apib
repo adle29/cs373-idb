@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://goalazostats.me/#/
+HOST: http://polls.apiblueprint.org/
 
 # golazo
 
@@ -30,12 +30,11 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
            "numGames":380
          }]
           
-## Filter Seasons [/seasons/{season_id}/{year}]
+## Filter Seasons [/seasons/{year}]
      
 ### List all seasons in a Year [GET]
 
 + Parameters
-    + season_id (number) - ID of the season in the form of an integer
     + year (number) - year of the season in the form of an integer
 
 + Response 200 (application/json)
@@ -59,7 +58,7 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
            "numGames":380
          }]
 
-## Season [/season/{season_id}]
+## Specific Season [/season/{season_id}]
       
 ### View a specific Seasons [GET]
 
@@ -181,7 +180,7 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
             }]
         }
 
-## Game [/game/{game_id}]
+## Specific Game [/game/{game_id}]
 
 ### View a specific game [GET]
  
@@ -205,10 +204,10 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
 
 ## Teams [/season/{season_id}/teams]
 
+### List teams playing in a season [GET]
+
 + Parameters
     + season_id (number) - ID of the season in the form of an integer
-    
-### List teams playing in a season [GET]
 
 + Response 200 (application/json)
         
@@ -242,7 +241,7 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
         }
 
 
-## Team [/team/{team_id}]
+## Specific Team [/team/{team_id}]
 
 ### View a specific game [GET]
  
@@ -257,4 +256,56 @@ Golazo is a simple API allowing consumers to view soccer seasons, games, teams a
             "nickname": "Foxes",
             "marketVal": "95,500,000 €",
             "logoURL": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png"
+        }
+        
+
+## Players [/players]
+
+### List all players [GET]
+
++ Response 200 (application/json)
+        
+        {
+            "count": 3,
+            "players": [{
+                "id": 66,
+                "name": "Lionel Messi",
+                "nation": "Argentina",
+                "birth": "24 Jun 1987",
+                "pos": "Forward",
+                "jerseyNum": 10
+            }, {
+                "id": 181,
+                "name": "Cristiano Ronaldo",
+                "nation": "Portugal",
+                "birth": "5 Feb 1985",
+                "pos": "Forward/Winger",
+                "jerseyNum": 7
+            }, {
+                "id": 76,
+                "name": "Tim Howard",
+                "nation": "United States",
+                "birth": "6 Mar 1979",
+                "pos": "Goalkeeper",
+                "jerseyNum": 1
+            }]
+        }
+
+
+## Specific Player [/players/{player_id}]
+
+### View a specific player [GET]
+ 
++ Parameters
+    + player_id (number) - ID of the player in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": 76,
+            "name": "Tim Howard",
+            "nation": "United States",
+            "birth": "6 Mar 1979",
+            "pos": "Goalkeeper",
+            "jerseyNum": 1
         }

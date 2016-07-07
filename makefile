@@ -7,8 +7,8 @@ else
 endif
 
 
-Site.log:
-	git log > site.log
+IDB1.log:
+	git log > IDB1.log
 
 check:
 
@@ -26,7 +26,10 @@ status:
 	git remote -v
 	git status
 
+<<<<<<< HEAD
+=======
 models.html: apps/models.py
 	pydoc3 -w models
 
+>>>>>>> 06650737e5adfa9ef77e4ed645de6f3c8dd3340d
 test: 

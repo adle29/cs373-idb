@@ -24,6 +24,18 @@ var routes = myApp.config(['$httpProvider', function($httpProvider) {
       templateUrl: '/static/partials/games.html',
       controller: 'games'
     })
+    .when('/players',{
+      templateUrl: '/static/partials/players.html',
+      controller: 'players'
+    })
+    .when('/teams',{
+      templateUrl: '/static/partials/teams.html',
+      controller: 'teams'
+    })
+    .when('/games',{
+      templateUrl: '/static/partials/games.html',
+      controller: 'games'
+    })
     .when('/seasons',{
       templateUrl: '/static/partials/seasons.html',
       controller: 'seasons'
@@ -214,6 +226,8 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
 routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   $scope.seasons = [];
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
 
   //later change to url = /seasons
   $http.get('/data/seasons.json').then(function(response){
@@ -242,7 +256,10 @@ routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http
   $scope.games = [];
   $timeout = twttr.widgets.load();
 
-  $http.get('/games').then(function(response){
+  $scope.propertyName = 'date'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+
+  $http.get('/data/game.json').then(function(response){
     console.log(response);
     var res = response.data.fixtures;
     for (var i = 0; i < res.length; i++) {
@@ -255,5 +272,59 @@ routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http
         $scope.games.push(game);
     }
     console.log($scope.games);
+  });
+}]);
+
+routes.controller('players',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+  $scope.games = [];
+
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+
+  $http.get('/data/players.json').then(function(response){
+    console.log(response);
+    var res = response.data;
+    var players = res.players;
+    $scope.players = [];
+
+    for(var i in players){
+      var player = players[i];
+      var newPlayer = {
+        name: player.name,
+        nationality: player.nationality,
+        position: player.position,
+        jerseyNumber: player.jerseyNumber,
+        dateOfBirth: player.dateOfBirth
+      };
+      $scope.players.push(newPlayer);
+    }
+
+  });
+}]);
+
+routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+
+  $scope.propertyName = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+
+  $http.get('/data/teams.json').then(function(response){
+    console.log(response);
+    var res = response.data;
+    $scope.teams = [];
+
+    for (var i in res) {
+      var team = res[i];
+
+      var newTeam = {
+        logo:team.crestUrl,
+        id:team.id,
+        name:team.name,
+        shortName:team.shortName,
+        squadMarketValue: team.squadMarketValue
+      };
+
+      $scope.teams.push(newTeam);
+    }
+
   });
 }]);

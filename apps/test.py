@@ -9,6 +9,7 @@ import app
 class DBTestCases(unittest.TestCase):
 
     # Tests that every player is readable
+
     def test_players_readable_1(self):
         db.session.add(self.player)
         db.session.commit()
@@ -49,6 +50,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(davidDeGea.JerneyNum, 1)
 
     # Tests that every team is readable
+
     def test_teams_readable_1(self):
         db.session.add(self.team)
         db.session.commit()
@@ -83,6 +85,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(bMunich.marketVal, "$57,000,000")
 
     # Tests that every game is readable
+
     def test_games_readable_1(self):
         db.session.add(self.game)
         db.session.commit()
@@ -123,6 +126,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(psgOpener.matchDay, 3)
 
     # Tests that every season is readable
+
     def test_season_readable_1(self):
         db.session.add(self.season)
         db.session.commit()
@@ -169,6 +173,7 @@ class DBTestCases(unittest.TestCase):
         self.assertEqual(ligue1.curMatchDay, 1
 
     # Tests that every standing is readable
+    
     def test_standings_readable_1(self):
         db.session.add(self.standings)
         db.session.commit()

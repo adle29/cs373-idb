@@ -12,7 +12,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import Season
+from models import *
 
 # Requests headers
 headers = { 'X-Auth-Token': '1a83f9cdfa664421bc7c1997f1409218', 'X-Response-Control': 'minified' }
@@ -37,10 +37,10 @@ def season_teams(season_id):
     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/teams', headers=headers)
     return r.text
 
-# @app.route('/season/players/<season_id>')
-# def season_players(season_id):
-#     r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
-#     return r.text
+@app.route('/season/players/<season_id>')
+def season_players(season_id):
+    r = requests.get('http://api.football-data.org/v1/competitions/'+season_id+'/leagueTable', headers=headers)
+    return r.text
 
 @app.route('/data/<filename>')
 def data(filename):

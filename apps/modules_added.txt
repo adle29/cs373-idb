@@ -1,3 +1,4 @@
+*****STEPS TO INSTALL DATABASE IN MAC****
 
 #install postgres
 brew update
@@ -6,23 +7,18 @@ pip3 install psycopg2
 pip install psycopg2==2.6.1 Flask-SQLAlchemy===2.1 Flask-Migrate==1.8.0
 
 #as root delete
-/usr/local/var/postgres
+rm  -r /usr/local/var/postgres
 
+#then
 initdb -D /usr/local/var/postgres/
 
 #start database
 pg_ctl -D /usr/local/var/postgres/ -l logfile start
-createdb <database_name>
-psql -d <database_name>
-psql -d golazo-dev
+psql -d golazo_dev #createdb <database_name>
+psql -d golazo_dev
 export DATABASE_URL="postgresql://localhost/golazo_dev"
 export APP_SETTINGS=config.DevelopmentConfig
 
-#setup server-database Flask-postgresl
-https://realpython.com/blog/python/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
-
-#to run migrations
-http://flask-migrate.readthedocs.io/en/latest/
 pip install Flask-Migrate
 pip3 install Manager
 createdb golazo-dev
@@ -31,6 +27,35 @@ python3 manage.py db migrate
 python3 manage.py db upgrade
 
 #psql
+psql #start postgresql console 
 \q  : exit
-\connect <database name>
-CREATE <database_name>
+\connect golazo_dev #\connect <database name>
+\dt #show tables
+
+#to create data bse
+#CREATE <database_name>
+
+#setup server-database Flask-postgresl
+https://realpython.com/blog/python/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
+
+#to run migrations
+http://flask-migrate.readthedocs.io/en/latest/
+
+#to save stuff in the database
+https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/
+# save the results
+try:
+    from models import Result
+    result = Result(
+        url=url,
+        result_all=raw_word_count,
+        result_no_stop_words=no_stop_words_count
+    )
+    db.session.add(result)
+    db.session.commit()
+    return result.id
+
+#WHEN MODELS CHANGE YOU HAVE TO RUN THIS, SO THE DATABASE UPDATES
+python3 manage.py db init
+python3 manage.py db migrate
+python3 manage.py db upgrade

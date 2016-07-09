@@ -1,13 +1,23 @@
 #!flask/bin/python
+import os
 from flask import Flask
 from flask import render_template, send_file
+from flask_sqlalchemy import SQLAlchemy
 import requests
 import ast
 
+# Server and DB data
 app = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
+from models import Season
+
+# Requests headers
 headers = { 'X-Auth-Token': '1a83f9cdfa664421bc7c1997f1409218', 'X-Response-Control': 'minified' }
 
+# Routes
 @app.route('/')
 def index():
     return send_file("templates/index.html")

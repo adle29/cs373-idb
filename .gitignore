@@ -93,3 +93,5 @@ ENV/
 *.temp
 
 .DS_Store
+.pyc
+/apps/migrations

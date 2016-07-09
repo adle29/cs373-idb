@@ -1,0 +1,44 @@
+LOG:  database system was interrupted; last known up at 2016-07-09 15:14:41 CDT
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at 0/17361F0
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2016-07-09 15:30:32 CDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "sniper" does not exist
+FATAL:  database "golazo-dev" does not exist
+FATAL:  database "golazo_dev" does not exist
+FATAL:  database "golazo_dev" does not exist
+FATAL:  database "golaazo_dev" does not exist
+FATAL:  database "golazo_dev" does not exist
+FATAL:  database "golazo_dev" does not exist
+ERROR:  syntax error at or near "DROP" at character 28
+STATEMENT:  DROP TABLE alembic_version
+	DROP TABLE alembic_version;
+ERROR:  database "golazo-dev" already exists
+STATEMENT:  CREATE DATABASE "golazo-dev";
+ERROR:  syntax error at or near "golazo" at character 6
+STATEMENT:  DROP golazo-dev
+	DROP DATABASE golazo-dev
+	DROP DATABASE golazo-dev
+	DROP DATABASE 
+	DROP DATABASE 
+	DROP DATABASE golazo_dev
+	DROP DATABASE golazo_dev;
+ERROR:  syntax error at or near "-" at character 21
+STATEMENT:  drop database golazo-dev;
+ERROR:  syntax error at or near "'golazo-dev'" at character 15
+STATEMENT:  drop database 'golazo-dev';
+ERROR:  cannot drop the currently open database
+STATEMENT:  drop database "golazo-dev";
+FATAL:  database "golazo_dev" does not exist
+ERROR:  syntax error at or near "databse" at character 6
+STATEMENT:  drop databse "golazo-dv";

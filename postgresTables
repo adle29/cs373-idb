@@ -1,0 +1,67 @@
+CREATE TABLE seasons {
+	season_id serial PRIMARY KEY,
+	season_name varchar (250) NOT NULL,
+	league varchar (250) NOT NULL,
+	year smallint NOT NULL,
+	num_teams smallint NOT NULL,
+	num_games smallint NOT NULL,
+	num_match_days smallint NOT NULL,
+	cur_match_day smallint NOT NULL,
+
+	game_ids int REFERENCES games,
+	standing_ids int REFERENCES standings,
+}
+
+# many to many relationship between seasons and teams
+CREATE season_team {
+	season_id int REFERENCES seasons 
+	game_id	int REFERENCES games,
+}
+
+CREATE TABLE standings {
+	standing_id serial PRIMARY KEY,
+	match_day smallint NOT NULL,
+	group varchar (250) NOT NULL,
+	rank smallint NOT NULL,
+	matches_played smallint NOT NULL,
+	points smallint NOT NULL,
+	goals_for smallint NOT NULL,
+	goals_against smallint NOT NULL,
+	team_ids int REFERENCES teams,
+	
+}
+
+CREATE TABLE teams {
+	team_id serial PRIMARY KEY,
+	team_name varchar (250) NOT NULL,
+	logoURL varchar (250) NOT NULL,
+	nickname varchar (250),
+	market_val varchar (250) NOT NULL,
+
+	standing_ids int REFERENCES standings,
+	player_ids int REFERENCES players
+	
+
+}
+
+CREATE TABLE games {
+	game_id serial PRIMARY KEY,
+	date date NOT NULL,
+	time time NOT NULL,
+	home_team_id int REFERENCES teams,
+	away_team_id int REFERENCES teams,
+	home_team_score smallint NOT NULL,
+	away_team_score smallint NOT NULL,
+	match_day smallint NOT NULL
+	
+}
+
+CREATE TABLE players {
+	player_id serial PRIMARY KEY,
+	player_name varchar (250) NOT NULL,
+	nation varchar (250) NOT NULL,
+	birth date NOT NULL,
+	pos varchar (250) NOT NULL,
+	jersey_Num smallint NOT NULL,
+
+}

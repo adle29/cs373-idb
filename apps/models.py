@@ -30,14 +30,14 @@ Base = db.Model #declarative_base()
 # many to many relationships
 # seasons to teams  #Base.metadata,
 season_team = db.Table('season_team',
-    db.Column('season_id', db.Integer, db.ForeignKey('season.id')),
-    db.Column('team_id', db.Integer, db.ForeignKey('team.id')),
+    db.Column('season_id', db.Integer, db.ForeignKey('season.seasonID')),
+    db.Column('team_id', db.Integer, db.ForeignKey('team.teamID')),
     extend_existing=True
 )
 # games to teams
 team_game = db.Table('team_game',
-    db.Column('team_id', db.Integer, db.ForeignKey('team.id')),
-    db.Column('game_id', db.Integer, db.ForeignKey('game.id')),
+    db.Column('team_id', db.Integer, db.ForeignKey('team.teamID')),
+    db.Column('game_id', db.Integer, db.ForeignKey('game.gameID')),
     extend_existing=True
 )
 
@@ -54,7 +54,7 @@ class Season(Base):
     __table_args__ = {'extend_existing': True}
     # Here we define columns for the table Season
     # Notice that each column is also a normal Python instance attribute.
-    id = db.Column(Integer, primary_key=True)
+    seasonID = db.Column(Integer, primary_key=True)
     seasonName = db.Column(String(250), nullable=False)
     league = db.Column(String(250))
     year = db.Column(Integer)
@@ -68,18 +68,18 @@ class Season(Base):
     Steam = db.relationship(
         "Team", secondary=season_team, back_populates="Tseason")  # many to many
 
-    def __init__(self, id, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
+    def __init__(self, seasonID, seasonName, league, year, numTeams, numGames, numMatchdays, curMatchday):
         """
         itializes everything in the Season class
         :param self:
-        :param id: Integer
+        :param seasonID: Integer
         :param league: String
         :param numTeams: Integer
         :param numGames: Integer
         :param numMatchdays: Integer
         :param curMatchday: Integer
         """
-        self.id = id
+        self.seasonID = seasonID
         self.seasonName = seasonName
         self.league = league
         self.year = year
@@ -95,7 +95,7 @@ class Season(Base):
         :rtype: OrderedDict
         """
         displayDict = OrderedDict()
-        displayDict['id'] = self.id
+        displayDict['seasonID'] = self.seasonID
         displayDict['seasonName'] = self.seasonName.title()
         displayDict['league'] = self.league
         displayDict['year'] = self.year
@@ -122,7 +122,7 @@ class Standing(Base):
     __table_args__ = {'extend_existing': True}
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
-    id = db.Column(Integer, primary_key=True)
+    standingID = db.Column(Integer, primary_key=True)
     matchday = db.Column(Integer, nullable=False)
     group = db.Column(String(250))
     rank = db.Column(Integer)
@@ -131,16 +131,16 @@ class Standing(Base):
     goalsFor = db.Column(Integer)
     goalsAgainst = db.Column(Integer)
     # relationships
-    season_id = db.Column(db.Integer, db.ForeignKey('season.id'))
+    season_id = db.Column(db.Integer, db.ForeignKey('season.seasonID'))
     Rseason = db.relationship("Season")  # many to 1
-    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    team_id = db.Column(db.Integer, db.ForeignKey('team.teamID'))
     Rteam = db.relationship("Team")  # many to 1
 
-    def __init__(self, id, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
+    def __init__(self, standingID, matchday, group, rank, matchesPlayed, points, goalsFor, goalsAgainst):
         """
         itializes everything in the Standing class
         :param self:
-        :param id: Integer
+        :param standingID: Integer
         :param matchday: Integer
         :param group: String
         :param rank: Integer
@@ -149,7 +149,7 @@ class Standing(Base):
         :param goalsFor: Integer
         :param goalsAgainst: Integer
         """
-        self.id = id
+        self.standingID = standingID
         self.matchday = matchday
         self.group = group
         self.rank = rank
@@ -165,7 +165,7 @@ class Standing(Base):
         :rtype: OrderedDict
         """
         displayDict = OrderedDict()
-        displayDict['id'] = self.id
+        displayDict['standingID'] = self.standingID
         displayDict['matchday'] = self.matchday
         displayDict['group'] = self.group
         displayDict['rank'] = self.rank
@@ -189,7 +189,7 @@ class Team(Base):
     __table_args__ = {'extend_existing': True}
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
-    id = db.Column(db.Integer, primary_key=True)
+    teamID = db.Column(db.Integer, primary_key=True)
     teamName = db.Column(db.String(250), nullable=False)
     logoURL = db.Column(db.String(250))
     nickname = db.Column(db.String(250))
@@ -202,17 +202,17 @@ class Team(Base):
     Tgame = db.relationship(
         "Game", secondary=team_game, back_populates="Gteam")  # many to many
 
-    def __init__(self, id, teamName, logoURL, nickname, marketVal):
+    def __init__(self, teamID, teamName, logoURL, nickname, marketVal):
         """
         initializes everything in the Team class
         :param self:
-        :param id: Integer
+        :param teamID: Integer
         :param teamName: String
         :param logoURL: String
         :param nickname: String
         :param marketVal: String
         """
-        self.id = id
+        self.teamID = teamID
         self.teamName = teamName
         self.logoURL = logoURL
         self.nickname = nickname
@@ -225,7 +225,7 @@ class Team(Base):
         :rtype: OrderedDict
         """
         displayDict = OrderedDict()
-        displayDict['id'] = self.id
+        displayDict['teamID'] = self.teamID
         displayDict['teamName'] = self.teamName.title()
         displayDict['logoURL'] = self.logoURL
         displayDict['nickname'] = self.nickname
@@ -247,7 +247,7 @@ class Game(Base):
     __table_args__ = {'extend_existing': True}
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
-    id = db.Column(db.Integer, primary_key=True)
+    gameID = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.String(250))
     time = db.Column(db.String(250))
     awayTeam = db.Column(db.String(250))
@@ -256,16 +256,16 @@ class Game(Base):
     homeTeamScore = db.Column(db.Integer)
     matchDay = db.Column(Integer)
     # relationships
-    season_id = db.Column(db.Integer, db.ForeignKey('season.id'))
+    season_id = db.Column(db.Integer, db.ForeignKey('season.seasonID'))
     Gseason = db.relationship("Season", back_populates="Sgame")  # many to 1
     Gteam = db.relationship(
         "Team", secondary=team_game, back_populates="Tgame")  # many to many
 
-    def __init__(self, id, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday):
+    def __init__(self, gameID, date, time, awayTeam, homeTeam, awayTeamScore, homeTeamScore, matchday):
         """
         itializes everything in the Game class
         :param self:
-        :param id: Integer
+        :param gameID: Integer
         :param date: String
         :param time: String
         :param awayTeam: String
@@ -273,7 +273,7 @@ class Game(Base):
         :param awayTeamScore: Integer
         :param hometeamScore Integer
         """
-        self.id = id
+        self.gameID = gameID
         self.date = date
         self.time = time
         self.awayTeam = awayTeam
@@ -289,7 +289,7 @@ class Game(Base):
         :rtype: OrderedDict
         """
         displayDict = OrderedDict()
-        displayDict['id'] = self.id
+        displayDict['gameID'] = self.gameID
         displayDict['season_name'] = self.season_name.title()
         displayDict['league'] = self.league
         displayDict['year'] = self.year
@@ -312,28 +312,28 @@ class Player(Base):
     __table_args__ = {'extend_existing': True}
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
-    id = db.Column(db.Integer, primary_key=True)
+    playerID = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), nullable=False)
     nation = db.Column(db.String(250))
     birth = db.Column(db.String(250))
     pos = db.Column(db.String(250))
     jerseyNum = db.Column(db.Integer)
     # relationships
-    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    team_id = db.Column(db.Integer, db.ForeignKey('team.teamID'))
     Pteam = db.relationship("Team")  # many to 1
 
-    def __init__(self, id, name, nation, birth, pos, jerseyNum):
+    def __init__(self, playerID, name, nation, birth, pos, jerseyNum):
         """
         itializes everything in the player class
         :param self:
-        :param id: Integer
+        :param playerID: Integer
         :param name: String
         :param nation: String
         :param birth: String
         :param pos: String
         :param jerseyNum: Integer
         """
-        self.id = id
+        self.playerID = playerID
         self.name = name
         self.nation = nation
         self.birth = birth
@@ -347,7 +347,7 @@ class Player(Base):
         :rtype: OrderedDict
         """
         displayDict = OrderedDict()
-        displayDict['id'] = self.id
+        displayDict['playerID'] = self.playerID
         displayDict['name'] = self.name.title()
         displayDict['nation'] = self.nation
         displayDict['birth'] = self.birth

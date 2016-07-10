@@ -10,7 +10,6 @@ import app
 class DBTestCases(unittest.TestCase):
 
     # Tests that every player is readable
-
     def test_players_readable_1(self):
         db.session.add(self.player)
         db.session.commit()

@@ -55,6 +55,7 @@ class Season(Base):
     # Here we define columns for the table Season
     # Notice that each column is also a normal Python instance attribute.
     season_id = db.Column(Integer, primary_key=True)
+    api_season_id = db.Column(Integer)
     season_name = db.Column(String(250), nullable=False)
     league = db.Column(String(250))
     year = db.Column(Integer)
@@ -68,7 +69,7 @@ class Season(Base):
     s_team = db.relationship(
         "Team", secondary=season_team, back_populates="t_season")  # many to many
 
-    def __init__(self, season_id, season_name, league, year, num_teams, num_games, num_match_days, cur_match_day):
+    def __init__(self, api_season_id, season_name, league, year, num_teams, num_games, num_match_days, cur_match_day):
         """
         itializes everything in the Season class
         :param self:
@@ -79,7 +80,7 @@ class Season(Base):
         :param num_match_days: Integer
         :param cur_match_day: Integer
         """
-        self.season_id = season_id
+        self.api_season_id = api_season_id
         self.season_name = season_name
         self.league = league
         self.year = year
@@ -123,6 +124,7 @@ class Standing(Base):
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
     standing_id = db.Column(Integer, primary_key=True)
+    api_standing_id = db.Column(Integer)
     match_day = db.Column(Integer, nullable=False)
     group = db.Column(String(250))
     rank = db.Column(Integer)
@@ -136,11 +138,11 @@ class Standing(Base):
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
     r_team = db.relationship("Team")  # many to 1
 
-    def __init__(self, standing_id, match_day, group, rank, matches_played, points, goals_for, goals_against):
+    def __init__(self, api_standing_id, match_day, group, rank, matches_played, points, goals_for, goals_against):
         """
         itializes everything in the Standing class
         :param self:
-        :param standing_id: Integer
+        :param api_standing_id: Integer
         :param match_day: Integer
         :param group: String
         :param rank: Integer
@@ -149,7 +151,7 @@ class Standing(Base):
         :param goals_for: Integer
         :param goals_against: Integer
         """
-        self.standing_id = standing_id
+        self.api_standing_id = api_standing_id
         self.match_day = match_day
         self.group = group
         self.rank = rank
@@ -190,6 +192,7 @@ class Team(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     team_id = db.Column(db.Integer, primary_key=True)
+    api_team_id = db.Column(Integer)
     team_name = db.Column(db.String(250), nullable=False)
     logo_url = db.Column(db.String(250))
     nickname = db.Column(db.String(250))
@@ -202,17 +205,17 @@ class Team(Base):
     t_game = db.relationship(
         "Game", secondary=team_game, back_populates="g_team")  # many to many
 
-    def __init__(self, team_id, team_name, logo_url, nickname, market_val):
+    def __init__(self, api_team_id, team_name, logo_url, nickname, market_val):
         """
         initializes everything in the Team class
         :param self:
-        :param team_id: Integer
+        :param api_team_id: Integer
         :param team_name: String
         :param logo_url: String
         :param nickname: String
         :param market_val: String
         """
-        self.team_id = team_id
+        self.api_team_id = api_team_id
         self.team_name = team_name
         self.logo_url = logo_url
         self.nickname = nickname
@@ -248,6 +251,7 @@ class Game(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     game_id = db.Column(db.Integer, primary_key=True)
+    api_game_id = db.Column(Integer)
     date = db.Column(db.String(250))
     time = db.Column(db.String(250))
     away_team = db.Column(db.String(250))
@@ -257,15 +261,15 @@ class Game(Base):
     match_day = db.Column(Integer)
     # relationships
     season_id = db.Column(db.Integer, db.ForeignKey('season.season_id'))
-    g_season = db.relationship("Season", back_populates="s_game")  # many to 1
+    g_season = db.relationship("Season")  # many to 1
     g_team = db.relationship(
         "Team", secondary=team_game, back_populates="t_game")  # many to many
 
-    def __init__(self, game_id, date, time, away_team, home_team, away_team_score, home_team_score, match_day):
+    def __init__(self, api_game_id, date, time, away_team, home_team, away_team_score, home_team_score, match_day):
         """
         itializes everything in the Game class
         :param self:
-        :param game_id: Integer
+        :param api_game_id: Integer
         :param date: String
         :param time: String
         :param away_team: String
@@ -273,7 +277,7 @@ class Game(Base):
         :param away_team_score: Integer
         :param home_team_score Integer
         """
-        self.game_id = game_id
+        self.api_game_id = api_game_id
         self.date = date
         self.time = time
         self.away_team = away_team
@@ -313,6 +317,7 @@ class Player(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     player_id = db.Column(db.Integer, primary_key=True)
+    api_player_id = db.Column(Integer)
     name = db.Column(db.String(250), nullable=False)
     nation = db.Column(db.String(250))
     birth = db.Column(db.String(250))
@@ -322,18 +327,18 @@ class Player(Base):
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
     p_team = db.relationship("Team")  # many to 1
 
-    def __init__(self, player_id, name, nation, birth, pos, jersey_num):
+    def __init__(self, api_player_id, name, nation, birth, pos, jersey_num):
         """
         itializes everything in the player class
         :param self:
-        :param player_id: Integer
+        :param api_team_id: Integer
         :param name: String
         :param nation: String
         :param birth: String
         :param pos: String
         :param jersey_num: Integer
         """
-        self.player_id = player_id
+        self.api_player_id = api_player_id
         self.name = name
         self.nation = nation
         self.birth = birth

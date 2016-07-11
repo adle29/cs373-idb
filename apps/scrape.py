@@ -165,15 +165,15 @@ def team_api_ids():
 
 def main():
     populate_seasons()
-
     season_ids = season_api_ids()
+
     for season_id in season_ids:
-    	populate_teams_for_season(season_id)
-    	populate_games_for_season(season_id)
+        populate_teams_for_season(season_id)
+        populate_games_for_season(season_id)
         populate_standings_for_season(season_id)
 
-
     team_ids = team_api_ids()
+
     for team_id in team_ids:
         populate_players_for_team(team_id)
 

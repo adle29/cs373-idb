@@ -124,7 +124,6 @@ class Standing(Base):
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
     standing_id = db.Column(Integer, primary_key=True)
-    api_standing_id = db.Column(Integer, unique=True)
     match_day = db.Column(Integer, nullable=False)
     group = db.Column(String(250))
     rank = db.Column(Integer)
@@ -134,9 +133,9 @@ class Standing(Base):
     goals_against = db.Column(Integer)
     # relationships
     season_id = db.Column(db.Integer, db.ForeignKey('season.season_id'))
-    r_season = db.relationship("Season", backref="s_standing")  # many to 1
+    r_season = db.relationship("Season")  # many to 1
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    r_team = db.relationship("Team", backref="t_standing")  # many to 1
+    r_team = db.relationship("Team")  # many to 1
 
     def __init__(self, api_standing_id, match_day, group, rank, matches_played, points, goals_for, goals_against):
         """
@@ -262,12 +261,12 @@ class Game(Base):
     match_day = db.Column(Integer)
     # relationships
     season_id = db.Column(db.Integer, db.ForeignKey('season.season_id'))
-    g_season = db.relationship("Season", backref="s_game")  # many to 1
+    g_season = db.relationship("Season")  # many to 1
     #g_team = db.relationship("Team", secondary=team_game, back_populates="t_game")  # many to many
     home_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_home = db.relationship("Team", backref="t_game_home")
+    g_team_home = db.relationship("Team")
     away_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_away = db.relationship("Team", backref="t_game_away")
+    g_team_away = db.relationship("Team")
 
 
 
@@ -323,7 +322,6 @@ class Player(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     player_id = db.Column(db.Integer, primary_key=True)
-    api_player_id = db.Column(Integer, unique=True)
     name = db.Column(db.String(250), nullable=False)
     nation = db.Column(db.String(250))
     birth = db.Column(db.String(250))
@@ -331,7 +329,7 @@ class Player(Base):
     jersey_num = db.Column(db.Integer)
     # relationships
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    p_team = db.relationship("Team", backref="t_player")  # many to 1
+    p_team = db.relationship("Team")  # many to 1
 
     def __init__(self, api_player_id, name, nation, birth, pos, jersey_num):
         """

@@ -2,7 +2,7 @@
 import os
 import sys
 import subprocess
-import StringIO
+import io
 from flask import Flask, request, url_for
 from flask import render_template, send_file
 from flask_sqlalchemy import SQLAlchemy
@@ -83,31 +83,31 @@ def run_tests():
     test_out = []
     line = "-------------------------"
 
-    tout = StringIO.StringIO()
+    tout = io.StringIO()
 
+    cmd = 'python apps/tests.py'
     try:
-        cmd = 'python apps/tests.py'
         output = subprocess.check_output("{}".format(cmd), shell = True)
         # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
         tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception, e:
+    except Exception as e:
         tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
 
     
+    cmd = 'pylint apps/tests.py'
     try:
-        ccmd = 'pylint apps/tests.py'
         output = subprocess.check_output("{}".format(cmd), shell = True)
         # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
         tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception, e:
+    except Exception as e:
         tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
 
+    cmd = 'coverage apps/tests.py'
     try:
-        cmd = 'coverage apps/tests.py'
         output = subprocess.check_output("{}".format(cmd), shell = True)
         # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
         tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception, e:
+    except Exception as e:
         tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
 
     return tout.getvalue()

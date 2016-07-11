@@ -124,7 +124,6 @@ class Standing(Base):
     # Here we define columns for the table Standing
     # Notice that each column is also a normal Python instance attribute.
     standing_id = db.Column(Integer, primary_key=True)
-    api_standing_id = db.Column(Integer, unique=True)
     match_day = db.Column(Integer, nullable=False)
     group = db.Column(String(250))
     rank = db.Column(Integer)
@@ -323,7 +322,6 @@ class Player(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     player_id = db.Column(db.Integer, primary_key=True)
-    api_player_id = db.Column(Integer, unique=True)
     name = db.Column(db.String(250), nullable=False)
     nation = db.Column(db.String(250))
     birth = db.Column(db.String(250))

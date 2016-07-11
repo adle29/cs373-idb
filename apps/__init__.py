@@ -1,6 +1,9 @@
 #!flask/bin/python
 import os
-from flask import Flask
+import sys
+import subprocess
+import StringIO
+from flask import Flask, request, url_for
 from flask import render_template, send_file
 from flask_sqlalchemy import SQLAlchemy
 import requests
@@ -72,6 +75,42 @@ def players(team_id):
 def games():
     r = requests.get('http://api.football-data.org/v1/fixtures/', headers=headers)
     return r.text
+
+
+@app.route('/runtests')
+def run_tests():
+
+    test_out = []
+    line = "-------------------------"
+
+    tout = StringIO.StringIO()
+
+    try:
+        cmd = 'python apps/tests.py'
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception, e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    
+    try:
+        ccmd = 'pylint apps/tests.py'
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception, e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    try:
+        cmd = 'coverage apps/tests.py'
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception, e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    return tout.getvalue()
 
 if __name__ == '__main__':
     app.run(debug=True)

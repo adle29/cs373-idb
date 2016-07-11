@@ -18,7 +18,8 @@ var routes = myApp.config(['$httpProvider', function($httpProvider) {
       controller: 'main'
     }).
     when('/about',{
-      templateUrl: '/static/partials/about.html'
+      templateUrl: '/static/partials/about.html',
+      controller: 'about'
     })
     .when('/games',{
       templateUrl: '/static/partials/games.html',
@@ -327,4 +328,22 @@ routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http
     }
 
   });
+}]);
+
+routes.controller('about',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+
+  $scope.testOut = '';
+
+  $scope.getTestOutput = function() {
+    $http.get('/runtests').then(function(response) {
+      var res = response.data;
+      $scope.testOut = res;
+    });
+  };
+
+  $scope.clearTestOutput = function() {
+      $scope.testOut = '';
+  };
+
+
 }]);

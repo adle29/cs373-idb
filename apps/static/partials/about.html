@@ -115,4 +115,22 @@
       <br><br>
   </div>
 
+  <div>
+    <div class= "travis-status">
+      <h6>Master</h6>
+      <img src="https://travis-ci.org/adle29/cs373-idb.svg?branch=master">
+      <h6>Dev</h6>
+      <img src="https://travis-ci.org/adle29/cs373-idb.svg?branch=dev">
+    </div>
+    <br><br>
+
+    <div ng-controller="about">
+     <p>{{testOut}}</p>
+     <button ng-click="getTestOutput()">Run Tests</button>
+     <button ng-click="clearTestOutput()">Clear</button>
+    </div>
+    <br><br>
+
+  </dev>
+
 </div><!-- /.container -->

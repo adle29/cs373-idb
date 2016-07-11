@@ -264,9 +264,9 @@ class Game(Base):
     g_season = db.relationship("Season")  # many to 1
     #g_team = db.relationship("Team", secondary=team_game, back_populates="t_game")  # many to many
     home_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_home = db.relationship("Team")
+    g_team_home = db.relationship("Team", foreign_keys=[home_team_id])
     away_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_away = db.relationship("Team")
+    g_team_away = db.relationship("Team", foreign_keys=[away_team_id])
 
 
 

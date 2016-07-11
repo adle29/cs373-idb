@@ -5,6 +5,59 @@
   <p class="lead">Our Team</p>
   </div>
 
+  <!-- testing  -->
+  <div class="row">
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle  img-center" src="/static/img/abraham.jpg" alt="">
+          <h3>Abraham Adberstein
+              <small>Job Title</small>
+          </h3>
+          <p>I am a senior studying Computer Science at the University of Texas at Austin. I have experience in web development, mobile development, and cybersecurity. My major responsibilities were setting up the server and the website.  </p>
+          <ul>
+            <li>10 of commits. </li>
+            <li>11 of issues. </li>
+            <li>0 of unit tests.</li>
+          </ul>
+      </div>
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+          <h3>John Smith
+              <small>Job Title</small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+          <h3>John Smith
+              <small>Job Title</small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+          <h3>John Smith
+              <small>Job Title</small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+          <h3>John Smith
+              <small>Job Title</small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 text-center">
+          <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+          <h3>John Smith
+              <small>Job Title</small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+      </div>
+  </div>
+
+  <!-- testing  -->
+
 
   <div class="container">
     <div class="media">
@@ -115,22 +168,22 @@
       <br><br>
   </div>
 
-  <div>
-    <div class= "travis-status">
-      <h6>Master</h6>
-      <img src="https://travis-ci.org/adle29/cs373-idb.svg?branch=master">
-      <h6>Dev</h6>
-      <img src="https://travis-ci.org/adle29/cs373-idb.svg?branch=dev">
-    </div>
-    <br><br>
 
-    <div ng-controller="about">
-     <p>{{testOut}}</p>
-     <button ng-click="getTestOutput()">Run Tests</button>
-     <button ng-click="clearTestOutput()">Clear</button>
-    </div>
-    <br><br>
 
-  </dev>
+  <div class= "travis-status">
+    <h4>Tests:</h4>
+    <br>
+    <h6> Master <img src="https://travis-ci.org/adle29/cs373-idb.svg?branch=master"></h6>
+    <h6> Dev <img  src="https://travis-ci.org/adle29/cs373-idb.svg?branch=dev"></h6>
+  </div>
+  <br><br>
+
+  <div >
+   <button class="btn" ng-click="getTestOutput()">Run Tests</button>
+   <button class="btn" ng-click="clearTestOutput()">Clear</button>
+    </br></br>
+   <pre class="jumbotron">{{testOut}}</pre>
+  </div>
+  <br><br>
 
 </div><!-- /.container -->

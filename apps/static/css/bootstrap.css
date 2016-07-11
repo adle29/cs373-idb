@@ -684,7 +684,8 @@ dl.row > dd + dt {
 }
 
 .img-circle {
-  border-radius: 50%;
+  border-radius: 10%;
+  clip: rect(0px, 50px, 50px, 0px);
 }
 
 .figure {

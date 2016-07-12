@@ -202,8 +202,8 @@ class Team(Base):
     t_standing = db.relationship("Standing", back_populates="r_team")  # 1 to many
     t_player = db.relationship("Player", back_populates="p_team")  # 1 to many
     #t_game = db.relationship("Game", secondary=team_game, back_populates="g_team")  # many to many
-    t_game_home = db.relationship("Game", back_populates="g_team_home") # 1 to many
-    t_game_away = db.relationship("Game", back_populates="g_team_away") # 1 to many
+    #t_game_home = db.relationship("Game", back_populates="g_team_home") # 1 to many
+    #t_game_away = db.relationship("Game", back_populates="g_team_away") # 1 to many
 
     def __init__(self, api_team_id, team_name, logo_url, nickname, market_val):
         """
@@ -264,9 +264,9 @@ class Game(Base):
     g_season = db.relationship("Season")  # many to 1
     #g_team = db.relationship("Team", secondary=team_game, back_populates="t_game")  # many to many
     home_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_home = db.relationship("Team")
+    g_team_home = db.relationship("Team", backref='t_game_home', foreign_keys=[home_team_id])
     away_team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
-    g_team_away = db.relationship("Team")
+    g_team_away = db.relationship("Team", backref='t_game_away', foreign_keys=[away_team_id])
 
 
 

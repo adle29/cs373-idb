@@ -15,7 +15,6 @@ def populate_seasons():
     response = make_request(url)
     res = json.loads(response)
     for season in res:
-        # try:
         result = Season(
         	api_season_id = season["id"],
         	season_name = season["caption"],
@@ -27,10 +26,6 @@ def populate_seasons():
         	cur_match_day = season["currentMatchday"]
         )
         db.session.add(result)
-        db.session.commit()
-        # except:
-        #     print("error getting data")
-
 
 def populate_teams_for_season(season_id):
     # url = 'http://api.football-data.org/v1/competitions/?season=2015'
@@ -39,8 +34,6 @@ def populate_teams_for_season(season_id):
     res = json.loads(response)
     try:
         for instance in teams:
-            # try:
-
             result = Team(
             	api_team_id = instance["id"],
             	team_name = instance["name"],
@@ -49,10 +42,8 @@ def populate_teams_for_season(season_id):
             	market_val = instance["squadMarketValue"]
             )
 
-
-
             db.session.add(result)
-            db.session.commit()
+
     except:
         print("error getting data for teams for season "+ str(season_id) )
 
@@ -76,7 +67,7 @@ def populate_games_for_season(season_id):
             )
 
             db.session.add(result)
-            db.session.commit()
+
     except:
         print("error getting data for games from season " + str(season_id))
 
@@ -84,54 +75,71 @@ def populate_standings_for_season(season_id):
     # url = 'http://api.football-data.org/v1/competitions/?season=2015'
     url = 'http://api.football-data.org/v1/competitions/' + str(season_id) +'/leagueTable'
     response = make_request(url)
-    print(response)
+    standings = list()
+
     try:
         res = json.loads(response)
         match_day = res["matchday"]
-        standings = res["standing"]
 
-        print(standings)
-        # for instance in standings:
-        #
-        #     result = Standing(
-        #     	api_standing_id = "",
-        #     	match_day = match_day,
-        #     	group = "CLARK", #CLARK KNOWS BETTER ABOUT THE GROUP SITUATION
-        #     	rank = instance["rank"],
-        #     	points = instance["points"],
-        #     	matches_played = instance["playedGames"],
-        #     	goals_for = instance["goals"],
-        #     	goals_against = instance["goalsAgainst"]
-        #     )
-        #
-        #     db.session.add(result)
-        #     db.session.commit()
+        if "standing" in res.keys():
+            standings = res["standing"]
+
+            for instance in standings:
+                result = Standing(
+                	api_standing_id = "",
+                	match_day = match_day,
+                	group = "", #CLARK KNOWS BETTER ABOUT THE GROUP SITUATION
+                	rank = instance["rank"],
+                	points = instance["points"],
+                	matches_played = instance["playedGames"],
+                	goals_for = instance["goals"],
+                	goals_against = instance["goalsAgainst"]
+                )
+
+                db.session.add(result)
+
+        elif "standings" in res.keys():
+            standings = res["standings"]
+
+            for key in standings:
+                instance = standings[key]
+                result = Standing(
+                	api_standing_id = "",
+                	match_day = match_day,
+                	group = key, #CLARK KNOWS BETTER ABOUT THE GROUP SITUATION
+                	rank = instance["rank"],
+                	points = instance["points"],
+                	matches_played = instance["playedGames"],
+                	goals_for = instance["goals"],
+                	goals_against = instance["goalsAgainst"]
+                )
+
+                db.session.add(result)
 
     except Exception as e:
         print("error getting standings for season " +  str(season_id))
 
 def populate_players_for_team(team_id):
-    # url = 'http://api.football-data.org/v1/competitions/?season=2015'
-    url = 'http://api.football-data.org/v1/competitions/' + str(team_id) +'/leagueTable'
+    url = 'http://api.football-data.org/v1/teams/'+str(team_id)+'/players'
     response = make_request(url)
-    res = json.loads(response)
-    match_day = res["matchday"]
-    standings = res["standing"]
-    for instance in standings:
-        # try:
+    try:
+        res = json.loads(response)
+        players = res["players"]
+        count = 0
+        for instance in players:
+            result = Player(
+                api_player_id = 1,
+                name = instance["name"],
+                pos = instance["position"],
+                jersey_num = instance["jerseyNumber"],
+                birth = instance["dateOfBirth"],
+                nation = instance["nationality"])
 
-           # THERES NO API ID COMING FROM THE API
-        result = Player(
-            api_standing_id = "id",
-            name = instance["name"],
-            position = instance[""],
-            jersey_num = instance["jerseyNumber"],
-            birth = instance["dateOfBirth"],
-            #I think nation should be changed to nationality
-            nation = instance["nationality"])
+            db.session.add(result)
 
-        db.session.add(result)
-        db.session.commit()
+    except Exception as e:
+        print("error getting players for team " +  str(team_id))
+        print(e)
 
 def season_api_ids():
 	ids = list()
@@ -141,27 +149,27 @@ def season_api_ids():
 
 def team_api_ids():
 	ids = list()
-	for instance in db.session.query(team).order_by(team.team_id):
+	for instance in db.session.query(Team):#.order_by(team.team_id):
 		ids += [instance.team_id]
 	return ids
 
 
 def main():
-    populate_standings_for_season(394)
-    # populate_seasons()
-    # season_ids = season_api_ids()
-    #
-    # print(season_ids)
-    #
-    # for season_id in season_ids:
-    #     populate_teams_for_season(season_id)
-    #     populate_games_for_season(season_id)
-    #     populate_standings_for_season(season_id)
-    #
-    # team_ids = team_api_ids()
-    #
-    # for team_id in team_ids:
-    #     populate_players_for_team(team_id)
+
+    populate_seasons()
+    season_ids = season_api_ids()
+
+    for season_id in season_ids:
+        populate_teams_for_season(season_id)
+        populate_games_for_season(season_id)
+        populate_standings_for_season(season_id)
+
+    team_ids = team_api_ids()
+
+    for team_id in team_ids:
+        populate_players_for_team(team_id)
+
+    db.session.commit()
 
 
 if __name__ == "__main__":

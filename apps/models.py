@@ -131,17 +131,17 @@ class Standing(Base):
     points = db.Column(Integer)
     goals_for = db.Column(Integer)
     goals_against = db.Column(Integer)
+    api_team_id = db.Column(Integer)
     # relationships
     season_id = db.Column(db.Integer, db.ForeignKey('season.season_id'))
-    r_season = db.relationship("Season")  # many to 1
+    r_season = db.relationship("Season", back_populates="s_standing")  # many to 1
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
     r_team = db.relationship("Team")  # many to 1
 
-    def __init__(self, api_standing_id, match_day, group, rank, matches_played, points, goals_for, goals_against):
+    def __init__(self, match_day, group, rank, matches_played, points, goals_for, goals_against, api_team_id):
         """
         itializes everything in the Standing class
         :param self:
-        :param api_standing_id: Integer
         :param match_day: Integer
         :param group: String
         :param rank: Integer
@@ -149,8 +149,8 @@ class Standing(Base):
         :param points: Integer
         :param goals_for: Integer
         :param goals_against: Integer
+        :param api_team_id: Integer
         """
-        self.api_standing_id = api_standing_id
         self.match_day = match_day
         self.group = group
         self.rank = rank
@@ -158,6 +158,7 @@ class Standing(Base):
         self.points = points
         self.goals_for = goals_for
         self.goals_against = goals_against
+        self.api_team_id = api_team_id
 
     def __repr__(self):
         """
@@ -254,8 +255,8 @@ class Game(Base):
     api_game_id = db.Column(Integer, unique=True)
     date = db.Column(db.String(250))
     time = db.Column(db.String(250))
-    away_team = db.Column(db.String(250))
-    home_team = db.Column(db.String(250))
+    api_away_team_id = db.Column(Integer)
+    api_home_team_id = db.Column(Integer)
     away_team_score = db.Column(db.Integer)
     home_team_score = db.Column(db.Integer)
     match_day = db.Column(Integer)
@@ -270,23 +271,23 @@ class Game(Base):
 
 
 
-    def __init__(self, api_game_id, date, time, away_team, home_team, away_team_score, home_team_score, match_day):
+    def __init__(self, api_game_id, date, time, api_away_team_id, api_home_team_id, away_team_score, home_team_score, match_day):
         """
         itializes everything in the Game class
         :param self:
         :param api_game_id: Integer
         :param date: String
         :param time: String
-        :param away_team: String
-        :param home_team: String
+        :param api_away_team_id: String
+        :param api_home_team_id: String
         :param away_team_score: Integer
         :param home_team_score Integer
         """
         self.api_game_id = api_game_id
         self.date = date
         self.time = time
-        self.away_team = away_team
-        self.home_team = home_team
+        self.api_away_team_id = api_away_team_id
+        self.api_home_team_id = api_home_team_id
         self.away_team_score = away_team_score
         self.home_team_score = home_team_score
         self.match_day = match_day
@@ -325,28 +326,27 @@ class Player(Base):
     name = db.Column(db.String(250), nullable=False)
     nation = db.Column(db.String(250))
     birth = db.Column(db.String(250))
-    pos = db.Column(db.String(250))
+    position = db.Column(db.String(250))
     jersey_num = db.Column(db.Integer)
     # relationships
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
     p_team = db.relationship("Team")  # many to 1
 
-    def __init__(self, api_player_id, name, nation, birth, pos, jersey_num):
+    def __init__(self, name, nation, birth, position, jersey_num):
         """
         itializes everything in the player class
         :param self:
-        :param api_team_id: Integer
         :param name: String
         :param nation: String
         :param birth: String
-        :param pos: String
+        :param position: String
         :param jersey_num: Integer
         """
-        self.api_player_id = api_player_id
+
         self.name = name
         self.nation = nation
         self.birth = birth
-        self.pos = pos
+        self.position = position
         self.jersey_num = jersey_num
 
     def __repr__(self):
@@ -360,7 +360,7 @@ class Player(Base):
         display['name'] = self.name.title()
         display['nation'] = self.nation
         display['birth'] = self.birth
-        display['pos'] = self.pos
+        display['position'] = self.position
         display['jersey_num'] = self.jersey_num
         return display
 

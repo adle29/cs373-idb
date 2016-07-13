@@ -90,7 +90,7 @@ class Season(Base):
         self.num_match_days = num_match_days
         self.cur_match_day = cur_match_day
 
-    def __repr__(self): #display(self):
+    def display(self): #display(self):
         """
         :param self:
         :return: display
@@ -105,8 +105,6 @@ class Season(Base):
         display['num_games'] = self.num_games
         display['num_match_days'] = self.num_match_days
         display['cur_match_day'] = self.cur_match_day
-        display['standings'] = [standing_id for standing in self.s_standing]
-
         return display
 
 
@@ -162,22 +160,21 @@ class Standing(Base):
         self.goals_against = goals_against
         self.api_team_id = api_team_id
 
-    def __repr__(self):
+    def display(self):
         """
         :param self:
         :return: display
         :rtype: OrderedDict
         """
         display = OrderedDict()
-        display['standing_id'] = self.standing_id
         display['match_day'] = self.match_day
         display['group'] = self.group
         display['rank'] = self.rank
         display['matches_played'] = self.matches_played
         display['points'] = self.points
-        display['goals_for'] = goals_for
-        display['goals_against'] = goals_against
-        display['team'] = team_id
+        display['goals_for'] = self.goals_for
+        display['goals_against'] = self.goals_against
+        display['team_id'] = self.team_id
         return display
 
 
@@ -224,7 +221,7 @@ class Team(Base):
         self.nickname = nickname
         self.market_val = market_val
 
-    def __repr__(self):
+    def display(self):
         """
         :param self:
         :return: display
@@ -236,8 +233,8 @@ class Team(Base):
         display['logo_url'] = self.logo_url
         display['nickname'] = self.nickname
         display['market_val'] = self.market_val
-        display['players'] = [player_id for player in self.t_player]
-        display['games'] = [game_id for game in self.t_game]
+        display['players'] = [player.player_id for player in self.t_player]
+        #display['games'] = [game.game_id for game in self.t_game]
         return display
 
 # --------------
@@ -294,7 +291,7 @@ class Game(Base):
         self.home_team_score = home_team_score
         self.match_day = match_day
 
-    def __repr__(self):
+    def display(self):
         """
         :param self:
         :return: display
@@ -302,11 +299,11 @@ class Game(Base):
         """
         display = OrderedDict()
         display['game_id'] = self.game_id
-        display['season_name'] = self.season_name.title()
-        display['league'] = self.league
-        display['year'] = self.year
-        display['num_teams'] = self.num_teams
-        display['num_games'] = self.num_games
+        #display['season_name'] = self.season_name.title()
+        #display['league'] = self.league
+        display['date'] = self.date
+        display['away_team_score'] = self.away_team_score
+        display['home_team_score'] = self.home_team_score
         display['match_day'] = self.match_day
         return display
 
@@ -351,7 +348,7 @@ class Player(Base):
         self.position = position
         self.jersey_num = jersey_num
 
-    def __repr__(self):
+    def display(self):
         """
         :param self:
         :return: display

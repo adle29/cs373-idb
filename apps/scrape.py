@@ -32,7 +32,6 @@ def populate_seasons_for_year(year):
             )
             seasons_cache.append(result)
             db.session.add(result)
-            #db.session.commit()
     except:
         print("error getting data")
 

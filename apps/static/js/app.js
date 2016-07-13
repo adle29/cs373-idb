@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('golazoApp',['ngRoute'])
+var myApp = angular.module('golazoApp',['ngRoute']);
 
 var routes = myApp.config(['$httpProvider', function($httpProvider) {
   $httpProvider.defaults.useXDomain = true;
@@ -142,17 +142,18 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
   var id = $routeParams.id;
 
   //# change route to '/season/'+id later
-  $http.get('/data/season_'+id+".json").then(function(response){
+  $http.get('/season/'+id+'/standings').then(function(response){
 
+    console.log(response);
     var res = response.data;
+    var seasonData = res.season;
     var standings;
-    var matchDay = res.matchday;
 
-    $scope.leagueCaption = res.leagueCaption;
-    $scope.matchDay = res.matchday;
-    $scope.numberOfMatches = res.numberOfMatchdays;
-    $scope.numberOfGames = res.numberOfGames;
-    $scope.completed = $scope.numberOfMatches == $scope.matchDay;
+    $scope.leagueCaption = seasonData.season_name;
+    $scope.matchDay = seasonData.cur_match_day;
+    $scope.numberOfMatches = seasonData.num_match_days;
+    $scope.numberOfGames = seasonData.num_games;
+    $scope.completed = seasonData.numberOfMatches == $scope.matchDay;
     $scope.groups = [];
 
     if( $scope.matchDay == 1 || $scope.completed ) {
@@ -171,11 +172,11 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
           var newTeam = {
             logo:team["crestURI"],
             name:team["team"],
-            id:team["teamId"],
+            id:team["team_id"],
             rank:team["rank"],
             playedGames: team["playedGames"],
-            goalsAgainst: team["goalsAgainst"],
-            goals: team["goals"],
+            goalsAgainst: team["goals_against"],
+            goals: team["goals_for"],
             pts: team["points"]
           };
           group.teams.push(newTeam);
@@ -187,7 +188,7 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
     else {
       var standings = res.standings;
 
-      console.log(res);
+      console.log("many groups");
 
       for (var groupLetter in standings) {
 
@@ -203,11 +204,11 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
           var newTeam = {
             logo:team.crestURI,
             name:team.team,
-            id:team.teamId,
+            id:team.team_id,
             rank:String(team.rank).trim(),
             playedGames: team.playedGames,
-            goalsAgainst: team.goalsAgainst,
-            goals: team.goals,
+            goalsAgainst: team.goals_against,
+            goals: team.goals_for,
             pts: team.points
 
           };
@@ -226,30 +227,70 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
 
 routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
-  $scope.seasons = [];
+  $scope.seasons = {};
   $scope.propertyName = 'name'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
+  $scope.totalSeasons = 0;
+  $scope.pointer = 0;
+  $scope.offset = 0;
+
+  $scope.range = function(n) {
+        return new Array(n);
+  };
+
+  $scope.nextList = function(){
+    if ($scope.pointer < $scope.totalSeasons - 1){
+      $scope.pointer++;
+      $scope.goToPage($scope.pointer);
+    }
+  }
+
+  $scope.prevList = function(){
+    if ($scope.pointer > 0){
+      $scope.pointer--;
+      $scope.goToPage($scope.pointer);
+    }
+  }
+
+  $scope.goToPage = function(i){
+    $scope.pointer = i;
+
+    if ($scope.pointer in $scope.seasons == false){
+      fetchData();
+    }
+  }
 
   //later change to url = /seasons
-  $http.get('/data/seasons.json').then(function(response){
-    console.log(response);
-    var res = response.data;
-    for (var i = 0; i < res.length; i++) {
-        var element = res[i];
-        var season = {
-          name: element.caption,
-          league: element.league,
-          numberOfTeams: element.numberOfTeams,
-          numberOfGames: element.numberOfGames,
-          numberOfMatchdays: element.numberOfMatchdays,
-          currentMatchday: element.currentMatchday,
-          completed: element.currentMatchday == element.numberOfMatchdays,
-          id: element.id,
-          year: element.year
-        };
-        $scope.seasons.push(season);
-    }
-  });
+  var fetchData = function(){
+    $http.get('/seasons/'+$scope.offset).then(function(response){
+      console.log(response);
+      var res = response.data;
+      var seasons = res.seasons;
+
+      $scope.totalSeasons = Math.ceil(res.totalNumberOfSeasons / 10);
+      $scope.offset += seasons.length;
+      console.log($scope.pointer);
+      $scope.seasons[$scope.pointer] = [];
+
+      for (var i = 0; i < seasons.length; i++) {
+          var element = seasons[i];
+          var season = {
+            name: element.season_name,
+            league: element.league,
+            numberOfTeams: element.num_teams,
+            numberOfGames: element.num_games,
+            numberOfMatchdays: element.num_match_days,
+            currentMatchday: element.cur_match_day,
+            completed: element.cur_match_day == element.num_match_days,
+            id: element.season_id,
+            year: element.year
+          };
+          $scope.seasons[$scope.pointer].push(season);
+      }
+    });
+  }
+
+  fetchData();
 
 }]);
 

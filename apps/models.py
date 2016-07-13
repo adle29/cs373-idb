@@ -228,6 +228,8 @@ class Team(Base):
         :rtype: OrderedDict
         """
         display = OrderedDict()
+        display['api_team_id'] = self.api_team_id
+        display['team_id'] = self.team_id
         display['team_id'] = self.team_id
         display['team_name'] = self.team_name.title()
         display['logo_url'] = self.logo_url

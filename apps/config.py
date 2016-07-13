@@ -7,7 +7,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'this-really-needs-to-be-changed'
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']#"golazo-dev"
+    SQLALCHEMY_DATABASE_URI = "postgresql:///golazo_dev" #os.environ['DATABASE_URL']#"golazo-dev"
 
 class ProductionConfig(Config):
     DEBUG = False

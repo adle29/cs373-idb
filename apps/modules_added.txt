@@ -16,7 +16,7 @@ initdb -D /usr/local/var/postgres/
 pg_ctl -D /usr/local/var/postgres/ -l logfile start
 psql -d golazo_dev #createdb <database_name>
 psql -d golazo_dev
-export DATABASE_URL="postgresql://localhost/golazo_dev"
+export DATABASE_URL="postgresql:///golazo_dev"
 export APP_SETTINGS=config.DevelopmentConfig
 
 pip install Flask-Migrate
@@ -27,7 +27,7 @@ python3 manage.py db migrate
 python3 manage.py db upgrade
 
 #psql
-psql #start postgresql console 
+psql #start postgresql console
 \q  : exit
 \connect golazo_dev #\connect <database name>
 \dt #show tables

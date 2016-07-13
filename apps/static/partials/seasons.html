@@ -58,8 +58,9 @@
               </a>
             </li>
             <!-- numbers in pagination -->
+
             <li ng-repeat="n in range(totalSeasons) track by $index" ng-class="{'active':pointer == $index} " class="page-item">
-              <a class="page-link"  ng-click="goToPage($index)" href="">{{$index+1}}</a>
+              <a class="page-link" ng-show="($index >= startIndex && $index < endIndex) || ($index - totalSeasons + 1 == 0) || ($index == 0)"  ng-click="goToPage($index)" href="">{{$index+1}}</a>
             </li>
 
             <li class="page-item">

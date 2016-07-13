@@ -79,18 +79,18 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
 
   var fetchPlayers = function(team_id){
     $http.get("/team/"+team_id+"/players").then(function(response){
-       var res = response.data;
-       var players = res.players;
+       var players = response.data;
+       console.log(response);
        $scope.players = [];
 
        for(var i in players){
          var player = players[i];
          var newPlayer = {
            name: player.name,
-           nationality: player.nationality,
+           nationality: player.nation,
            position: player.position,
-           jerseyNumber: player.jerseyNumber,
-           dateOfBirth: player.dateOfBirth
+           jerseyNumber: player.jersey_num,
+           dateOfBirth: player.birth
          };
          $scope.players.push(newPlayer);
        }
@@ -99,18 +99,20 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
   };
 
   var fetchGames = function(team_id){
-    $http.get("/team/"+team_id+"/fixtures").then(function(response){
+    $http.get("/team/"+team_id+"/games").then(function(response){
 
-      var res = response.data;
-      var games = res.fixtures;
+      var games = response.data;
       $scope.games = [];
+      console.log(games);
 
       for(var i in games){
         var game = games[i];
         var newGame = {
-          matchday: game.matchday,
-          awayTeamName: game.awayTeamName,
-          homeTeamName: game.homeTeamName,
+          matchday: game.match_day,
+          away_team_name: game.away_team_name,
+          home_team_name: game.home_team_name,
+          home_team_score:game.home_team_score,
+          away_team_score: game.away_team_score,
           date: game.date,
           id: game.id
         };
@@ -124,10 +126,10 @@ routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $h
       var res = response.data;
       console.log(res);
       $scope.team = {
-        name:res.name,
-        logo:res.crestUrl,
-        shortName: res.shortName,
-        squadMarketValue: res.squadMarketValue
+        name:res.team_name,
+        logo:res.logo_url,
+        shortName: res.nickname,
+        squadMarketValue: res.market_val
       };
     });
   };
@@ -172,8 +174,8 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
         if (team["team"] != ""){
 
           var newTeam = {
-            logo:team["crestURI"],
-            name:team["team"],
+            logo:team["logo_url"],
+            name:team["team_name"],
             id:team["team_id"],
             rank:team["rank"],
             playedGames: team["matches_played"],
@@ -237,6 +239,8 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
   $scope.totalSeasons = 0;
   $scope.pointer = 0;
   $scope.offset = 0;
+  $scope.endIndex = 6;
+  $scope.startIndex = 0;
 
   $scope.range = function(n) {
         return new Array(n);
@@ -245,6 +249,8 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
   $scope.nextList = function(){
     if ($scope.pointer < $scope.totalSeasons - 1){
       $scope.pointer++;
+      $scope.endIndex++;
+      $scope.startIndex++;
       $scope.goToPage($scope.pointer);
     }
   }
@@ -252,16 +258,18 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
   $scope.prevList = function(){
     if ($scope.pointer > 0){
       $scope.pointer--;
+      $scope.endIndex--;
+      $scope.startIndex--;
       $scope.goToPage($scope.pointer);
     }
   }
 
   $scope.goToPage = function(i){
     $scope.pointer = i;
-
-    if ($scope.pointer in $scope.seasons == false){
+    $scope.endIndex = $scope.pointer+6;
+    $scope.startIndex = $scope.pointer;
+    if ($scope.pointer in $scope.seasons == false)
       fetchData();
-    }
   }
 
   //later change to url = /seasons
@@ -299,26 +307,78 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
 }]);
 
 routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
-  $scope.games = [];
+  $scope.games = {};
   $timeout = twttr.widgets.load();
 
   $scope.propertyName = 'date'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
+//
+  // PAGINATION
+  $scope.totalGames = 0;
+  $scope.pointer = 0;
+  $scope.offset = 0;
+  $scope.endIndex = 6;
+  $scope.startIndex = 0;
 
-  $http.get('/data/game.json').then(function(response){
-    console.log(response);
-    var res = response.data.fixtures;
-    for (var i = 0; i < res.length; i++) {
-        var element = res[i];
-        var game = {
-          date: element.date,
-          awayTeamName: element.awayTeamName,
-          homeTeamName: element.homeTeamName
-        };
-        $scope.games.push(game);
+  $scope.range = function(n) {
+        return new Array(n);
+  };
+
+  $scope.nextList = function(){
+    if ($scope.pointer < $scope.totalGames - 1){
+      $scope.pointer++;
+      $scope.endIndex++;
+      $scope.startIndex++;
+      $scope.goToPage($scope.pointer);
     }
-    console.log($scope.games);
-  });
+  }
+
+  $scope.prevList = function(){
+    if ($scope.pointer > 0){
+      $scope.pointer--;
+      $scope.endIndex--;
+      $scope.startIndex--;
+      $scope.goToPage($scope.pointer);
+    }
+  }
+
+  $scope.goToPage = function(i){
+    $scope.pointer = i;
+    $scope.endIndex = $scope.pointer+6;
+    $scope.startIndex = $scope.pointer;
+    if ($scope.pointer in $scope.games == false)
+      fetchData();
+  }
+  // PAGINATION
+
+  var fetchData = function(){
+      $http.get('/games/'+$scope.offset).then(function(response){
+        console.log(response);
+        var res = response.data;
+        var games = res.games;
+
+        $scope.totalGames = Math.ceil(res.totalNumberOfGames / 10);
+        $scope.offset += games.length;
+        console.log($scope.pointer);
+        $scope.games[$scope.pointer] = [];
+
+        for(var i in games){
+          var game = games[i];
+          var newGame = {
+            date: game.date,
+            awayTeamName: game.away_team_name,
+            homeTeamName: game.home_team_name
+          };
+          $scope.games[$scope.pointer].push(newGame);
+        }
+
+      });
+  };
+
+  fetchData();
+
+//
+
 }]);
 
 routes.controller('players',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
@@ -331,6 +391,8 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
   $scope.totalPlayers = 0;
   $scope.pointer = 0;
   $scope.offset = 0;
+  $scope.endIndex = 6;
+  $scope.startIndex = 0;
 
   $scope.range = function(n) {
         return new Array(n);
@@ -339,6 +401,8 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
   $scope.nextList = function(){
     if ($scope.pointer < $scope.totalPlayers - 1){
       $scope.pointer++;
+      $scope.endIndex++;
+      $scope.startIndex++;
       $scope.goToPage($scope.pointer);
     }
   }
@@ -346,12 +410,16 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
   $scope.prevList = function(){
     if ($scope.pointer > 0){
       $scope.pointer--;
+      $scope.endIndex--;
+      $scope.startIndex--;
       $scope.goToPage($scope.pointer);
     }
   }
 
   $scope.goToPage = function(i){
     $scope.pointer = i;
+    $scope.endIndex = $scope.pointer+6;
+    $scope.startIndex = $scope.pointer;
     if ($scope.pointer in $scope.players == false)
       fetchData();
   }
@@ -387,30 +455,79 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
 }]);
 
 routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
+  $scope.teams = {};
 
   $scope.propertyName = 'name'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
 
-  $http.get('/data/teams.json').then(function(response){
-    console.log(response);
-    var res = response.data;
-    $scope.teams = [];
+  // PAGINATION
+  $scope.totalTeams = 0;
+  $scope.pointer = 0;
+  $scope.offset = 0;
+  $scope.endIndex = 6;
+  $scope.startIndex = 0;
 
-    for (var i in res) {
-      var team = res[i];
+  $scope.range = function(n) {
+        return new Array(n);
+  };
 
-      var newTeam = {
-        logo:team.crestUrl,
-        id:team.id,
-        name:team.name,
-        shortName:team.shortName,
-        squadMarketValue: team.squadMarketValue
-      };
-
-      $scope.teams.push(newTeam);
+  $scope.nextList = function(){
+    if ($scope.pointer < $scope.totalTeams - 1){
+      $scope.pointer++;
+      $scope.endIndex++;
+      $scope.startIndex++;
+      $scope.goToPage($scope.pointer);
     }
+  }
 
-  });
+  $scope.prevList = function(){
+    if ($scope.pointer > 0){
+      $scope.pointer--;
+      $scope.endIndex--;
+      $scope.startIndex--;
+      $scope.goToPage($scope.pointer);
+    }
+  }
+
+  $scope.goToPage = function(i){
+    $scope.pointer = i;
+    $scope.endIndex = $scope.pointer+6;
+    $scope.startIndex = $scope.pointer;
+    if ($scope.pointer in $scope.teams == false)
+      fetchData();
+  }
+  // PAGINATION
+
+  var fetchData = function(){
+      $http.get('/teams/'+$scope.offset).then(function(response){
+        console.log(response);
+        var res = response.data;
+        var teams = res.teams;
+
+        $scope.totalTeams = Math.ceil(res.totalNumberOfTeams / 10);
+        $scope.offset += teams.length;
+        console.log($scope.pointer);
+        $scope.teams[$scope.pointer] = [];
+
+        for(var i in teams){
+          var team = teams[i];
+          var newTeam = {
+            logo:team.logo_url,
+            id:team.team_id,
+            name:team.team_name,
+            shortName:team.nickname,
+            squadMarketValue: team.market_val
+          };
+          $scope.teams[$scope.pointer].push(newTeam);
+        }
+
+      });
+  };
+
+  fetchData();
+
+
+
 }]);
 
 routes.controller('about',['$scope', '$http', '$timeout', function($scope, $http, $timeout){

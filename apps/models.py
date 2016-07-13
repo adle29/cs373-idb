@@ -299,11 +299,11 @@ class Game(Base):
         """
         display = OrderedDict()
         display['game_id'] = self.game_id
-        #display['season_name'] = self.season_name.title()
-        #display['league'] = self.league
         display['date'] = self.date
         display['away_team_score'] = self.away_team_score
         display['home_team_score'] = self.home_team_score
+        display['home_team_id'] = self.home_team_id
+        display['away_team_id'] = self.away_team_id
         display['match_day'] = self.match_day
         return display
 

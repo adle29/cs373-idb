@@ -52,14 +52,16 @@
           <th>Away Team </th>
           <th>Home Team </th>
           <th>Date </th>
+          <th>Result </th>
         </tr>
         </thead>
         <tbody>
           <tr ng-repeat="game in games">
             <td> {{game.matchday}} </td>
-            <td> {{game.awayTeamName}}</td>
-            <td> {{game.homeTeamName}}</td>
+            <td> {{game.away_team_name}}</td>
+            <td> {{game.home_team_name}}</td>
             <td> {{game.date | date:'yyyy-MM-dd'}}</td>
+            <td> {{game.away_team_score + " - " + game.home_team_score }}</td>
           </tr>
         </tbody>
       </table>

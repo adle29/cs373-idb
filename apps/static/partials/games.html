@@ -28,7 +28,7 @@
           </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="game in games | orderBy:propertyName:sortReverse">
+            <tr ng-repeat="game in games[pointer] | orderBy:propertyName:sortReverse">
               <th scope="row">{{$index}}</th>
               <td>{{game.date | date:'yyyy-MM-dd'}}</td>
               <td>{{game.date | date:'HH:mm:ss'}}</td>
@@ -37,6 +37,30 @@
             </tr>
           </tbody>
           </table>
+
+          <nav>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" ng-click="prevList()" href="" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <!-- numbers in pagination -->
+
+              <li ng-repeat="n in range(totalGames) track by $index" ng-class="{'active':pointer == $index} " class="page-item">
+                <a class="page-link" ng-show="($index >= startIndex && $index < endIndex) || ($index - totalPlayers + 1 == 0) || ($index == 0)"  ng-click="goToPage($index)" href="">{{$index+1}}</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" ng-click="nextList()" href="" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
       </div>
 
       <div class="col-lg-4">

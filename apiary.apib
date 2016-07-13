@@ -1,4 +1,318 @@
-FORMAT: 1A
+MAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# golazo
+
+Golazo is a simple API allowing consumers to view soccer seasons, games, teams and players.
+
+## Seasons [/seasons]
+
+### List All Seasons [GET]
+
++ Response 200 (application/json)
+
+        [{ "season_id":398,
+           "season_name":"Premier League 2015/16",
+           "league":"PL",
+           "year":"2015",
+           "cur_match_day":38,
+           "num_match_days":38,
+           "num_teams":20,
+           "num_games":380,
+           "season_id":30
+         },
+         { "season_id":399,
+           "season_name":"Primera Division 2015/16",
+           "league":"PD",
+           "year":"2015",
+           "cur_match_day":38,
+           "num_match_days":38,
+           "num_teams":20,
+           "num_games":380,
+           "season_id":23 
+         }]
+          
+## Filter Seasons [/seasons/{year}]
+     
+### List all seasons in a Year [GET]
+
++ Parameters
+    + year (number) - year of the season in the form of an integer
+
++ Response 200 (application/json)
+
+        [{ "season_id":398,
+           "season_name":"Premier League 2015/16",
+           "league":"PL",
+           "year":"2015",
+           "cur_match_day":38,
+           "num_match_days":38,
+           "num_teams":20,
+           "num_games":380,
+           "season_id":23 
+           
+         },
+         { "season_id":399,
+           "season_name":"Primera Division 2015/16",
+           "league":"PD",
+           "year":"2015",
+           "cur_match_day":38,
+           "num_match_days":38,
+           "num_teams":20,
+           "num_games":380,
+           "season_id":23 
+         }]
+
+## Specific Season [/season/{season_id}]
+      
+### View a specific Seasons [GET]
+
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+
++ Response 200 (application/json)
+
+         { "season_id":398,
+            "season_name":"Premier League 2015/16",
+            "league":"PL",
+            "year":"2015",
+            "cur_match_day":38,
+            "num_match_days":38,
+            "num_teams":20,
+            "num_games":380,
+            "season_id":23 
+          }
+
+
+## Standings [/season/{season_id}/standings]
+
+### List standings in a season [GET]
+ 
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "match_day": 34,
+            "standing": [{
+                "rank": 1,
+                "team": "Bayern",
+                "standing_id": 5,
+                "matches_played": 34,
+                "logo_url": "http://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg",
+                "points": 88,
+                "goals_for": 80,
+                "goals_against": 17
+            }, {
+                "rank": 2,
+                "team": "Dortmund",
+                "standing_id": 4,
+                "matches_played": 34,
+                "logo_url": "http://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg",
+                "points": 78,
+                "goals_for": 82,
+                "goals_against": 34
+            }, {
+                "rank": 3,
+                "team": "Leverkusen",
+                "standing_id": 3,
+                "matches_played": 34,
+                "logo_url": "http://upload.wikimedia.org/wikipedia/de/9/95/Bayer_04_Leverkusen_Logo.svg",
+                "points": 60,
+                "goals_for": 56,
+                "goals_against": 40
+            }]
+        }
+
+## Specific Standing [/standing/{standing_id}]
+     
+### View a specific standing [GET]
+
++ Parameters
+    + standing_id (number) - ID of the standing in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "rank": 1,
+            "team": "Bayern",
+            "standing_id": 5,
+            "matches_played": 34,
+            "logo_url": "http://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg",
+            "points": 88,
+            "goals_for": 80,
+            "goals_against": 17
+        }
+        
+## Games [/games]
+
+### List recent/upcoming games [GET]
+
++ Response 200 (application/json)
+
+        {
+            "timeFrameStart": "2016-07-06",
+            "timeFrameEnd": "2016-07-12",
+            "count": 2,
+            "fixtures": [{
+                "game_id": 153663,
+                "date": "2016-07-06T19:00:00Z",
+                "match_day": 6,
+                "home_team_name": "Portugal",
+                "away_team_name": "Wales",
+                "away_team_score": 0,
+                "home_team_score": 2,
+                "home_team_id": 12,
+                "away_team_id": 14,
+                "season_id": 398
+ 
+            }, {
+                "game_id": 153664,
+                "date": "2016-07-07T19:00:00Z",
+                "match_day": 6,
+                "home_team_name": "Germany",
+                "away_team_name": "France",
+                "away_team_score": 2,
+                "home_team_score": 0,
+                "home_team_id": 18,
+                "away_team_id": 20,
+                "season_id": 398
+            }]
+        }
+
+## Specific Game [/game/{game_id}]
+
+### View a specific game [GET]
+ 
++ Parameters
+    + game_id (number) - ID of the game in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "game_id": 153663,
+            "date": "2016-07-06T19:00:00Z",
+            "match_day": 6,
+            "home_team_name": "Portugal",
+            "api_home_team_id": 765,
+            "away_team_name": "Wales",
+            "api_away_team_id": 833,
+            "away_team_score": 0,
+            "home_team_score": 2,
+            "home_team_id": 12,
+            "away_team_id": 14,
+            "season_id": 398
+        }
+
+## Teams [/season/{season_id}/teams]
+
+### List teams playing in a season [GET]
+
++ Parameters
+    + season_id (number) - ID of the season in the form of an integer
+
++ Response 200 (application/json)
+        
+        {
+            "count": 20,
+            "teams": [{
+                "team_id": 66,
+                "team_name": "Manchester United FC",
+                "nickname": "ManU",
+                "market_val": "394,550,000 €",
+                "logo_url": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg"
+            }, {
+                "team_id": 73,
+                "team_name": "Tottenham Hotspur FC",
+                "nickname": "Spurs",
+                "market_val": "278,000,000 €",
+                "logo_url": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg"
+            }, {
+                "team_id": 1044,
+                "team_name": "AFC Bournemouth",
+                "nickname": "Bournemouth",
+                "market_val": "88,800,000 €",
+                "logo_url": "https://upload.wikimedia.org/wikipedia/de/4/41/Afc_bournemouth.svg"
+            }, {
+                "team_id": 58,
+                "team_name": "Aston Villa FC",
+                "nickname": "Aston Villa",
+                "market_val": "114,750,000 €",
+                "logo_url": "http://upload.wikimedia.org/wikipedia/de/9/9f/Aston_Villa_logo.svg"
+            }]
+        }
+
+
+## Specific Team [/team/{team_id}]
+
+### View a specific game [GET]
+ 
++ Parameters
+    + team_id (number) - ID of the team in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "team_id": 338,
+            "team_name": "Leicester City FC",
+            "nickname": "Foxes",
+            "market_val": "95,500,000 €",
+            "logo_url": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png"
+        }
+        
+
+## Players [/players]
+
+### List all players [GET]
+
++ Response 200 (application/json)
+        
+        {
+            "count": 3,
+            "players": [{
+                "player_id": 66,
+                "name": "Lionel Messi",
+                "nation": "Argentina",
+                "birth": "24 Jun 1987",
+                "position": "Forward",
+                "jersey_num": 10
+            }, {
+                "player_id": 181,
+                "name": "Cristiano Ronaldo",
+                "nation": "Portugal",
+                "birth": "5 Feb 1985",
+                "position": "Forward/Winger",
+                "jersey_num": 7
+            }, {
+                "player_id": 76,
+                "name": "Tim Howard",
+                "nation": "United States",
+                "birth": "6 Mar 1979",
+                "position": "Goalkeeper",
+                "jersey_num": 1
+            }]
+        }
+
+
+## Specific Player [/players/{player_id}]
+
+### View a specific player [GET]
+ 
++ Parameters
+    + player_id (number) - ID of the player in the form of an integer
+
++ Response 200 (application/json)
+
+        {
+            "player_id": 76,
+            "name": "Tim Howard",
+            "nation": "United States",
+            "birth": "6 Mar 1979",
+            "position": "Goalkeeper",
+            "jersey_num": 1
+        }
+
 HOST: http://polls.apiblueprint.org/
 
 # golazo

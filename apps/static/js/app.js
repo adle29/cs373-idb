@@ -153,12 +153,14 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
     $scope.matchDay = seasonData.cur_match_day;
     $scope.numberOfMatches = seasonData.num_match_days;
     $scope.numberOfGames = seasonData.num_games;
-    $scope.completed = seasonData.numberOfMatches == $scope.matchDay;
+    $scope.completed = $scope.numberOfMatches == $scope.matchDay;
     $scope.groups = [];
+
+    console.log("Completed: " + $scope.completed, $scope.numberOfMatches, $scope.matchDay);
 
     if( $scope.matchDay == 1 || $scope.completed ) {
       $scope.seasonFinished = true;
-      var standings = res.standing;
+      var standings = res.standings;
 
       var group = {
         letter: 'A',
@@ -174,7 +176,7 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
             name:team["team"],
             id:team["team_id"],
             rank:team["rank"],
-            playedGames: team["playedGames"],
+            playedGames: team["matches_played"],
             goalsAgainst: team["goals_against"],
             goals: team["goals_for"],
             pts: team["points"]
@@ -198,9 +200,10 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
           teams: []
         };
 
+        console.log(rawGroupData);
+
         for (var i in rawGroupData) {
           var team = rawGroupData[i];
-
           var newTeam = {
             logo:team.crestURI,
             name:team.team,
@@ -218,6 +221,7 @@ routes.controller('standings',['$scope', '$http', '$routeParams', function($scop
 
         $scope.groups.push(group);
       }
+      console.log($scope.groups);
     }
 
   });
@@ -318,30 +322,68 @@ routes.controller('games',['$scope', '$http', '$timeout', function($scope, $http
 }]);
 
 routes.controller('players',['$scope', '$http', '$timeout', function($scope, $http, $timeout){
-  $scope.games = [];
+  $scope.players = {};
 
   $scope.propertyName = 'name'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
 
-  $http.get('/data/players.json').then(function(response){
-    console.log(response);
-    var res = response.data;
-    var players = res.players;
-    $scope.players = [];
+  // PAGINATION
+  $scope.totalPlayers = 0;
+  $scope.pointer = 0;
+  $scope.offset = 0;
 
-    for(var i in players){
-      var player = players[i];
-      var newPlayer = {
-        name: player.name,
-        nationality: player.nationality,
-        position: player.position,
-        jerseyNumber: player.jerseyNumber,
-        dateOfBirth: player.dateOfBirth
-      };
-      $scope.players.push(newPlayer);
+  $scope.range = function(n) {
+        return new Array(n);
+  };
+
+  $scope.nextList = function(){
+    if ($scope.pointer < $scope.totalPlayers - 1){
+      $scope.pointer++;
+      $scope.goToPage($scope.pointer);
     }
+  }
 
-  });
+  $scope.prevList = function(){
+    if ($scope.pointer > 0){
+      $scope.pointer--;
+      $scope.goToPage($scope.pointer);
+    }
+  }
+
+  $scope.goToPage = function(i){
+    $scope.pointer = i;
+    if ($scope.pointer in $scope.players == false)
+      fetchData();
+  }
+  // PAGINATION
+
+  var fetchData = function(){
+      $http.get('/players/'+$scope.offset).then(function(response){
+        console.log(response);
+        var res = response.data;
+        var players = res.players;
+
+        $scope.totalPlayers = Math.ceil(res.totalNumberOfPlayers / 10);
+        $scope.offset += players.length;
+        console.log($scope.pointer);
+        $scope.players[$scope.pointer] = [];
+
+        for(var i in players){
+          var player = players[i];
+          var newPlayer = {
+            name: player.name,
+            nationality: player.nation,
+            position: player.position,
+            jerseyNumber: player.jersey_num,
+            dateOfBirth: player.birth
+          };
+          $scope.players[$scope.pointer].push(newPlayer);
+        }
+
+      });
+  }
+
+  fetchData()
 }]);
 
 routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http, $timeout){

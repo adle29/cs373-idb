@@ -58,6 +58,15 @@ def season_standings(season_id):
     #team data
     return json.dumps(data)
 
+@app.route('/players')
+@app.route('/players/<offset>')
+def player(offset=0):
+    count = len(Player.query.all())
+    query = Player.query.order_by(Player.name).limit(10).offset(offset).all()
+    players = [player.display() for player in query]
+    data = {"totalNumberOfPlayers":count, "players":players}
+    return json.dumps(data)
+
 @app.route('/players/<team_id>')
 def players(team_id):
     query =  Player.query.filter(Player.team_id == team_id).first()

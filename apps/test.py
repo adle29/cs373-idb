@@ -1,4 +1,5 @@
 from unittest import main, TestCase
+import unittest
 import os
 import sys
 import subprocess
@@ -10,6 +11,7 @@ import requests
 import ast
 import json
 from models import *
+import config
 
 
 class DBTestCases(TestCase):
@@ -198,13 +200,19 @@ class DBTestCases(TestCase):
 if __name__ == "__main__":
     try:
         app = Flask(__name__)
-        app.config.from_object(os.environ['APP_SETTINGS'])
+        app.config.from_object(app.config.from_object(config.DevelopmentConfig))
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
         db = SQLAlchemy(app)
         Base = db.Model
-        main()  
-    except:
+        log_file = 'test.log'
+        f = open(log_file, "w")
+        runner = unittest.TextTestRunner(f)
+        unittest.main(testRunner=runner)
+        f.close()
+    except Exception as e:
+        print(e)
         pass
+
 
 #db.db.add(self.standings)
 #db.db.commit()

@@ -23,7 +23,7 @@ class DBTestCases(TestCase):
         self.assertEqual(test_player.name, "Fabian Johnson")
         self.assertEqual(test_player.nation, "United States")
         self.assertEqual(test_player.birth, "1987-12-11")
-        self.assertEqual(test_player.pos, "Left Wing")
+        self.assertEqual(test_player.position, "Left Wing")
         self.assertEqual(test_player.jersey_num, 19)
 
     def test_players_readable_2(self):
@@ -33,7 +33,7 @@ class DBTestCases(TestCase):
         self.assertEqual(test_player.name, "Kenan Karaman")
         self.assertEqual(test_player.nation, "Turkey")
         self.assertEqual(test_player.birth, "1994-03-05")
-        self.assertEqual(test_player.pos, "Left Wing")
+        self.assertEqual(test_player.position, "Left Wing")
         self.assertEqual(test_player.jersey_num, 26)
 
     def test_players_readable_3(self):
@@ -43,7 +43,7 @@ class DBTestCases(TestCase):
         self.assertEqual(test_player.name, "Claudio Pizarro")
         self.assertEqual(test_player.nation, "Peru")
         self.assertEqual(test_player.birth, "1978-10-03")
-        self.assertEqual(test_player.pos, "Centre Forward")
+        self.assertEqual(test_player.position, "Centre Forward")
         self.assertEqual(test_player.jersey_num, 14)
 
     # Tests that every team is readable
@@ -61,7 +61,7 @@ class DBTestCases(TestCase):
         test_team = db.session.query(Team).get(4)
 
         self.assertEqual(test_team.team_id, 4)
-        self.assertEqual(test_team.team_name, "Hertha Bsc")
+        self.assertEqual(test_team.team_name, "Hertha BSC")
         self.assertEqual(test_team.nickname, "Hertha")
         self.assertEqual(test_team.market_val, "62,050,000 €")
         self.assertEqual(test_team.logo_url, "http://upload.wikimedia.org/wikipedia/de/8/81/Hertha_BSC_Logo_2012.svg")
@@ -73,7 +73,7 @@ class DBTestCases(TestCase):
         self.assertEqual(test_team.team_name, "Bayer Leverkusen")
         self.assertEqual(test_team.nickname, "Leverkusen")
         self.assertEqual(test_team.market_val, "202,500,000 €")
-        self.assertEqual(test_team.logo_url, "https://upload.wikimedia.org/wikipedia/de/9/95/Bayer_04_Leverkusen_Logo.svg")
+        self.assertEqual(test_team.logo_url, "http://upload.wikimedia.org/wikipedia/de/9/95/Bayer_04_Leverkusen_Logo.svg")
  
 
     # Tests that every game is readable
@@ -83,8 +83,8 @@ class DBTestCases(TestCase):
 
         self.assertEqual(test_game.game_id, 1)
         self.assertEqual(test_game.date, "2015-08-14T18:30:00Z")
-        self.assertEqual(test_game.home_team_name, "Fc Bayern München") 
-        self.assertEqual(test_game.away_team_name, "Hamburger Sv") 
+        self.assertEqual(test_game.home_team_id, 1) 
+        self.assertEqual(test_game.away_team_id, 2) 
         self.assertEqual(test_game.home_team_score, 5)
         self.assertEqual(test_game.away_team_score, 0)
         self.assertEqual(test_game.match_day, 1)
@@ -94,8 +94,8 @@ class DBTestCases(TestCase):
 
         self.assertEqual(test_game.game_id, 16)
         self.assertEqual(test_game.date, "2015-08-22T16:30:00Z")
-        self.assertEqual(test_game.home_team_name, "Hamburger Sv") 
-        self.assertEqual(test_game.away_team_name, "Vfb Stuttgart") 
+        self.assertEqual(test_game.home_team_id, 2) 
+        self.assertEqual(test_game.away_team_id, 17) 
         self.assertEqual(test_game.home_team_score, 3)
         self.assertEqual(test_game.away_team_score, 2)
         self.assertEqual(test_game.match_day, 2)
@@ -105,8 +105,8 @@ class DBTestCases(TestCase):
 
         self.assertEqual(test_game.game_id, 11)
         self.assertEqual(test_game.date, "2015-08-22T13:30:00Z")
-        self.assertEqual(test_game.home_team_name, "Tsg 1899 Hoffenheim") 
-        self.assertEqual(test_game.away_team_name, "Fc Bayern München") 
+        self.assertEqual(test_game.home_team_id, 6) 
+        self.assertEqual(test_game.away_team_id, 1) 
         self.assertEqual(test_game.home_team_score, 1)
         self.assertEqual(test_game.away_team_score, 2)
         self.assertEqual(test_game.match_day, 2)
@@ -126,9 +126,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_season.cur_match_day, 34)
 
     def test_season_readable_2(self):
-        test_season = db.session.query(Season).get(8)
+        test_season = db.session.query(Season).get(6)
 
-        self.assertEqual(test_season.season_id, 8) #399
+        self.assertEqual(test_season.season_id, 6) #399
         self.assertEqual(test_season.season_name, "Primera Division 2015/16")
         self.assertEqual(test_season.league, "PD")
         self.assertEqual(test_season.year, 2015)
@@ -138,9 +138,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_season.cur_match_day, 38)
 
     def test_season_readable_3(self):
-        test_season = db.session.query(Season).get(12)
+        test_season = db.session.query(Season).get(11)
 
-        self.assertEqual(test_season.season_id, 12)
+        self.assertEqual(test_season.season_id, 11)
         self.assertEqual(test_season.season_name, "Eredivisie 2015/16")
         self.assertEqual(test_season.league, "DED")
         self.assertEqual(test_season.year, 2015)

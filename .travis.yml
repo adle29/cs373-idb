@@ -22,8 +22,4 @@ before_script:
 script:
     - date
     - ls -lah
-    - make test
-<<<<<<< HEAD
-=======
-
->>>>>>> 769c3be519916983f641b77fce0769f2689c2f2e
+    - make apitest

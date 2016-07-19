@@ -1,0 +1,94 @@
+
+
+<div class="container">
+
+<div class="starter-template">
+  <div class="col-lg-12">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button ng-click="query_search()" class="btn btn-default" type="button">Go!</button>
+      </span>
+      <input type="text" class="form-control" ng-model="searchKeys" placeholder="Search for...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+</div>
+
+
+<ul class="list-group">
+  <li  ng-if="seasons.length == 0 && teams.length == 0 && players.length == 0 && games.length == 0 && loading == false" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/sad.png" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">No items found.</h4>
+      <small>Make a new search for teams, players, games or seasons!</small> 
+    </div>
+  </li> 
+
+  <li  ng-if="loading" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/sad.png" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Loading</h4>
+      <small>Please wait a moment for the results to arrive.</small> 
+    </div>
+  </li>
+
+  <li  ng-repeat="season in seasons" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/season.svg" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Season</h4>
+      <small>{{season.season_name}}</small> 
+    </div>
+  </li>
+
+  <li  ng-repeat="team in teams" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/team.png" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Team</h4>
+      <small>{{team.name}}</small> 
+    </div>
+  </li>
+
+  <li  ng-repeat="player in players" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/player.png" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Player</h4>
+      <small>{{player.name}}</small> 
+    </div>
+  </li>
+
+  <li  ng-repeat="game in games" class="list-group-item">
+    <div class="media-left media-middle">
+      <a href="">
+        <img class="media-object" src="/static/img/icons/game.jpg" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Game</h4>
+      <small>{{game.away_team + " VS " + game.home_team}}</small> 
+    </div>
+  </li>
+
+</ul>
+
+
+</div> <!-- end container -->

@@ -6,10 +6,12 @@ import io
 from flask import Flask, request, url_for
 from flask import render_template, send_file
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Integer, String
 import requests
 import ast
 import json
 import config
+import itertools
 
 # Server and DB data
 app = Flask(__name__)
@@ -149,27 +151,91 @@ def games(offset=0):
     db.session.close()
     return json.dumps(data)
 
-# @app.route('/season/players/<season_id>')
-# def season_players(season_id):
-#     query =  Player.query.filter(Player.season_id == season_id).first()
-#     data = query.display()
-#     return json.dumps(data)
+#function for all searches
+@app.route('/search')
+def search_site():
+    arguments = str(request.args.get('q', '')).split(' ')
+    parameters = [x for x in arguments if x != '']
+    string = ' '.join(parameters)
 
-# @app.route('/data/<filename>')
-# def data(filename):
-#     print("[+]Returning JSON file.")
-#     print( send_file("static/js/data/"+filename) )
-#     return send_file("static/js/data/"+filename)
-#
-# @app.route('/team/<team_id>/players')
-# def team_players(team_id):
-#     r = requests.get('http://api.football-data.org/v1/teams/'+team_id+'/players', headers=headers)
-#     return r.text
-#
-# @app.route('/team/<team_id>/fixtures')
-# def team_fixtures(team_id):
-#     r = requests.get('http://api.football-data.org/v1/teams/'+team_id+'/fixtures', headers=headers)
-#     return r.text
+    #loop though the attributes of the model 
+    sstring  = '%' + str('%'.join(c for c in string)) + '%'
+
+    for i in range(0, len(parameters)): 
+        param = parameters[i]
+        parameters[i] = '%' + str('%'.join(c for c in param)) + '%'
+
+    def make_search(model, attributes, string, parameters, key):
+        merged = {}
+        merged_list = []
+        query_all = None
+        query = None
+
+        for attribute in attributes:
+            model_attribute = getattr(model, attribute)
+
+            query_all = db.session.query(model).filter(
+                model_attribute.like(string)).all()
+
+            query = sum([db.session.query(model).filter(
+                model_attribute.like(q)).all() for q in
+                parameters], [])
+
+
+            #Filter results
+            l1 = [dict(item.display()) for item in query_all]
+            l2 = [dict(item.display()) for item in query]
+
+            for item in l1+l2+merged_list:
+                if item[key] not in merged:
+                    merged[item[key]] = item
+                    merged_list.append(item)
+
+        return merged_list
+
+    # SEARCH SEASONS
+    attributes = ["league", "season_name"]
+    seasons = make_search(Season, attributes, sstring, parameters, "season_id")
+
+    # SEARCH TEAM
+    attributes = ["team_name", "nickname"]
+    teams = make_search(Team, attributes, sstring, parameters, "team_id")
+
+    # SEARCH PLAYERS
+    attributes = ["nation", "name", "position"]
+    players = make_search(Player, attributes, sstring, parameters, "player_id")
+
+    # SEARCH GAMES
+
+    query = db.session.query(Game).all()
+    games = [game.display() for game in query]
+    sgames = []
+
+    for game in games:
+        home_team_id = game["home_team_id"]
+        away_team_id = game["away_team_id"]
+        homeTeam = db.session.query(Team).filter(Team.team_id == home_team_id).first()
+        awayTeam = db.session.query(Team).filter(Team.team_id == away_team_id).first()
+        game["home_team_name"] = homeTeam.display()["team_name"]
+        game["away_team_name"] = awayTeam.display()["team_name"]
+
+        if string in game["home_team_name"] or string in game["away_team_name"]:
+            sgames.append(game)
+
+    data = {
+       'seasons' : seasons,
+       'players' : players,
+       'teams'   : teams,
+       'games'   : sgames
+    }
+
+    db.session.close()
+    return json.dumps(data)
+
+# @app.errorhandler(404)
+# def page_does_not_exist(error):
+#     print(error)
+#     return render_template('templates/404.html'), 404
 
 @app.route('/runtests')
 def run_tests():

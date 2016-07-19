@@ -24,7 +24,7 @@ pip3 install Manager
 createdb golazo-dev
 python3 manage.py db init
 python3 manage.py db migrate
-python3 manage.py db upgrade
+p
 
 #psql
 psql #start postgresql console

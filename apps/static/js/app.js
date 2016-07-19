@@ -2,6 +2,18 @@
 
 var myApp = angular.module('golazoApp',['ngRoute']);
 
+// myApp.factory('searchBar', function() {
+//     return {
+//         search: function() {
+//             //call search
+//         }
+//     };
+// });
+
+myApp.run(function($rootScope) {
+    $rootScope.searchBarArguments = "";
+});
+
 var routes = myApp.config(['$httpProvider', function($httpProvider) {
   $httpProvider.defaults.useXDomain = true;
   $httpProvider.defaults.withCredentials = true;
@@ -49,30 +61,127 @@ var routes = myApp.config(['$httpProvider', function($httpProvider) {
       templateUrl: '/static/partials/team.html',
       controller: 'team'
     })
+    .when('/search',{
+      templateUrl: '/static/partials/search.html',
+      controller: 'search'
+    })
     .otherwise({redirectTo:'/'})
   }]);
 
-routes.controller('main',['$scope', '$http',function($scope, $http){
+routes.controller('main',['$scope', '$http', '$rootScope', function($scope, $http, $rootScope){
   $scope.games = [];
   $scope.show_card = false;
 
-  $http.get('/games').then(function(response){
-    console.log(response);
-    var res = response.data.fixtures;
-    for (var i = 0; i < res.length; i++) {
-        var element = res[i];
-        var game = {
-          date: element.date,
-          awayTeamName: element.awayTeamName,
-          homeTeamName: element.homeTeamName
-        };
-        $scope.games.push(game);
-    }
-  });
+  // $http.get('/games').then(function(response){
+  //   console.log(response);
+  //   var res = response.data;
+  //   for (var i = 0; i < res.length; i++) {
+  //       var element = res[i];
+  //       var game = {
+  //         date: element.date,
+  //         awayTeamName: element.awayTeamName,
+  //         homeTeamName: element.homeTeamName
+  //       };
+  //       $scope.games.push(game);
+  //   }
+  // });
 
   if ($scope.games.length <2)
     $scope.show_card = true;
 }]);
+
+routes.controller('search',['$scope', '$http', '$rootScope', function($scope, $http, $rootScope){
+
+  $scope.searchKeys = $rootScope.searchBarArguments; 
+  $scope.seasons = []; 
+  $scope.games = []; 
+  $scope.players = []; 
+  $scope.teams = []; 
+  $scope.loading = false; 
+
+  console.log($rootScope.searchBarArguments);
+
+  $scope.query_search = function(){
+    $scope.seasons = []; 
+    $scope.games = []; 
+    $scope.players = []; 
+    $scope.teams = []; 
+    $scope.loading = true; 
+
+    if ($scope.searchKeys != ""){
+      var parameters = $scope.searchKeys;
+      parameters = parameters.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+      parameters = parameters.replace(" ", "%20");
+
+      console.log(parameters);
+      if (parameters.length > 0 && parameters != undefined ){
+        $http.get('/search?q='+parameters).then(function(response){
+          $scope.loading = false; 
+          var res = response.data; 
+          console.log(res);
+          var seasons = res.seasons; 
+          var players = res.players; 
+          var teams = res.teams; 
+          var games = res.games; 
+
+          for(var i in seasons){
+            var season = seasons[i];
+            var newSeason =  {
+              season_name: season.season_name
+            };
+
+            $scope.seasons.push(newSeason);
+
+          }
+
+          for(var i in teams){
+            var team = teams[i];
+            var newTeam =  {
+              name: team.team_name
+            };
+
+            $scope.teams.push(newTeam);
+
+          }
+
+          for(var i in players){
+            var player = players[i];
+            var newPlayer =  {
+              name: player.name
+            };
+
+            $scope.players.push(newPlayer);
+
+          }
+
+          for(var i in games){
+            var game = games[i];
+            var newGame =  {
+              away_team: game.away_team_name,
+              home_team: game.home_team_name
+            };
+
+            $scope.games.push(newGame);
+          }
+
+
+
+        }); 
+
+        console.log($scope.games);
+      }
+    } //end if
+
+    else {
+       $scope.loading = false; 
+    }
+
+  };
+
+  $scope.query_search();
+
+}]);
+
 
 routes.controller('team',['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
   var id = $routeParams.id;
@@ -241,9 +350,30 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
   $scope.offset = 0;
   $scope.endIndex = 6;
   $scope.startIndex = 0;
+  $scope.searchKeys = "";
+  $scope.loadedSearch = false; 
+  $scope.cacheSeasons = {}; 
+  $scope.cacheTotalSeasons = 0;
+  $scope.loading = false; 
+  $scope.found = 0; 
+
+  $scope.$watch('searchKeys', function(newValue, oldValue) {
+    if( $scope.searchKeys == ""){
+        $scope.found = $scope.cacheTotalSeasons; 
+        $scope.loadedSearch = false;
+        $scope.seasons = $scope.cacheSeasons;
+        $scope.totalSeasons = $scope.cacheTotalSeasons;
+    }
+  });
 
   $scope.range = function(n) {
+        if ( n == undefined || n == null || isNaN(n))
+            n = 0; 
         return new Array(n);
+  };
+
+  $scope.reverse_seasons = function(){
+
   };
 
   $scope.nextList = function(){
@@ -279,9 +409,9 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
       var res = response.data;
       var seasons = res.seasons;
 
+      $scope.found = seasons.length;
       $scope.totalSeasons = Math.ceil(res.totalNumberOfSeasons / 10);
       $scope.offset += seasons.length;
-      console.log($scope.pointer);
       $scope.seasons[$scope.pointer] = [];
 
       for (var i = 0; i < seasons.length; i++) {
@@ -299,8 +429,71 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
           };
           $scope.seasons[$scope.pointer].push(season);
       }
+      console.log($scope.seasons);
     });
-  }
+  }; 
+
+  $scope.query_search = function(){ 
+      $scope.cacheSeasons = $scope.seasons; 
+      $scope.cacheTotalSeasons = $scope.totalSeasons; 
+      $scope.seasons = {};
+      $scope.loading = true; 
+
+      if ($scope.searchKeys != ""){
+        var parameters = $scope.searchKeys;
+            parameters = parameters.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+            parameters = parameters.replace(" ", "%20");
+
+        if (parameters.length > 0 && parameters != undefined ){
+          $http.get('/search?q='+parameters).then(function(response){
+            $scope.loading = false; 
+            var res = response.data; 
+            console.log(res);
+            var seasons = res.seasons; 
+
+            $scope.totalSeasons = Math.ceil(res.totalNumberOfSeasons / 10);
+            $scope.seasons[$scope.pointer] = [];
+
+            for (var i = 0; i < seasons.length; i++) {
+                var element = seasons[i];
+                var season = {
+                  name: element.season_name,
+                  league: element.league,
+                  numberOfTeams: element.num_teams,
+                  numberOfGames: element.num_games,
+                  numberOfMatchdays: element.num_match_days,
+                  currentMatchday: element.cur_match_day,
+                  completed: element.cur_match_day == element.num_match_days,
+                  id: element.season_id,
+                  year: element.year
+                };
+                $scope.seasons[$scope.pointer].push(season);
+
+                if(i%10 == 0) {
+                  $scope.pointer++;
+                  $scope.seasons[$scope.pointer] = [];
+                }
+            }
+
+            console.log($scope.seasons);
+            $scope.pointer = 0; 
+            $scope.found = seasons.length;
+            if(seasons.length > 0){
+              loadedSearch = true;
+              
+            }
+
+
+          }); 
+
+        }
+      } //end if
+
+      else {
+         $scope.loading = false; 
+      }
+
+  };//finished function 
 
   fetchData();
 

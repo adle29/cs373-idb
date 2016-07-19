@@ -1,0 +1,757 @@
+commit d5ba85dc7fb9c50f9ca7d8f279b9fafbc2c14402
+Merge: a1e84ea fd4f2b5
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 21:47:38 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit a1e84ea059eb55e49260562248fea3d96e2be3f7
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 21:47:28 2016 -0500
+
+    fixed section in games
+
+commit b5598b1e2dbf7f9ac5181ad6a3155d3f64fc84f9
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 21:26:48 2016 -0500
+
+    all pages have pagination and connected to routes
+
+commit fd4f2b5691174804d18e03e059144039fe258f23
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Tue Jul 12 21:11:50 2016 -0500
+
+    tests should work with online db
+
+commit a7e6e76980cd92bc0024e34f0db5b09e0654ebf3
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Tue Jul 12 20:13:48 2016 -0500
+
+    Updated apiary.apib
+
+commit e8d93affc7846c5c4c7e7631c3f11ddc36795a9c
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 19:57:36 2016 -0500
+
+    added players
+
+commit ad91cea3f7eecd5c37b1683ed27fff17a3f567fd
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 19:29:38 2016 -0500
+
+    modifed models, init, scrape, connected database queries
+
+commit bc8785f2f76b0666d378476cca4b59e0a069f4a5
+Merge: 9f5c311 5ec9c4d
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 14:27:10 2016 -0500
+
+    added updateDB.sh, modified models, and scrape.py
+
+commit 9f5c3118cdcf09790bd69f57b51cefc1536c0a2d
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Tue Jul 12 13:47:36 2016 -0500
+
+    changes
+
+commit 5ec9c4d9c3f5b46de6cd608d0a4a6236fa71f7c9
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 22:38:37 2016 -0500
+
+    Clark and I got the scraper relationships setup, just need to point towards digital ocean to fill database
+
+commit c436cdbd6035bc4f405e4357a46a21345ff5530c
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 19:20:07 2016 -0500
+
+    fixed about page, added more code to scrape.py
+
+commit 7161a34778b40e9e214b34eacddbec1e23fa2388
+Merge: 19dbd64 3b09474
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 19:13:35 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into avidev
+
+commit f75da104afaedba9f32771b51a320a73f6ed48a7
+Merge: 2164453 3b09474
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 19:06:36 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 3b094743c264cfa9cd3d1622239eb6e912190bf1
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Mon Jul 11 18:58:50 2016 -0500
+
+    trying to fix relationships
+
+commit 2164453a20c71b6c2812a25eb81ce161b99191f1
+Merge: 62ffb5f 9234f01
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 18:50:51 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 9234f01ab80830a07375d9977241a9b7ceb902a5
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Mon Jul 11 18:50:26 2016 -0500
+
+    fixed error about ambiguity
+
+commit 19dbd64253faf47208eeea953ccff981d913b1af
+Merge: 11ca948 f6dd64f
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 18:40:07 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into avidev
+
+commit 62ffb5f896ec1d2821ebed839e84ff89d0f1b77a
+Merge: 940bf89 f6dd64f
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 18:37:12 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit f6dd64f1c5f8a89afc4b48e9c04f7dc17da834f8
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Mon Jul 11 18:36:46 2016 -0500
+
+    removed backrefs
+
+commit 11ca9481c723a437929898a69f1c4812f9e32f58
+Merge: 469f6ab 8e97381
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 18:30:35 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into avidev
+
+commit 8e9738145ed7f3d905fe060f6d30e99ce807e9e8
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Mon Jul 11 18:30:01 2016 -0500
+
+    removed api ids for players and standings
+
+commit 940bf89166572da2e94998c0cc908d00ba74fe9c
+Merge: 469f6ab b9c14ff
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 18:12:16 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit b9c14ff2977a07710566832a4b82b38f46b932ae
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Mon Jul 11 18:11:49 2016 -0500
+
+    updated games to teams relationship and tried fixing many to many relationships
+
+commit 469f6ab8405355912bc43a5ad2bcbb2c2371d39a
+Merge: 19763cb 87bdc66
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 17:58:33 2016 -0500
+
+    fixed scrape.py, __init__.py, and models.py
+
+commit bfec2790374486f806ebf20d067398f15e3fdc26
+Author: koalanis <kalebalanis@gmail.com>
+Date:   Mon Jul 11 16:51:43 2016 -0500
+
+    update makefile
+
+commit 19763cb995959ad0cd36a563b97e3afb226b1c51
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Mon Jul 11 16:35:41 2016 -0500
+
+    my changes
+
+commit 87bdc666c60d196538d5c19184374397119499d9
+Author: koalanis <kalebalanis@gmail.com>
+Date:   Mon Jul 11 16:34:19 2016 -0500
+
+    fixed #27, rewrote code for python3
+
+commit 3a2d0810d905390207cd6321557dd39708398608
+Author: koalanis <kalebalanis@gmail.com>
+Date:   Mon Jul 11 16:10:42 2016 -0500
+
+    added test output to about.html and functions in js to get test output data
+
+commit 12b3329e55829d95b827eb825aab072d37e0db46
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 10:39:51 2016 -0500
+
+    Forgot to call the funciton to populate the standings for the seasons
+
+commit 603d95e126042123c9ff13a7bb1922c300c62883
+Merge: 5262b47 4255205
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 10:35:18 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 5262b47034a073c149a933e248578e05cbcd1bb0
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Mon Jul 11 10:35:12 2016 -0500
+
+    Scraper is about done other than setting up relations
+
+commit 4255205fc314745db97edf90f66e6814f3b8d33c
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Sun Jul 10 18:58:53 2016 -0500
+
+    fixed typos and improved test.py
+
+commit 25c9b41516bdd7a510a64c8c15c6d8ec92feb36f
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Sun Jul 10 18:41:28 2016 -0500
+
+    Updated the scraper and models now saves the api ids seperately
+
+commit ef286e7d82a2ec866025bc58e07d98e3eb55fabf
+Merge: b8006aa 1616632
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sun Jul 10 14:50:15 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit b8006aa75e194997e3b4e7230d2ffab606826972
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sun Jul 10 14:46:21 2016 -0500
+
+    added scrape.py
+
+commit 1616632cf6ed631a3c0b054896c11035548be533
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Sun Jul 10 14:23:28 2016 -0500
+
+    changed names to fit python language
+    
+    no Camelcase
+
+commit d95588b4c6d85bc025cadaae57b7ad7e324e6fbb
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sat Jul 9 17:24:22 2016 -0500
+
+    connected server with database
+
+commit 94438b730c1adc764a23b581207fe44323be8826
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sat Jul 9 17:23:16 2016 -0500
+
+    connected database with server
+
+commit 1248feeedf1a43aca20d184e4a65fe54f34e0b04
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sat Jul 9 16:25:10 2016 -0500
+
+    added logic to connect server and database
+
+commit c29c7939067b04ef242fb3fdadf2d614a816dca6
+Author: Abraham Adberstein <aadberstein@gmail.com>
+Date:   Sat Jul 9 13:24:36 2016 -0500
+
+    merged dev and masters
+
+commit f82108fea270e5c7d648ffbb06a947888ba90d33
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 21:17:37 2016 -0500
+
+    fixed merge conflict
+
+commit 507208664fd392e67e6e5f36ac60c34da2b903eb
+Merge: 62f8395 04ab2cc
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 21:04:40 2016 -0500
+
+    Merge pull request #19 from adle29/dev
+    
+    Dev
+
+commit 62f83953419827a88d26e09c8eea6fd06e2f3c8c
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 21:01:08 2016 -0500
+
+    ran format on python code
+
+commit 04ab2cca43f79a9349802f3a809a98cd5d758852
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 20:47:06 2016 -0500
+
+    added git log
+
+commit e672bfa03faec4f772619f07932610852f53bef1
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 20:40:00 2016 -0500
+
+    took out unnecessary stuff from makefile
+
+commit b45df74253daf61455b8261d04473fa1c4844b4d
+Merge: 837fd8d b758093
+Author: ace1294 <ace@gmail.com>
+Date:   Wed Jul 6 20:31:25 2016 -0500
+
+    Merge conflict with models in eof
+
+commit b758093a41d2963923b24e9b5025e26000de5c8b
+Author: ace1294 <ace@gmail.com>
+Date:   Wed Jul 6 20:29:31 2016 -0500
+
+    Updated the apiary
+
+commit 9df064f5788d4ec185944ab0993073bc9a8f1597
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:59:58 2016 -0500
+
+    Gathered results from pylint3
+
+commit 01a4a4fdf087f8e98979d3ba5ad8b5dd451fe34a
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:58:48 2016 -0500
+
+    Gathered results from pylint3
+
+commit 1c553140f22ace0eca470cd8f31308a0241aff9d
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:54:42 2016 -0500
+
+    Still getting syntax errors for some odd reason
+
+commit 00b3d0c2095bef5252435e28d8c285349c0338a4
+Merge: 271d8f8 0c467f1
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:48:26 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 271d8f8e02e40402fdcd401c04cada90291608da
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:47:57 2016 -0500
+
+    Still getting syntax errors for some odd reason
+
+commit 0c467f165e1d588f3138ab4c77ce813364721413
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:41:30 2016 -0500
+
+    added Hassan's pic for about page
+
+commit bd54fa31f7c7698a8d8116171d925af2b449ddb9
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 19:40:09 2016 -0500
+
+    updated profile pic
+
+commit bc1926f3eb36bdd8fac15e767f948bd21cd82755
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 19:21:57 2016 -0500
+
+    Delete site log because it does not have the right name
+
+commit 45808d691661b3214bd6077a891db003141728c9
+Merge: 4f06ae2 8338fbb
+Author: Abraham Adberstein <sniper@wireless-10-148-127-72.public.utexas.edu>
+Date:   Wed Jul 6 19:17:14 2016 -0500
+
+    Merge branch 'avidev' of https://github.com/adle29/cs373-idb into dev
+
+commit 8338fbba1030dbacd53f17314538c7385741b088
+Author: Abraham Adberstein <sniper@wireless-10-148-127-72.public.utexas.edu>
+Date:   Wed Jul 6 19:16:25 2016 -0500
+
+    added pages, added sorting
+
+commit 4f06ae2e0a806e7cff6b3ed88bed51aa222c4611
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 19:12:19 2016 -0500
+
+    fixing name of log to IDB1.log
+
+commit 9d213b752e8d3423657646df045576625443fbb5
+Merge: 59f902d 18fe12c
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 16:11:24 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 59f902dfe8d5f6aa690ddc11e85d8e2e7f787778
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 16:07:04 2016 -0500
+
+    fixed syntax error for file
+
+commit 18fe12c2b056db9915a7b45c1fda33d0ec1192a2
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Wed Jul 6 16:06:02 2016 -0500
+
+    Added my responsibilities
+
+commit d847c3402680c68a186d79a40125db22c6dcdc45
+Merge: 392d48d a763e93
+Author: Abraham Adberstein <sniper@wireless-10-147-82-48.public.utexas.edu>
+Date:   Wed Jul 6 16:01:27 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 392d48de30d0704fbb74b3352a50f3bdc9bc875a
+Merge: 0665073 f3bbcb4
+Author: Abraham Adberstein <sniper@wireless-10-147-82-48.public.utexas.edu>
+Date:   Wed Jul 6 16:00:51 2016 -0500
+
+    merging branches
+
+commit a763e93ee8d4335716d14345a457d7fe2cf9594d
+Merge: 88b0671 0665073
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 15:58:03 2016 -0500
+
+    Updated necessary files
+
+commit f3bbcb433460a42d4f2856a6478818174fa4417d
+Author: Abraham Adberstein <sniper@wireless-10-147-82-48.public.utexas.edu>
+Date:   Wed Jul 6 15:54:32 2016 -0500
+
+    fixed navigation
+
+commit 88b067166c1766ce39186052bf23c508142c2530
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 15:50:05 2016 -0500
+
+    updated info for about page
+
+commit d45061debe3153758a6964dccdd742915493b8ae
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 15:35:28 2016 -0500
+
+    Updated and pushed files into dev
+
+commit d944c4e0397623e37625432cfea9e1cd57028877
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Wed Jul 6 15:18:42 2016 -0500
+
+    Updated about page
+
+commit 06650737e5adfa9ef77e4ed645de6f3c8dd3340d
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:54:23 2016 -0500
+
+    Update about.html
+
+commit 8898866af7fc79376cc4ad4a513be1ea13e91dad
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:42:13 2016 -0500
+
+    fixed small typo in models.html
+
+commit 9451a50216b6f3339fae6bcc2c5117e591e9d4ed
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:41:00 2016 -0500
+
+    fixed small typo in models.py
+
+commit 9f37ec880601eacf30c0d6418cf920ad3116be84
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:40:01 2016 -0500
+
+    added models.html
+
+commit 837fd8d4e9ff8f54d722b8a3d8c9f3b3fcbbb500
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:36:10 2016 -0500
+
+    fixed bug in models.py
+
+commit 59fe4595f8e05a7568298be5ad9db9c6e2ad9024
+Merge: 5e184fb 22c461f
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:34:16 2016 -0500
+
+    Merge pull request #17 from adle29/master
+    
+    merging after accidentally pushing to master before dev
+
+commit 22c461fc120294e37572d6f2a5ffc9ea43083f1e
+Merge: b595d8e 5e184fb
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Wed Jul 6 01:31:45 2016 -0500
+
+    Merge pull request #16 from adle29/dev
+    
+    added more documentation
+
+commit 5e184fbfcc36f99b98a9bc449c258a16d76ff931
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 22:36:46 2016 -0500
+
+    added more documentation
+
+commit b595d8e4ff16ab979ff0718ee3e664464dfff4d1
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 22:27:21 2016 -0500
+
+    trying to fix pictures
+
+commit c893e9d08e71e38358ad374fb32e1ccfdc7de43a
+Author: Dimitri Vasiliev <sniper@wireless-10-148-194-87.public.utexas.edu>
+Date:   Tue Jul 5 21:55:54 2016 -0500
+
+    added abraham's pic
+
+commit e5c8bf738fd9b565005001d11ccea11ad676df97
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 21:55:12 2016 -0500
+
+    added documentation
+
+commit 522f621e532c5075390fd27e87313812ce96632a
+Merge: dafacf1 7adfb6f
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:35:47 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit dafacf123ba6c5870e7fb81bc3d157eddebd963c
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:35:40 2016 -0500
+
+    Added html to make file
+
+commit 7adfb6fb3e27f1302d99e38ed65265b14a56aa49
+Author: Kaleb Osiel Alanis <kalebalanis@gmail.com>
+Date:   Tue Jul 5 21:23:20 2016 -0500
+
+    fixed documention header HOST
+
+commit 0d4ecdacc41d99283dc5c2bbaf859e932f5517f8
+Author: Kaleb Osiel Alanis <kalebalanis@gmail.com>
+Date:   Tue Jul 5 21:20:08 2016 -0500
+
+    Create apiary.apib
+
+commit 465855c495283fc761edf331cc215ea59021cbec
+Merge: dfa5a20 c7e020b
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:12:32 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit dfa5a2099e8de82a1d4141a7bd259154026d8f46
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:12:25 2016 -0500
+
+    Added the links in the bottom of the about page
+
+commit c7e020bb04bd6c1415aafa380e347033e06dcd8b
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 21:08:43 2016 -0500
+
+    fixed my picture
+
+commit 29a50a515e70f05ce5707bc47300602cdb136307
+Merge: d2cc6bb 472e396
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:07:06 2016 -0500
+
+    Merge branch 'jason' into dev
+
+commit 472e396f3e8a3bd5c9bef4313d9bafd64c3fa126
+Author: ace1294 <ace@gmail.com>
+Date:   Tue Jul 5 21:06:50 2016 -0500
+
+    Avatar image
+
+commit d2cc6bb7683ac7118fe3d4e6139e7f97aa39daba
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Tue Jul 5 21:02:19 2016 -0500
+
+    Update about.html
+
+commit 4fb6d12af4e6d446fba416865f7ae61583ef54d3
+Merge: fcc38b3 84825e3
+Author: Dimitri Vasiliev <sniper@wireless-10-148-194-87.public.utexas.edu>
+Date:   Tue Jul 5 20:55:18 2016 -0500
+
+    added folder data
+
+commit fcc38b3e2c6671f99e8d441f6779a4318e63aa53
+Author: Dimitri Vasiliev <sniper@wireless-10-148-194-87.public.utexas.edu>
+Date:   Tue Jul 5 20:54:13 2016 -0500
+
+    added data folders
+
+commit 4c55fc70a73b96cd0e76c037d71258a7d9f15836
+Merge: e64a44c 84825e3
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Tue Jul 5 19:30:51 2016 -0500
+
+    Updated info of group members
+
+commit 84825e3971201ed9511e3c4d5999de2d5bac6bef
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 19:12:25 2016 -0500
+
+    added my information into the about page
+
+commit e64a44cda2df870836e96d5c2b94d49eea11fdd8
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Tue Jul 5 19:12:16 2016 -0500
+
+    Added more background info for one of members
+
+commit 0825d0c1133f025d6b4a67f855e4a083dd3ee47e
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 19:02:53 2016 -0500
+
+    Clark's photo for the about page
+
+commit 19b492ba51cf61c51139dddc60298295c7a1a4e6
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Tue Jul 5 18:53:57 2016 -0500
+
+    Updated and added test cases for each model
+
+commit 420a9128b1aaca0b02aaeb1dee398dd396ba01a8
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 18:43:25 2016 -0500
+
+    Added yUML file
+
+commit c8a3ca9ef857913b39195643cad96219c430cce6
+Author: Clarkclayton <clarkclayton@utexas.edu>
+Date:   Tue Jul 5 18:28:17 2016 -0500
+
+    Updated Models.py - might have some errors
+
+commit 7c750dea19c874d437907873d8ad668d0041e68e
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Tue Jul 5 17:58:25 2016 -0500
+
+    Updated original tests. Attempting to add more for remaining models
+
+commit 4a1d24579feb700e60d2358e1ee36744a9544952
+Author: Dimitri Vasiliev <sniper@wireless-10-147-49-72.public.utexas.edu>
+Date:   Tue Jul 5 17:32:46 2016 -0500
+
+    improved website design, added static content
+
+commit 3da0ee6d821030fb47153628975c0f637e85cee2
+Author: Jason Dimitriou <ace1294@gmail.com>
+Date:   Tue Jul 5 14:44:53 2016 -0500
+
+    Added my info to the about and my picture
+
+commit 5642a5c04494d348ceee550efc698961595ba8ef
+Author: koalanis <kalebalanis@gmail.com>
+Date:   Tue Jul 5 09:44:54 2016 -0500
+
+    added myself on about page
+
+commit d9fd3c3c1919ede24c09f3a4c5b0527a4bff1366
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 18:43:08 2016 -0500
+
+    Updated test.py
+
+commit 58187bd5313f9d659d42c6b930022a8c7880b42d
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 18:38:49 2016 -0500
+
+    Added unit test cases for test harness
+
+commit 368a7fa8ab5fadfbfec5f4c7ff63b29d6f2ab5f7
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 17:18:30 2016 -0500
+
+    Updated logs for idb site
+
+commit cfdf5fc415426a280e84f24f11f2af2de108c25a
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 16:41:35 2016 -0500
+
+    updated makefile and tests
+
+commit facc0fc7be141944634f4b3b150c29feb73f6da1
+Merge: 25ae38e 769c3be
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 16:30:54 2016 -0500
+
+    Updated files
+
+commit 25ae38ef0d17ad62d7719050d544821f857abcdc
+Author: Hassan Sheikh <hassims95@utexas.edu>
+Date:   Mon Jul 4 16:00:34 2016 -0500
+
+    Added .gitignore. .travis.yml, and temporary makefile
+
+commit 769c3be519916983f641b77fce0769f2689c2f2e
+Author: Dimitri Vasiliev <sniper@citadel.attlocal.net>
+Date:   Mon Jul 4 00:40:28 2016 -0500
+
+    added players and teams pages and logic, added carousel, improved about page
+
+commit 1e89d7246fe8a0427844123fd0ae7d0f56989c1c
+Author: Dimitri Vasiliev <sniper@citadel.attlocal.net>
+Date:   Sun Jul 3 01:46:57 2016 -0500
+
+    pushing
+
+commit 742ac55d89045bf555760517540b254a19594bdb
+Author: Dimitri Vasiliev <sniper@citadel.attlocal.net>
+Date:   Sun Jul 3 01:23:38 2016 -0500
+
+    added pictures and app.js
+
+commit 08286fce5bcbe753b8d7d9c2149d9fc1f1c2d3ed
+Merge: 52a1bf2 f886398
+Author: Dimitri Vasiliev <sniper@citadel.attlocal.net>
+Date:   Sun Jul 3 01:05:22 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit 52a1bf296ede86999b061bffc32dd56e011c08b4
+Author: Dimitri Vasiliev <sniper@citadel.attlocal.net>
+Date:   Sun Jul 3 01:05:10 2016 -0500
+
+    added routes interfaces, included bootstrap, added angular infraestructure
+
+commit f8863981313284c3aad11d9bb2ebfd1f95f23e82
+Author: Abraham Adberstein <adle29@users.noreply.github.com>
+Date:   Fri Jul 1 15:04:58 2016 -0500
+
+    Delete .gitingore
+
+commit f66cd32907db6b868e9f756c6e6d401bc00e393a
+Author: Dimitri Vasiliev <sniper@wireless-10-147-206-127.public.utexas.edu>
+Date:   Fri Jul 1 15:04:00 2016 -0500
+
+    added navigation structure to website
+
+commit 7974b70b0c6183fe774d5a1505070ac77bc8676f
+Merge: d8a0241 e3bf175
+Author: Dimitri Vasiliev <sniper@wireless-10-147-206-127.public.utexas.edu>
+Date:   Fri Jul 1 14:52:25 2016 -0500
+
+    Merge branch 'dev' of https://github.com/adle29/cs373-idb into dev
+
+commit d8a02414f6f2947e1280e0ab0a6dcd319d83b978
+Author: Dimitri Vasiliev <sniper@wireless-10-147-206-127.public.utexas.edu>
+Date:   Fri Jul 1 14:52:12 2016 -0500
+
+    works
+
+commit e3bf17577cb2fbf08e362638ac34f15bf2b04179
+Author: koalanis <kalebalanis@gmail.com>
+Date:   Thu Jun 30 16:18:09 2016 -0500
+
+    added .gitignore, travis.yml and rough makefile
+
+commit 6499929922771cfe1aad7a360834c4d42ab3b3b0
+Author: Dimitri Vasiliev <sniper@wireless-10-146-5-223.public.utexas.edu>
+Date:   Thu Jun 30 15:25:31 2016 -0500
+
+    skeleton structure of web app
+
+commit b2789059b6cd244b6d2c565f284eeb267b6d5a96
+Author: Dimitri Vasiliev <sniper@wireless-10-148-12-123.public.utexas.edu>
+Date:   Mon Jun 27 21:04:26 2016 -0500
+
+    added README file

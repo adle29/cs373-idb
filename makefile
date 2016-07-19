@@ -57,4 +57,7 @@ models.html: apps/models.py
 	pydoc3 -w models
 
 test: 
-	python3 apps/test.py 
+	python3 apps/test.py
+
+apitest:
+	python3 apps/apitest.py 

@@ -2,6 +2,7 @@ from models import *
 from __init__ import db
 import requests
 import json
+from models import *
 
 headers = { 'X-Auth-Token': '1a83f9cdfa664421bc7c1997f1409218', 'X-Response-Control': 'minified' }
 
@@ -17,9 +18,12 @@ def make_request(url):
 def populate_seasons_for_year(year):
     url = 'http://api.football-data.org/v1/competitions/?season='+str(year)
     response = make_request(url)
+
     try:
         res = json.loads(response)
         for season in res:
+            query =  Season.query.filter(Season.api_season_id == season["id"]).first()
+
             result = Season(
             	api_season_id = season["id"],
             	season_name = season["caption"],
@@ -28,12 +32,15 @@ def populate_seasons_for_year(year):
             	num_teams = season["numberOfTeams"],
             	num_games = season["numberOfGames"],
             	num_match_days = season["numberOfMatchdays"],
-            	cur_match_day = season["currentMatchday"]
+            	cur_match_day = season["numberOfMatchdays"]  if season["currentMatchday"] is None else season["currentMatchday"]
             )
-            seasons_cache.append(result)
-            db.session.add(result)
-    except:
-        print("error getting data")
+
+            if not query:
+                seasons_cache.append(result)
+                db.session.add(result)
+
+    except Exception as e:
+        print("[-]error getting data for season in year " + str(year)+ " error: " + str(e) )
 
 def populate_teams_for_season(season):
     url = 'http://api.football-data.org/v1/competitions/' + str(season.api_season_id) +'/teams'
@@ -41,22 +48,28 @@ def populate_teams_for_season(season):
     try:
         res = json.loads(response)
         teams_response = res["teams"]
+        print(len(teams_response))
         for instance in teams_response:
-            result = Team(
-            	api_team_id = instance["id"],
-            	team_name = instance["name"],
-            	logo_url = instance["crestUrl"],
-            	nickname = instance["shortName"],
-            	market_val = instance["squadMarketValue"]
-            )
+            with db.session.no_autoflush:
+                query =  db.session.query(Season).filter(Team.api_team_id == instance["id"]).first()
 
-            teams_cache[result.api_team_id] = result
-            season.s_team.append(result)
-            db.session.add(result)
-            #db.session.commit()
+                result = Team(
+                    api_team_id = instance["id"],
+                    team_name = instance["name"],
+                    logo_url = instance["crestUrl"],
+                    nickname = instance["shortName"],
+                    market_val = instance["squadMarketValue"]
+                )
+                teams_cache[result.api_team_id] = result
+                season.s_team.append(result)
 
-    except:
-        print("error getting data for teams for season "+ str(season.api_season_id) + " response: "+ str(response) )
+                if not query:
+                    db.session.add(result)
+
+        print("Finished populating teams")
+
+    except Exception as e:
+        print("[-]error getting data for teams for season "+ str(season.api_season_id) + " error: \n"+ str(e) + "\n")
 
 def populate_games_for_season(season):
     # url = 'http://api.football-data.org/v1/competitions/?season=2015'
@@ -66,23 +79,26 @@ def populate_games_for_season(season):
         res = json.loads(response)
         games_response = res["fixtures"]
         for instance in games_response:
-            result = Game(
-            	api_game_id = instance["id"],
-            	date = instance["date"],
-                time = instance["date"],
-                api_away_team_id = instance["awayTeamId"],
-                api_home_team_id = instance["homeTeamId"],
-            	match_day = instance["matchday"],
-            	away_team_score = instance["result"]["goalsAwayTeam"],
-            	home_team_score = instance["result"]["goalsHomeTeam"]
-            )
+            with db.session.no_autoflush:
+                query =  db.session.query(Game).filter(Game.api_game_id == instance["id"]).first()
+                result = Game(
+                	api_game_id = instance["id"],
+                	date = instance["date"],
+                    time = instance["date"],
+                    api_away_team_id = instance["awayTeamId"],
+                    api_home_team_id = instance["homeTeamId"],
+                	match_day = instance["matchday"],
+                	away_team_score = instance["result"]["goalsAwayTeam"],
+                	home_team_score = instance["result"]["goalsHomeTeam"]
+                )
 
-            games_cache.append(result)
-            season.s_game.append(result)
+                if not query:
+                    games_cache.append(result)
+                    season.s_game.append(result)
             #db.session.add(result)
 
     except:
-        print("error getting data for games from season "+ str(season.api_season_id) + " response: "+ str(response) )
+        print("[-]error getting data for games from season "+ str(season.api_season_id) + " error: "+ str(e) )
 
 def populate_standings_for_season(season):
     # url = 'http://api.football-data.org/v1/competitions/?season=2015'
@@ -130,10 +146,11 @@ def populate_standings_for_season(season):
                 )
                 standings_cache.append(result)
                 seasons.s_standing.append(result)
-                #db.session.add(result)
+                db.session.add(result)
+        #db.session.commit()
 
     except Exception as e:
-        print("error getting standings for season " +  str(season.api_season_id) + "error: " + str(e))
+        print("[-]error getting standings for season " +  str(season.api_season_id) + " error: \n" + str(e) +"\n")
 
 def populate_players_for_team(team):
     url = 'http://api.football-data.org/v1/teams/'+str(team.api_team_id)+'/players'
@@ -178,18 +195,23 @@ def main():
 
     populate_seasons_for_year(2015)
 
-    season = seasons_cache[0]
+    if len(seasons_cache) > 0:
+        season = seasons_cache[0]
 
-    populate_teams_for_season(season)
-    populate_games_for_season(season)
-    populate_standings_for_season(season)
+        populate_teams_for_season(season)
 
-    for team in teams_cache.values():
-        populate_players_for_team(team)
+        populate_games_for_season(season)
+        populate_standings_for_season(season)
 
-    connect_standings_to_teams()
-    connect_games_to_teams()
+        for team in teams_cache.values():
+            populate_players_for_team(team)
 
+        connect_standings_to_teams()
+        connect_games_to_teams()
+    else:
+        print("DB was not populated.")
+
+    db.session.commit()
     # for year in range(1970, 2017):
     #     populate_seasons_for_year(year)
     #
@@ -217,7 +239,7 @@ def main():
     # for team_id in team_ids:
     #     populate_players_for_team(team_id)
     #
-    db.session.commit()
+    #db.session.commit()
 
 
 if __name__ == "__main__":

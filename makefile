@@ -59,5 +59,5 @@ models.html: apps/models.py
 test: 
 	python3 apps/test.py
 
-api:
+apitest:
 	python3 apps/apitest.py 

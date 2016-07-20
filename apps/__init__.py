@@ -251,38 +251,7 @@ def search_site():
 
 @app.route('/runtests')
 def run_tests():
-
-    test_out = []
-    line = "-------------------------"
-
-    tout = io.StringIO()
-
-    cmd = 'python apps/tests.py'
-    try:
-        output = subprocess.check_output("{}".format(cmd), shell = True)
-        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception as e:
-        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
-
-    cmd = 'pylint apps/tests.py'
-
-    try:
-        output = subprocess.check_output("{}".format(cmd), shell = True)
-        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception as e:
-        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
-
-    cmd = 'coverage apps/tests.py'
-    try:
-        output = subprocess.check_output("{}".format(cmd), shell = True)
-        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
-    except Exception as e:
-        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
-
-    return tout.getvalue()
+    return send_file('test.log')
 
 
 ## utils ##

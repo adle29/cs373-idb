@@ -34,8 +34,8 @@ def index():
 @app.route('/seasons')
 @app.route('/seasons/<offset>')
 def seasons(offset=0):
-    count = len(db.session.query(Season).order_by(Season.year).all())
-    query = db.session.query(Season).order_by(Season.year).limit(10).offset(offset).all()
+    count = len(db.session.query(Season).all())
+    query = db.session.query(Season).limit(10).offset(offset).all()
     seasons = [season.display() for season in query]
     data = {"totalNumberOfSeasons":count, "seasons":seasons}
     db.session.close()

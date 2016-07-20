@@ -78,6 +78,12 @@ def player(offset=0):
     count = len(db.session.query(Player).all())
     query = db.session.query(Player).order_by(Player.name).limit(10).offset(offset).all()
     players = [player.display() for player in query]
+
+    for player in players: 
+        team_id = player["team_id"]
+        team = db.session.query(Team).filter(Team.team_id == team_id).first()
+        player["team"] = team.display()
+
     data = {"totalNumberOfPlayers":count, "players":players}
     db.session.close()
     return json.dumps(data)
@@ -121,11 +127,14 @@ def team_games(team_id):
     for game in games:
         home_team_id = game["home_team_id"]
         away_team_id = game["away_team_id"]
+        season_id = game["season_id"]
         homeTeam = db.session.query(Team).filter(Team.team_id == home_team_id).first()
         awayTeam = db.session.query(Team).filter(Team.team_id == away_team_id).first()
         print(homeTeam.display())
         game["home_team_name"] = homeTeam.display()["team_name"]
         game["away_team_name"] = awayTeam.display()["team_name"]
+        season = db.session.query(Season).filter(Season.season_id == season_id).first()
+        game["season"] = season.display()
 
     db.session.close()
 
@@ -142,10 +151,13 @@ def games(offset=0):
         print(game)
         home_team_id = game["home_team_id"]
         away_team_id = game["away_team_id"]
+        season_id = game["season_id"]
         homeTeam = db.session.query(Team).filter(Team.team_id == home_team_id).first()
         awayTeam = db.session.query(Team).filter(Team.team_id == away_team_id).first()
         game["home_team_name"] = homeTeam.display()["team_name"]
         game["away_team_name"] = awayTeam.display()["team_name"]
+        season = db.session.query(Season).filter(Season.season_id == season_id).first()
+        game["season"] = season.display()
 
     data = {"totalNumberOfGames":count, "games":games}
     db.session.close()

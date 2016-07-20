@@ -272,7 +272,7 @@ class Game(Base):
 
 
 
-    def __init__(self, api_game_id, date, time, api_away_team_id, api_home_team_id, away_team_score, home_team_score, match_day):
+    def __init__(self, season_id, api_game_id, date, time, api_away_team_id, api_home_team_id, away_team_score, home_team_score, match_day):
         """
         itializes everything in the Game class
         :param self:
@@ -285,6 +285,7 @@ class Game(Base):
         :param home_team_score Integer
         """
         self.api_game_id = api_game_id
+        self.season_id = season_id
         self.date = date
         self.time = time
         self.api_away_team_id = api_away_team_id
@@ -301,6 +302,7 @@ class Game(Base):
         """
         display = OrderedDict()
         display['game_id'] = self.game_id
+        display['season_id'] = self.season_id
         display['date'] = self.date
         display['away_team_score'] = self.away_team_score
         display['home_team_score'] = self.home_team_score
@@ -333,7 +335,7 @@ class Player(Base):
     team_id = db.Column(db.Integer, db.ForeignKey('team.team_id'))
     p_team = db.relationship("Team")  # many to 1
 
-    def __init__(self, name, nation, birth, position, jersey_num):
+    def __init__(self, team_id, name, nation, birth, position, jersey_num):
         """
         itializes everything in the player class
         :param self:
@@ -343,7 +345,7 @@ class Player(Base):
         :param position: String
         :param jersey_num: Integer
         """
-
+        self.team_id = team_id
         self.name = name
         self.nation = nation
         self.birth = birth
@@ -358,6 +360,7 @@ class Player(Base):
         """
         display = OrderedDict()
         display['player_id'] = self.player_id
+        display['team_id'] = self.team_id
         display['name'] = self.name.title()
         display['nation'] = self.nation
         display['birth'] = self.birth

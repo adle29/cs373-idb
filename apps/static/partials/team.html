@@ -48,6 +48,7 @@
       <table class="table table-bordered table-inverse">
         <thead>
         <tr>
+          <th>Season </th>
           <th>MD </th>
           <th>Away Team </th>
           <th>Home Team </th>
@@ -57,6 +58,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="game in games">
+            <td> {{game.season.season_name}} </td>
             <td> {{game.matchday}} </td>
             <td> {{game.away_team_name}}</td>
             <td> {{game.home_team_name}}</td>

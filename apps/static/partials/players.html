@@ -11,6 +11,7 @@
       <table class="table table-bordered table-inverse">
         <thead>
         <tr>
+          <th>Team </th>  
           <th class="link" style="width:250px;" ng-click="propertyName = 'name'; sortReverse = !sortReverse">Name
             <span ng-show="propertyName == 'name' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="propertyName == 'name' && sortReverse" class="fa fa-caret-up"></span>
@@ -35,6 +36,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="player in players[pointer] | orderBy:propertyName:sortReverse">
+            <td> <a class="link" href="/#/team/{{player.team.id}}">{{player.team.team_name}}</a> </td>
             <td> {{player.name}} </td>
             <td> {{player.nationality}}</td>
             <td> {{player.dateOfBirth}}</td>

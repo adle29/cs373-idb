@@ -258,7 +258,11 @@ def main():
     
 
     db.session.commit()
+<<<<<<< HEAD
+    for year in range(2010, 2017):
+=======
     for year in range(2015, 2017):
+>>>>>>> 05758a0540f836168e47b14215ad5e0baf98d310
         populate_seasons_for_year(year)
     
     for season in seasons_cache:

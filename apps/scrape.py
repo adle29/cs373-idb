@@ -59,7 +59,7 @@ def populate_teams_for_season(season):
     response = make_request(url)
     # try:
     res = json.loads(response)
-    print("$$$$$ Populating teams for season year " + str(season.season_name) + " " + str(season.api_season_id) + "\n" + str(res) + "\n")
+    print("$$$$$ Populating teams for season year " + " " + str(season.api_season_id) + "\n")
     teams_response = res["teams"]
     print(len(teams_response))
     for instance in teams_response:
@@ -78,7 +78,7 @@ def populate_teams_for_season(season):
             teams_cache[result.api_team_id] = result
             season.s_team.append(result)
 
-    print("Finished populating teams for season year " + str(season.season_name) + " " + str(season.api_season_id) + "\n")
+    print("Finished populating teams for season year " + " " + str(season.api_season_id) + "\n")
 
     # except Exception as e:
     #     print("[-]error getting data for teams for season "+ str(season.api_season_id) + " error: \n"+ str(e) + "\n")
@@ -258,7 +258,7 @@ def main():
     
 
     db.session.commit()
-    for year in range(2014, 2017):
+    for year in range(2010, 2017):
         populate_seasons_for_year(year)
     
     for season in seasons_cache:

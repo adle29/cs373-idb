@@ -1,41 +1,106 @@
 routes.controller('visual',['$scope', '$http', '$rootScope', function($scope, $http, $rootScope){
-  
-	var diameter = 960,
-    format = d3.format(",d");
 
-	var pack = d3.layout.pack()
-	    .size([diameter - 4, diameter - 4])
-	    .value(function(d) { return d.size; });
 
-	var svg = d3.select("body").append("svg")
-	    .attr("width", diameter)
-	    .attr("height", diameter)
-	  .append("g")
-	    .attr("transform", "translate(2,2)");
+	// houses
+	// characters
+	//events
 
-	d3.json("flare.json", function(error, root) {
-	  if (error) throw error;
+	//make characters link to houses, houses link to events 
+	var urlCharacters = "/static/js/data/characters.json";
+	var urlHouses = "/static/js/data/houses.json";
 
-	  var node = svg.datum(root).selectAll(".node")
-	      .data(pack.nodes)
-	    .enter().append("g")
-	      .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
-	      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+	$scope.characters = []; 
+	$scope.houses = []; 
 
-	  node.append("title")
-	      .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.size)); });
+	var model = {};
 
-	  node.append("circle")
-	      .attr("r", function(d) { return d.r; });
+	var jsonData = { "nodes": [], "links": [] };
 
-	  node.filter(function(d) { return !d.children; }).append("text")
-	      .attr("dy", ".3em")
-	      .style("text-anchor", "middle")
-	      .text(function(d) { return d.name.substring(0, d.r / 3); });
-	});
+	//make the id in houses a link 
 
-	d3.select(self.frameElement).style("height", diameter + "px");
+	function getRandomArbitrary(min, max) {
+	    return Math.random() * (max - min) + min;
+	}
 
+	$http.get(urlHouses).then(function(res1){
+		$http.get(urlCharacters).then(function(res2){
+          var houses = res1.data;
+          var characters =  res2.data; 
+
+          console.log(houses[0]); 
+          console.log(characters[0]); 
+
+          var colors = {};
+
+          for(var i = 0; i < houses.length; i++){
+          	var house = houses[i];
+          	var newNode = { "id":house.name, "group": i};
+    
+          	jsonData["nodes"].push(newNode)
+
+          	var swornMembers = house.swornMembers; 
+
+          	for(var j = 0; j < swornMembers.length; j++){
+          		colors[swornMembers[j]] = i;
+  				var newLink = {"source":house.name, "target": swornMembers[j], "value": getRandomArbitrary(1, 9), "name":house.name, "type":"house"};
+  				jsonData["links"].push(newLink);
+  			} //small for
+
+      	  } //end big for
+
+      	  for(var i = 0; i < characters.length; i++){
+      	  	var character = characters[i];
+          	var newNode = { "id":character.id, "group": colors[character.id], "name":character.name, "type":"character"};
+          	jsonData["nodes"].push(newNode);
+      	  }
+
+      	  console.log(jsonData);
+
+      	  ForceDirectedVisual(jsonData);
+        });               
+    });
+
+
+	// var jsonData = {
+	// 	  "nodes": [
+	// 	    {"id": "Myriel", "group": 1},
+	// 	    {"id": "Napoleon", "group": 1},
+	// 	    {"id": "Mlle.Baptistine", "group": 1},
+	// 	    {"id": "Mme.Magloire", "group": 1},
+	// 	    {"id": "CountessdeLo", "group": 1},
+	// 	    {"id": "Geborand", "group": 1},
+	// 	    {"id": "Champtercier", "group": 1},
+	// 	    {"id": "Cravatte", "group": 1},
+	// 	    {"id": "Count", "group": 1},
+	// 	    {"id": "OldMan", "group": 1},
+	// 	    {"id": "Labarre", "group": 2},
+	// 	    {"id": "Valjean", "group": 2},
+	// 	    {"id": "Marguerite", "group": 3}
+
+	// 	    ],
+	// 	  "links": [
+	// 	  	{"source": "Napoleon", "target": "Myriel", "value": 1}
+ //    	]};
+
+  //   var myFlower = new ForceDirectedVisual();
+		// myFlower.update(jsonData);
 		
-	
+	// { 
+	// 	node: {
+	// 		name: house of this
+	// 		link: character1
+	// 		link: character2
+	// 		link: fight
+	// 	}
+
+	// 	node: {
+	// 		name: fight of something
+	// 		link: house of this
+	// 		link: house of that
+	// 	}
+	// }
+  
+
+
+
 }]);

@@ -1,0 +1,5911 @@
+[
+  {
+    "coatOfArms": "A black plowman on a brown field(Tenn\u00e9, a plowman sable)", 
+    "currentLord": 712, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "97", 
+    "name": "House Darry of Darry", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      712, 
+      672, 
+      592, 
+      550, 
+      1114
+    ]
+  }, 
+  {
+    "coatOfArms": "A white sword and falling star crossed on lilac (Purpure, a blazing star bendways surmounted by a sword bendways sinister argent)", 
+    "currentLord": 348, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "99", 
+    "name": "House Dayne of Starfall", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      348, 
+      334, 
+      151, 
+      142, 
+      1060
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1421, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "98", 
+    "name": "House Dayne of High Hermitage", 
+    "overlord": 99, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "96", 
+    "name": "House Darkwood", 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Fusily sable and or, upon a pale in dexter gules seven escutcheons argent", 
+    "diedOut": "277 AC", 
+    "founded": "Age of Heroes", 
+    "id": "95", 
+    "name": "House Darklyn of Duskendale", 
+    "overlord": 378, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      967, 
+      924, 
+      301
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "94", 
+    "name": "House Darke", 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "93", 
+    "name": "House Dargood", 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Six yellow flowers on blue", 
+    "currentLord": 215, 
+    "diedOut": "", 
+    "founded": "Andal Invasion", 
+    "id": "91", 
+    "name": "House Cuy of Sunhouse", 
+    "overlord": 195, 
+    "region": "The Reach", 
+    "swornMembers": [
+      215
+    ]
+  }, 
+  {
+    "coatOfArms": "Purpure, semy of lemons Or", 
+    "currentLord": 309, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1163, 
+    "id": "92", 
+    "name": "House Dalt of Lemonwood", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      1163
+    ]
+  }, 
+  {
+    "coatOfArms": "Pily gules and sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "90", 
+    "name": "House Crowl of Deepdown", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "9", 
+    "name": "House Ashwood", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Seven silver coins on a red bend sinister, between two silver helmets, on a blue field(Azure, on a bend sinister gules seven plates, between two helmets argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "89", 
+    "name": "House Cressey", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "88", 
+    "name": "House Cray", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "85", 
+    "name": "House Crabb", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      244, 
+      241, 
+      1330, 
+      1271
+    ]
+  }, 
+  {
+    "coatOfArms": "A brindled boar on a brown field(Tenn\u00e9, a boar brindled sable and argent)", 
+    "currentLord": 922, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 257, 
+    "heir": 1046, 
+    "id": "86", 
+    "name": "House Crakehall of Crakehall", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      973, 
+      922, 
+      921, 
+      748, 
+      741, 
+      670, 
+      257, 
+      242, 
+      225, 
+      112, 
+      1046
+    ]
+  }, 
+  {
+    "coatOfArms": "Azure, cranes in chevron or", 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1905, 
+    "id": "87", 
+    "name": "House Crane of Red Lake", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      946, 
+      812, 
+      746, 
+      738, 
+      1080
+    ]
+  }, 
+  {
+    "coatOfArms": "Quarterly; sable, a chalice argent; or, a rose sable", 
+    "currentLord": 1030, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "83", 
+    "name": "House Costayne of Three Towers", 
+    "overlord": 195, 
+    "region": "The Reach", 
+    "swornMembers": [
+      1030, 
+      1028
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1846, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "84", 
+    "name": "House Cox of Saltpans", 
+    "overlord": 395, 
+    "region": "", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An eagle's head between crossed tridents, red on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "78", 
+    "name": "House Condon", 
+    "overlord": 66, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "79", 
+    "name": "House Conklyn", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, a sun in splendour beneath a chevron inverted argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "8", 
+    "name": "House Ashford of Ashford", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      641, 
+      121
+    ]
+  }, 
+  {
+    "coatOfArms": "Lozengny vert and or, a pair of boots sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "82", 
+    "name": "House Cordwayner of Hammerhal", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two combatant griffins, counterchanged, on a red and white field(Per pale gules and argent, two griffins combatant counterchanged)", 
+    "currentLord": 576, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "80", 
+    "name": "House Connington of Griffin's Roost", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      928, 
+      84, 
+      576
+    ]
+  }, 
+  {
+    "coatOfArms": "Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)", 
+    "currentLord": 681, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 256, 
+    "heir": 677, 
+    "id": "81", 
+    "name": "House Corbray of Heart's Home", 
+    "overlord": 7, 
+    "region": "", 
+    "swornMembers": [
+      681, 
+      677, 
+      654, 
+      447, 
+      256, 
+      255, 
+      1182
+    ]
+  }, 
+  {
+    "coatOfArms": "Ten black pellets, on a scarlet field(Gules, ten pellets, 4, 3, 2, 1)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "77", 
+    "name": "House Cole", 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three sprigs of mistletoe, green and red, on a gold field within a green border(Or, three sprigs of mistletoe vert, fructed gules, within a bordure of the second)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "68", 
+    "name": "House Charlton", 
+    "overlord": 143, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      119
+    ]
+  }, 
+  {
+    "coatOfArms": "Per bend green and white shield, a spiked mace and a silver dagger crossed(Per bend vert and argent, in pale a mace surmounted by a dagger in fesse of the second)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "69", 
+    "name": "House Chelsted", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, three feathers in fess gules argent and or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "74", 
+    "name": "House Cockshaw", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "75", 
+    "name": "House Codd", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      358
+    ]
+  }, 
+  {
+    "coatOfArms": "A sky-blue falcon soaring against a white moon, on a sky-blue field(Bleu celeste, upon a plate a falcon volant of the field)", 
+    "currentLord": 894, 
+    "diedOut": "", 
+    "founded": "Coming of the Andals", 
+    "founder": 144, 
+    "heir": 477, 
+    "id": "7", 
+    "name": "House Arryn of the Eyrie", 
+    "overlord": 16, 
+    "region": "The Vale", 
+    "swornMembers": [
+      92, 
+      894, 
+      688, 
+      572, 
+      558, 
+      548, 
+      540, 
+      508, 
+      49, 
+      477, 
+      356, 
+      300, 
+      265, 
+      223, 
+      1443, 
+      1280, 
+      1193, 
+      107, 
+      1068
+    ]
+  }, 
+  {
+    "coatOfArms": "A green hand on a gold escutcheon on a green field, a border of red rayonne", 
+    "currentLord": 760, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "70", 
+    "name": "House Chester of Greenshield", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three golden enhanced bendlets on a white shield(Argent, three bendlets enhanced or)", 
+    "currentLord": 663, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "71", 
+    "name": "House Chyttering", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three dogs on a yellow field(Or, three dogs courant in pale sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1272, 
+    "id": "72", 
+    "name": "House Clegane", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      1442, 
+      1356, 
+      1350, 
+      1272, 
+      1270
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1403, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "73", 
+    "name": "House Clifton", 
+    "overlord": 120, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      1403
+    ]
+  }, 
+  {
+    "coatOfArms": "A blue pall with white borders, on a red field(Gules, a pall azure, fimbriated argent)", 
+    "currentLord": 939, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "76", 
+    "name": "House Coldwater of Coldwater Burn", 
+    "overlord": 328, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "67", 
+    "name": "House Chambers", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, semy of crabs gules", 
+    "currentLord": 127, 
+    "diedOut": "", 
+    "founded": "prior to ~112 years before the Conquest", 
+    "id": "65", 
+    "name": "House Celtigar of Claw Isle", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a battle-axe paleways sable", 
+    "currentLord": 588, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "66", 
+    "name": "House Cerwyn of Cerwyn", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      588, 
+      247
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "64", 
+    "name": "House Cave", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A field of black nightingales on yellow(Or, sem\u00e9 of nightingales sable)", 
+    "currentLord": 925, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "60", 
+    "name": "House Caron of Nightsong", 
+    "overlord": 15, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      816, 
+      769, 
+      221, 
+      220
+    ]
+  }, 
+  {
+    "coatOfArms": "Ten white wolf heads, 4-3-2-1, on grey with a black border", 
+    "currentLord": 194, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "61", 
+    "name": "House Cassel", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      724, 
+      595, 
+      194
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "founder": 1286, 
+    "id": "62", 
+    "name": "House Casterly of Casterly Rock", 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a centaur with bow or", 
+    "currentLord": 644, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "63", 
+    "name": "House Caswell of Bitterbridge", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      644, 
+      642, 
+      566, 
+      248, 
+      133
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "6", 
+    "name": "House Arryn of Gulltown", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A green fess embattled on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "54", 
+    "name": "House Bushy", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Barry wavy green, white, and yellow(Barry wavy vert, argent, and or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "55", 
+    "name": "House Butterwell", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      1167, 
+      113
+    ]
+  }, 
+  {
+    "coatOfArms": "Gryonny white and black quartered with a silver axe on a green field(Quarterly, first and fourth, gyronny argent and sable, second and third, vert, an axe palewise argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "56", 
+    "name": "House Byrch", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      162
+    ]
+  }, 
+  {
+    "coatOfArms": "Blue frets on a white field, three silver fish on a blue chief(Argent fretty azure, on a chief of the second three fish of the field)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "57", 
+    "name": "House Bywater", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two white fawns counter salient, on a green field(Vert, two fawns counter-salient argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "58", 
+    "name": "House Cafferen of Fawnton", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Bendy sinister sable and gules, a goose Or", 
+    "diedOut": "after 209 AC", 
+    "founded": "", 
+    "id": "59", 
+    "name": "House Cargyll", 
+    "overlord": 378, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A rack of golden antlers, on a field of vair(Vair, a stag's attire or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "51", 
+    "name": "House Buckwell of the Antlers", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "White, upon a pile azure a knife white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "53", 
+    "name": "House Burley", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three brass buckles, on a blue field(Azure, three buckles or)", 
+    "currentLord": 848, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "50", 
+    "name": "House Buckler of Bronzegate", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      234
+    ]
+  }, 
+  {
+    "coatOfArms": "Sanguine, a bull`s skull argent", 
+    "currentLord": 100, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "52", 
+    "name": "House Bulwer of Blackcrown", 
+    "overlord": 195, 
+    "region": "The Reach", 
+    "swornMembers": [
+      224, 
+      100
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, an apple tree eradicated proper fructed gules, quartered with argent, a gatehouse cendr\u00e9e", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "5", 
+    "name": "House Appleton of Appleton", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a bear's paw erased within a double tressure tenn\u00e9", 
+    "currentLord": 184, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "48", 
+    "name": "House Brune of Brownhollow", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      184
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1380, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "49", 
+    "name": "House Brune of the Dyre Den", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "47", 
+    "name": "House Brownhill", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A silver helm crested with a sprig of broom, on a checkered black and green field(Chequy sable and vert, a helm argent, crested with a sprig of broom proper)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "46", 
+    "name": "House Broom", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "45", 
+    "name": "House Brook", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A golden longbow between two crimson flaunches, on a white field(Argent, a longbow or between two flaunches gules)", 
+    "currentLord": 707, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 65, 
+    "id": "443", 
+    "name": "House Yew", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      65
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, a portcullis sable", 
+    "currentLord": 117, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 452, 
+    "id": "444", 
+    "name": "House Yronwood of Yronwood", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      452, 
+      246, 
+      126, 
+      117, 
+      1129
+    ]
+  }, 
+  {
+    "coatOfArms": "a grey squirrel on white with red border", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "440", 
+    "name": "House Wythers", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      1112
+    ]
+  }, 
+  {
+    "coatOfArms": "Two bronze halberds crossed between four red diamonds, on a white field(Argent, two halberds saltirewise tenn\u00e9, hafted sable, between four lozenges gules)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "441", 
+    "name": "House Yarwyck", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Barry vert and Or, on a chief sable a battering-ram proper headed Or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "442", 
+    "name": "House Yelshire", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "Andal invasion", 
+    "founded": "", 
+    "id": "44", 
+    "name": "House Brightstone", 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A blue-green maelstrom, on a gold field(Or, a maelstrom azure)", 
+    "currentLord": 229, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "438", 
+    "name": "House Wylde of Rain House", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      795, 
+      587, 
+      543, 
+      427, 
+      414, 
+      370, 
+      229, 
+      1117, 
+      1045
+    ]
+  }, 
+  {
+    "coatOfArms": "a bloody moon on purple", 
+    "currentLord": 1097, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "439", 
+    "name": "House Wynch of Iron Holt", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      1097
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "312", 
+    "name": "House Quagg", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black adder biting a heel on yellow", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "437", 
+    "name": "House Wyl of the Boneway", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three woolsacks, white on purple, a white border", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "434", 
+    "name": "House Woolfield", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Five splintered lances, 3, 2, striped blue and white with blue pennons, on a yellow field, beneath a white chief bearing a red castle, a green viper, a black broken wheel, a purple unicorn and a yellow lion(Or, five broken lances, 3, 2, striped azure and argent, pennons of the second, on a chief of the third, a wheel broken sable between, on the dexter, a castle gules and snake vert, and, on the sinister, a unicorn rampant purpure and lion rampant of the field)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "436", 
+    "name": "House Wydman", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Azure, three wooden buckets tenn\u00e9, a bordure chequy cendr\u00e9e and white", 
+    "currentLord": 512, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "435", 
+    "name": "House Wull", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      1017
+    ]
+  }, 
+  {
+    "coatOfArms": "A red pall on a field of oak", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "433", 
+    "name": "House Woodwright", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "432", 
+    "name": "House Woods", 
+    "overlord": 150, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three white hedgehogs, on a yellow field(Or, three hedgehogs argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "430", 
+    "name": "House Wode", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "431", 
+    "name": "House Woodfoot of Bear Island", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "three silver longswords crossed on black beneath a dragonbone skeleton on a white chief", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "429", 
+    "name": "House Willum", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      371
+    ]
+  }, 
+  {
+    "coatOfArms": "A black stone bridge with three arches upon a golden chief above three blue pallets on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "43", 
+    "name": "House Bridges", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white pile inverted on indigo, an arch of 4-pointed stars above", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "428", 
+    "name": "House Whitehill", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Nine black bats, on a yellow field(Or, nine bats, 4, 3, 2, displayed sable)", 
+    "currentLord": 972, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "427", 
+    "name": "House Whent of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      960, 
+      805, 
+      755, 
+      1483, 
+      1207, 
+      1161, 
+      1125, 
+      1120, 
+      1099
+    ]
+  }, 
+  {
+    "coatOfArms": "A black dog on blue", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "426", 
+    "name": "House Westford", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Six white shells, on a sand-coloured field(Or, six escallops argent)", 
+    "currentLord": 413, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 923, 
+    "id": "425", 
+    "name": "House Westerling of the Crag", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      927, 
+      923, 
+      856, 
+      792, 
+      568, 
+      560, 
+      561, 
+      479, 
+      413, 
+      374, 
+      360
+    ]
+  }, 
+  {
+    "coatOfArms": "Two green bars gemmel on gold", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "424", 
+    "name": "House Westbrook", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two golden trumpets crossed on a blue field, beneath a gold chief with three black stags(Azure, two trumpets saltirewise or, on a chief of the second three stags salient sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "423", 
+    "name": "House Wensington", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per fess cendr\u00e9e and lozengy argent and vert, in chief five pellets", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "421", 
+    "name": "House Wells", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A green engrailed pall, inverted on white, dividing three trees, green, red and bare", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "422", 
+    "name": "House Wendwater", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "420", 
+    "name": "House Wells", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "42", 
+    "name": "House Briar", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, a cobweb argent thereon a spider gules", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "419", 
+    "name": "House Webber of Coldmoat", 
+    "overlord": 326, 
+    "region": "The Reach", 
+    "swornMembers": [
+      655, 
+      1263
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "418", 
+    "name": "House Weaver", 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Four wheels counterchanged on a quartered blue and white field(Quarterly azure and argent, four wheels counterchanged)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "416", 
+    "name": "House Wayn", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three candles, white with red flames, within silver candle holders, on a grey field within a black border(Cendr\u00e9e, three candles in holders argent, flamed gules, within a bordure sable)", 
+    "currentLord": 345, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "415", 
+    "name": "House Waxley of Wickenden", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A broken black wheel, on a green field(Vert, a wheel broken sable)", 
+    "currentLord": 125, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1727, 
+    "id": "417", 
+    "name": "House Waynwood of Ironoaks", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      723, 
+      542, 
+      373, 
+      228, 
+      1335, 
+      125, 
+      1121, 
+      1098
+    ]
+  }, 
+  {
+    "coatOfArms": "Five yellow mascles, on a green field(Vert, five mascles in fess or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "413", 
+    "name": "House Wagstaff", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, two oars saltirewise tenny between as many flaunces azure", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "414", 
+    "name": "House Waterman", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "412", 
+    "name": "House Wade", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "a silver wyvern within a red double tressure on sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "411", 
+    "name": "House Vyrwel of Darkdell", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black toad on white lily pad, on a green field(Vert, a toad sable atop a lilypad argent)", 
+    "currentLord": 660, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 288, 
+    "id": "410", 
+    "name": "House Vypren", 
+    "overlord": 10, 
+    "region": "", 
+    "swornMembers": [
+      370, 
+      288
+    ]
+  }, 
+  {
+    "coatOfArms": "A red sledge", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "41", 
+    "name": "House Breakstone", 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, on a pile Or three leopards statant sable", 
+    "currentLord": 277, 
+    "diedOut": "", 
+    "founded": "Andal Invasion", 
+    "id": "403", 
+    "name": "House Vaith of the Red Dunes", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      231
+    ]
+  }, 
+  {
+    "coatOfArms": "Quartered, a green dragon on a white field and a white tower on a black field(Quarterly, first and fourth, argent, a dragon vert, second and third, sable, a tower argent)", 
+    "currentLord": 780, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1169, 
+    "heir": 929, 
+    "id": "404", 
+    "name": "House Vance of Atranta", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      780, 
+      606, 
+      511, 
+      365
+    ]
+  }, 
+  {
+    "coatOfArms": "Quartered, a black dragon on a white field and two golden eyes in a golden ring on a black field(Quarterly, first and fourth, argent, a dragon sable, second and third, sable, a pair of eyes within an annulet or)", 
+    "currentLord": 604, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1169, 
+    "id": "405", 
+    "name": "House Vance of Wayfarer's Rest", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      637, 
+      604, 
+      378
+    ]
+  }, 
+  {
+    "coatOfArms": "Ermines, a weasel argent", 
+    "currentLord": 993, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "406", 
+    "name": "House Varner", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "seahorse rampant argent, on sea green", 
+    "currentLord": 757, 
+    "diedOut": "", 
+    "founded": "prior to 114BC", 
+    "id": "407", 
+    "name": "House Velaryon of Driftmark", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      875, 
+      757, 
+      756, 
+      611, 
+      610, 
+      33, 
+      253, 
+      154, 
+      1302, 
+      1177, 
+      110, 
+      1070, 
+      1066
+    ]
+  }, 
+  {
+    "coatOfArms": "Quarterly: a red boar's head on a white field; beneath a gold bend sinister, a silver lion rampant regardant with a forked tail, with gold teeth and claws, on a red field(Quarterly, first and fourth, argent, a boar's head couped gules, second and third, gules, a lion rampant regardant queue-forch\u00e9 argent, armed and langued or, debruised by a bend sinister of the last)", 
+    "currentLord": 676, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "408", 
+    "name": "House Vikary", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Cendr\u00e9e, a leviathan sable", 
+    "currentLord": 720, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "409", 
+    "name": "House Volmark", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Nine strawberries on a white saltire, on a field of green and red vairy in point(Vairy-in-point vert and gules, on a saltire argent nine strawberries of the second)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "396", 
+    "name": "House Turnberry", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A cresting sea-green wave, on a black field(Sable, a wave cresting vert)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "402", 
+    "name": "House Upcliff", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A leaping silver trout on a field of blue and mud red(Paly wavy azure and gules, a trout embowed argent)", 
+    "currentLord": 346, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 894, 
+    "id": "395", 
+    "name": "House Tully of Riverrun", 
+    "overlord": 362, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      909, 
+      755, 
+      733, 
+      688, 
+      503, 
+      347, 
+      346, 
+      232, 
+      223, 
+      1371, 
+      1364, 
+      1321, 
+      1063
+    ]
+  }, 
+  {
+    "coatOfArms": "Vert, a rose Or", 
+    "currentLord": 691, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 75, 
+    "heir": 1113, 
+    "id": "398", 
+    "name": "House Tyrell of Highgarden", 
+    "overlord": 16, 
+    "region": "The Reach", 
+    "swornMembers": [
+      855, 
+      838, 
+      785, 
+      784, 
+      783, 
+      754, 
+      77, 
+      766, 
+      75, 
+      736, 
+      691, 
+      69, 
+      689, 
+      686, 
+      685, 
+      666, 
+      664, 
+      665, 
+      658, 
+      647, 
+      640, 
+      636, 
+      626, 
+      624, 
+      623, 
+      532, 
+      519, 
+      467, 
+      408, 
+      372, 
+      362, 
+      16, 
+      1410, 
+      1409, 
+      1377, 
+      1244, 
+      1173, 
+      1113, 
+      1112, 
+      1075, 
+      1073, 
+      1019
+    ]
+  }, 
+  {
+    "coatOfArms": "A purple unicorn, on a silver field(Argent, a unicorn rampant purpure)", 
+    "currentLord": 1055, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 393, 
+    "id": "40", 
+    "name": "House Brax of Hornvale", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      897, 
+      896, 
+      765, 
+      574, 
+      393, 
+      236, 
+      120, 
+      1088, 
+      1055
+    ]
+  }, 
+  {
+    "coatOfArms": "per fess rayonny Or and gules", 
+    "currentLord": 470, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "400", 
+    "name": "House Uller of Hellholt", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      364, 
+      1061
+    ]
+  }, 
+  {
+    "coatOfArms": "Gules, a roaring giant proper with shattered chains argent", 
+    "currentLord": 585, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "401", 
+    "name": "House Umber of the Last Hearth", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      586, 
+      585, 
+      504, 
+      495, 
+      471
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 401, 
+    "diedOut": "", 
+    "founded": "299 AC", 
+    "founder": 401, 
+    "id": "397", 
+    "name": "House Tyrell of Brightwater Keep", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Paly tenn\u00e9 and cendr\u00e9e, upon a chief argent seven hands couped vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "399", 
+    "name": "House Uffering", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      489
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, semy of ants gules", 
+    "currentLord": 141, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "4", 
+    "name": "House Ambrose", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      344, 
+      152, 
+      141, 
+      102
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "175", 
+    "name": "House Hardy", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black winged heart, on a gold field, within a black embattled borderOr, a winged heart within a bordure embattled sable)", 
+    "diedOut": "281 AC in Westeros296 AC in Essos", 
+    "founded": "", 
+    "id": "392", 
+    "name": "House Toyne", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      1014
+    ]
+  }, 
+  {
+    "coatOfArms": "A black hanged man, on a blue field(Azure, a hanged man sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "393", 
+    "name": "House Trant of Gallowsgrey", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A brown tortoise within a yellow lozenge, on a green field(Vert, on a lozenge or a tortoise tergiant tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "394", 
+    "name": "House Tudbury", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Five black towers within a red and black double tressure, on a white field(Argent, five towers sable within a double-tressure, the outer gules and the inner of the second)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "391", 
+    "name": "House Towers of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "390", 
+    "name": "House Towers", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "39", 
+    "name": "House Branfield", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a flail argent within an bordure rayonne sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "386", 
+    "name": "House Thorne", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      79
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a sun in splendour gules", 
+    "currentLord": 980, 
+    "diedOut": "", 
+    "founded": "300 AC", 
+    "id": "385", 
+    "name": "House Thenn", 
+    "region": "The North", 
+    "swornMembers": [
+      96
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, a dragon biting its tail vert", 
+    "currentLord": 781, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "387", 
+    "name": "House Toland of Ghost Hill", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Pily grey and black(Pily cendr\u00e9e and sable)", 
+    "currentLord": 1064, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "388", 
+    "name": "House Tollett of the Grey Glen", 
+    "overlord": 328, 
+    "region": "The Vale", 
+    "swornMembers": [
+      1064
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1150, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "389", 
+    "name": "House Torrent of Littlesister", 
+    "overlord": 370, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per saltire purple and gold, four hawks' heads countercharged(Per saltire purpure and or, four hawks' heads counterchanged)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "384", 
+    "name": "House Terrick", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Nine stars, one of seven points and eight of six points, on a gold saltire, on a black field(Sable, on a saltire or, nine mullets of the field, that in fesse-point of seven points, all others of six points)", 
+    "currentLord": 1005, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "383", 
+    "name": "House Templeton", 
+    "overlord": 7, 
+    "region": "", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A scourge of nettles, red and black, on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "381", 
+    "name": "House Tawney of Orkmont", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Quartered, yellow sun on a rose-coloured field and white crescents on a blue field(Quarterly, first and fourth, carnation, a sun-in-splendour or, second and third, azure, a moon increscent argent)", 
+    "currentLord": 966, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 216, 
+    "id": "380", 
+    "name": "House Tarth of Evenfall Hall", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      919, 
+      398, 
+      379, 
+      216, 
+      1432, 
+      131, 
+      106
+    ]
+  }, 
+  {
+    "coatOfArms": "A golden trident upright between two golden flanches, on a black field(Sable, between two flaunches a trident erect or)", 
+    "diedOut": "Battle of Six Kings", 
+    "founded": "", 
+    "founder": 1032, 
+    "id": "382", 
+    "name": "House Teague", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A seven-pointed star, parts silver parts blue, on a silver and blue field(Gyronny argent and azure, a star of seven points counterchanged)", 
+    "diedOut": "261 AC", 
+    "founded": "", 
+    "id": "377", 
+    "name": "House Tarbeck of Tarbeck Hall", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      560, 
+      367
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "38", 
+    "name": "House Branch", 
+    "overlord": 150, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, three sentinel trees vert", 
+    "currentLord": 337, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 214, 
+    "id": "376", 
+    "name": "House Tallhart of Torrhen's Square", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      490, 
+      337, 
+      214, 
+      189, 
+      188, 
+      179
+    ]
+  }, 
+  {
+    "coatOfArms": "Sable, a dragon thrice-headed gules", 
+    "currentLord": 1303, 
+    "diedOut": "", 
+    "founded": "House Targaryen: >114 BCHouse Targaryen of King's Landing:1 AC", 
+    "id": "378", 
+    "name": "House Targaryen of King's Landing", 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      951, 
+      93, 
+      91, 
+      876, 
+      875, 
+      874, 
+      873, 
+      872, 
+      871, 
+      870, 
+      868, 
+      869, 
+      867, 
+      865, 
+      797, 
+      779, 
+      767, 
+      76, 
+      759, 
+      729, 
+      709, 
+      696, 
+      611, 
+      610, 
+      59, 
+      58, 
+      576, 
+      560, 
+      55, 
+      546, 
+      49, 
+      488, 
+      48, 
+      45, 
+      44, 
+      43, 
+      42, 
+      361, 
+      334, 
+      330, 
+      33, 
+      276, 
+      275, 
+      272, 
+      271, 
+      270, 
+      269, 
+      266, 
+      265, 
+      239, 
+      195, 
+      169, 
+      168, 
+      161, 
+      157, 
+      156, 
+      154, 
+      155, 
+      1469, 
+      1450, 
+      1445, 
+      1358, 
+      1340, 
+      1303, 
+      1302, 
+      1242, 
+      1205, 
+      1142, 
+      1114, 
+      110, 
+      109, 
+      1079, 
+      1070, 
+      1067
+    ]
+  }, 
+  {
+    "coatOfArms": "Vert, a huntsman striding to dexter proper garbed gules", 
+    "currentLord": 850, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 313, 
+    "id": "379", 
+    "name": "House Tarly of Horn Hill", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      742, 
+      359, 
+      313, 
+      1008
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, seven mullets of seven points or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "372", 
+    "name": "House Sunglass of Sweetport Sound", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white scroll with gold knobs, on a purple field within a white tressure(Purpure a scroll argent, knobbed or, within a tressure of the second)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "375", 
+    "name": "House Swygert", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Battling swans black and white, beaks and feet golden, on per pale white and black field(Per pale argent and sable, two swans combatant counterchanged, beaked and membered or)", 
+    "currentLord": 442, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 322, 
+    "id": "373", 
+    "name": "House Swann of Stonehelm", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      704, 
+      569, 
+      559, 
+      442, 
+      412, 
+      322, 
+      263, 
+      252, 
+      164
+    ]
+  }, 
+  {
+    "coatOfArms": "A blue bantam rooster, on a yellow field(Or, a cock close azure)", 
+    "currentLord": 487, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 992, 
+    "id": "374", 
+    "name": "House Swyft of Cornfield", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      974, 
+      564, 
+      563, 
+      516, 
+      487, 
+      34, 
+      327
+    ]
+  }, 
+  {
+    "coatOfArms": "A drowned man, pink and pale, floating upright in a blue-green sea", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "371", 
+    "name": "House Sunderly of Saltcliffe", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three women's heads, white with black hair, on a barry wavy blue and green field(Barry wavy azure and vert, three women's heads argents, crined sable)", 
+    "currentLord": 1042, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "370", 
+    "name": "House Sunderland of the Three Sisters", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A bare stone tree, grey on black", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "366", 
+    "name": "House Stonetree of Harlaw", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A tripartite pale, blue, red, and green, on a white field(Argent, a pale tierced per pale azure, gules, and vert)", 
+    "diedOut": "131 AC", 
+    "founded": "", 
+    "id": "369", 
+    "name": "House Strong of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      652, 
+      618, 
+      481
+    ]
+  }, 
+  {
+    "coatOfArms": "a black brazier on a grey masonry field", 
+    "currentLord": 1016, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "365", 
+    "name": "House Stonehouse of Old Wyk", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      1016
+    ]
+  }, 
+  {
+    "coatOfArms": "Chevronny tenn\u00e9 and Or", 
+    "currentLord": 483, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "367", 
+    "name": "House Stout of Goldgrass", 
+    "overlord": 111, 
+    "region": "The North", 
+    "swornMembers": [
+      483, 
+      1127
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 480, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "368", 
+    "name": "House Strickland", 
+    "region": "", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red stallion upon a gold shield, on a brown field(Tenn\u00e9, on an escutcheon or a stallion rampant gules)", 
+    "currentLord": 1559, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "id": "37", 
+    "name": "House Bracken of Stone Hedge", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      47, 
+      197, 
+      165, 
+      1496, 
+      1259, 
+      1212, 
+      1187, 
+      1160
+    ]
+  }, 
+  {
+    "coatOfArms": "two black wings upon a white fess on checkered black and grey", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "363", 
+    "name": "House Staunton of Rook's Rest", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      964, 
+      643
+    ]
+  }, 
+  {
+    "coatOfArms": "A running grey direwolf, on an ice-white field", 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "founder": 209, 
+    "id": "362", 
+    "name": "House Stark of Winterfell", 
+    "overlord": 16, 
+    "region": "The North", 
+    "swornMembers": [
+      97, 
+      957, 
+      918, 
+      917, 
+      916, 
+      912, 
+      911, 
+      891, 
+      887, 
+      777, 
+      737, 
+      716, 
+      668, 
+      648, 
+      603, 
+      593, 
+      591, 
+      589, 
+      584, 
+      583, 
+      561, 
+      461, 
+      389, 
+      354, 
+      351, 
+      349, 
+      340, 
+      339, 
+      324, 
+      259, 
+      232, 
+      216, 
+      212, 
+      210, 
+      209, 
+      207, 
+      208, 
+      206, 
+      20, 
+      2, 
+      192, 
+      181, 
+      170, 
+      1499, 
+      1489, 
+      1488, 
+      148, 
+      143, 
+      1407, 
+      1396, 
+      1383, 
+      136, 
+      1336, 
+      1326, 
+      1260, 
+      1254, 
+      1190, 
+      1185, 
+      1175, 
+      1158, 
+      1148, 
+      1111, 
+      1101
+    ]
+  }, 
+  {
+    "coatOfArms": "Vert, a lamb couchant argent holding a goblet or", 
+    "currentLord": 638, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 2043, 
+    "id": "364", 
+    "name": "House Stokeworth of Stokeworth", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      392, 
+      391, 
+      217, 
+      1010
+    ]
+  }, 
+  {
+    "coatOfArms": "A driftwood tree, bare and brown, on pale green", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "361", 
+    "name": "House Stane of Driftwood Hall", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two crossed black spears, on a checkered silver and gold field(Chequy argent and or, two spears in saltire sable)", 
+    "currentLord": 965, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 991, 
+    "id": "359", 
+    "name": "House Stackspear", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      965, 
+      89
+    ]
+  }, 
+  {
+    "coatOfArms": "Vert, semy of fishes argent", 
+    "currentLord": 419, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "36", 
+    "name": "House Botley of Lordsport", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      958, 
+      835, 
+      717, 
+      661, 
+      474, 
+      468, 
+      419, 
+      185, 
+      163, 
+      1071, 
+      1039, 
+      1003
+    ]
+  }, 
+  {
+    "coatOfArms": "A black dagger piercing a red heart on a white de sang field, within an undulating red border(Argent goutt\u00e9-de-sang, a heart gules transfixed by a dagger sable, all within a bordure wavy of the second)", 
+    "currentLord": 71, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "360", 
+    "name": "House Staedmon of Broad Arch", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "358", 
+    "name": "House Stackhouse", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A bloody gold spear, on a black field, within a checkered gold and black border(Sable, a spear or, tipped gules, within a bordure chequy of the field and of the second)", 
+    "currentLord": 761, 
+    "diedOut": "", 
+    "founded": "298 AC", 
+    "founder": 533, 
+    "heir": 599, 
+    "id": "354", 
+    "name": "House Slynt of Harrenhal", 
+    "overlord": 16, 
+    "region": "None", 
+    "swornMembers": [
+      599, 
+      533, 
+      290
+    ]
+  }, 
+  {
+    "coatOfArms": "Six brown acorns, on a yellow field(Or, six acorns, 3, 2, 1, tenn\u00e9)", 
+    "currentLord": 1020, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "355", 
+    "name": "House Smallwood of Acorn Hall", 
+    "overlord": 405, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      772, 
+      227, 
+      1020
+    ]
+  }, 
+  {
+    "coatOfArms": "an oak saltire on blue", 
+    "currentLord": 1015, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "356", 
+    "name": "House Sparr of Great Wyk", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      1015
+    ]
+  }, 
+  {
+    "coatOfArms": "Three black pepperpots on a saffron bend, across a field of green and silver stripes (Paly vert and argent, three pepperpots sable on a bend tenn\u00e9)", 
+    "currentLord": 927, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 997, 
+    "id": "357", 
+    "name": "House Spicer of Castamere", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      953, 
+      927
+    ]
+  }, 
+  {
+    "coatOfArms": "Pale grey, a double tressure white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "352", 
+    "name": "House Slate of Blackpool", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per pale, white stars strewn on indigo, an orange sun on yellow", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "353", 
+    "name": "House Sloane", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Nine white seagulls on a field of brown(Tenn\u00e9, nine seagulls argent, 3, 3, 2, 1)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "351", 
+    "name": "House Shett of Gulltown", 
+    "overlord": 160, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white spider crab, on a grey-green field(Vert-cendr\u00e9e, a spider crab argent)", 
+    "currentLord": 429, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "35", 
+    "name": "House Borrell of Sweetsister", 
+    "overlord": 370, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three golden wings, bendwise, on a checkered white and black field(Chequy argent and sable, in bend three dexter wings elevated bendwise or)", 
+    "currentLord": 287, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "350", 
+    "name": "House Shett of Gull Tower", 
+    "overlord": 328, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "348", 
+    "name": "House Shepherd", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "a field of copper nails on blue, a copper border rayonne", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "349", 
+    "name": "House Shermer of Smithyton", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "Andal invasion", 
+    "founded": "", 
+    "id": "347", 
+    "name": "House Shell", 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "346", 
+    "name": "House Shell", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "344", 
+    "name": "House Sharp", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      1480, 
+      1156
+    ]
+  }, 
+  {
+    "coatOfArms": "Per fesse, a divided blue, red, green field above, a white catfish on a black field below(Per fesse, the first tierced in pale azure, gules and vert, the second sable, a catfish argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "345", 
+    "name": "House Shawney", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, an escutcheon gules charged with a rose of the first all within a bordure embattled of the second", 
+    "currentLord": 798, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1007, 
+    "id": "343", 
+    "name": "House Serry of Southshield", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      636, 
+      1007
+    ]
+  }, 
+  {
+    "coatOfArms": "A peacock in his pride, on a cream field(Argent, a peacock-in-his-pride proper)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "342", 
+    "name": "House Serrett of Silverhill", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red flayed man on pink de sang", 
+    "currentLord": 933, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "heir": 849, 
+    "id": "34", 
+    "name": "House Bolton of the Dreadfort", 
+    "overlord": 16, 
+    "region": "The North", 
+    "swornMembers": [
+      849, 
+      314, 
+      196, 
+      1492, 
+      1452, 
+      1329, 
+      1313, 
+      1208, 
+      1159, 
+      1084
+    ]
+  }, 
+  {
+    "coatOfArms": "A black ship on a pale grey field, with a white onion on its sails(Cendr\u00e9e, a ship sable, its sail charged with an onion argent)", 
+    "currentLord": 1319, 
+    "diedOut": "", 
+    "founded": "284 AC", 
+    "founder": 1319, 
+    "heir": 308, 
+    "id": "340", 
+    "name": "House Seaworth of Cape Wrath", 
+    "overlord": 15, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      308, 
+      1319, 
+      1310, 
+      1155
+    ]
+  }, 
+  {
+    "coatOfArms": "Three stalks of yellow wheat, on a brown field(Tenn\u00e9, three stalks of wheat or)", 
+    "currentLord": 139, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "341", 
+    "name": "House Selmy of Harvest Hall", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      168, 
+      139
+    ]
+  }, 
+  {
+    "coatOfArms": "A green weeping willow, on a white field(Argent, a willow-tree vert)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "333", 
+    "name": "House Ryger of Willow Wood", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      1038
+    ]
+  }, 
+  {
+    "coatOfArms": "A green arrow on a white bend, on a green field(Vert, on a bend argent an arrow of the field, point to dexter chief)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "338", 
+    "name": "House Sarsfield of Sarsfield", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A broken silver sword on red", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "339", 
+    "name": "House Sarwyck", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Azure, a cross saltire argent charged with two crossed warhammers sable", 
+    "currentLord": 861, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "334", 
+    "name": "House Rykker of Duskendale", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Bronze, a horse's head sable orbed and maned gules within a bordure engrailed sable", 
+    "currentLord": 915, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "335", 
+    "name": "House Ryswell of the Rills", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      915, 
+      911, 
+      885, 
+      714, 
+      196, 
+      166
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a serpent nine-headed sable", 
+    "currentLord": 323, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "336", 
+    "name": "House Saltcliffe of Saltcliffe", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per bend sinister azure and argent, a leopard rampant Or spotted sable bearing an axe of the third", 
+    "currentLord": 1002, 
+    "diedOut": "", 
+    "founded": "Andal Invasion", 
+    "heir": 999, 
+    "id": "337", 
+    "name": "House Santagar of Spottswood", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      135, 
+      1002
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "332", 
+    "name": "House Ryder of the Rills", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An orange engrailed bend, on a black field(Sable, a bend tenn\u00e9 engrailed)", 
+    "currentLord": 857, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "331", 
+    "name": "House Ruttiger", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Vairy orange and blue, upon a black canton, a golden stag beneath an orange bend sinister(Vairy tenn\u00e9 and azure, on a canton sable a stag or debruised by a bend sinister of the first)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "33", 
+    "name": "House Bolling", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Five black starfish on a gold pale, on a field of pean(Pean, on a pale or five starfish sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "330", 
+    "name": "House Ruthermont", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Black iron studs on a bronze field, bordered with runes(Tenn\u00e9 pellet\u00e9e, an orle of ancient runes sable)", 
+    "currentLord": 1131, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "heir": 116, 
+    "id": "328", 
+    "name": "House Royce of Runestone", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      892, 
+      878, 
+      818, 
+      648, 
+      608, 
+      558, 
+      116, 
+      1133, 
+      1131, 
+      1104
+    ]
+  }, 
+  {
+    "coatOfArms": "A black portcullis over a white crescent moon, on a purple field, bordered with runes on bronze(Purpure, a moon increscent argent surmounted by a portcullis sable, all within a bordure tenn\u00e9 charged with ancient runes of the third)", 
+    "currentLord": 1755, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 67, 
+    "id": "329", 
+    "name": "House Royce of the Gates of the Moon", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      67, 
+      1256
+    ]
+  }, 
+  {
+    "coatOfArms": "Bleu celeste, per saltire a chain of rings Or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "327", 
+    "name": "House Roxton of the Ring", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A brown double-headed horse on a field of wavy green and green(Wavy vert and vert, a two-headed horse tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "324", 
+    "name": "House Roote of Lord Harroway's Town", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Ermine, three chevronels gules", 
+    "currentLord": 458, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "325", 
+    "name": "House Rosby of Rosby", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      199
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a tree eradicated", 
+    "currentLord": 731, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1908, 
+    "id": "326", 
+    "name": "House Rowan of Goldengrove", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      731, 
+      198
+    ]
+  }, 
+  {
+    "coatOfArms": "Six roundels fountain, 3-2-1, on grey", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "323", 
+    "name": "House Rollingford", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An oaken door banded with iron, in a grey stone doorway, on black masonry", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "320", 
+    "name": "House Rhysling", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black knight on a black rearing horse on white, bearing a golden lance and a white shield, upon which is seen the above in miniature", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "321", 
+    "name": "House Risley", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Nine silver unicorns around a silver maze, on a black field(Sable, a maze surrounded by an orle of nine unicorns rampant argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "322", 
+    "name": "House Rogers of Amberly", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red lion rampant regardant with a forked tail, with gold teeth and claws, on a silver field(Argent, a lion rampant regardant queue-fourch\u00e9 gules, armed and langued or)", 
+    "diedOut": "261 AC", 
+    "founded": "", 
+    "id": "319", 
+    "name": "House Reyne of Castamere", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      367
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "32", 
+    "name": "House Bole", 
+    "overlord": 150, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red castle, on a white field, within a red embattled border(Argent, a castle within a bordure embattled gules)", 
+    "currentLord": 499, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "316", 
+    "name": "House Redfort of Redfort", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      582, 
+      541, 
+      499, 
+      261, 
+      1299, 
+      1133
+    ]
+  }, 
+  {
+    "coatOfArms": "Azure, a grape cluster proper", 
+    "currentLord": 815, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 425, 
+    "heir": 498, 
+    "id": "317", 
+    "name": "House Redwyne of the Arbor", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      815, 
+      784, 
+      754, 
+      498, 
+      496, 
+      425, 
+      307, 
+      304, 
+      198, 
+      1184
+    ]
+  }, 
+  {
+    "coatOfArms": "Vert, a lizard-lion sable", 
+    "currentLord": 506, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 571, 
+    "id": "318", 
+    "name": "House Reed of Greywater Watch", 
+    "overlord": 362, 
+    "region": "The Neck", 
+    "swornMembers": [
+      571, 
+      506
+    ]
+  }, 
+  {
+    "coatOfArms": "Gules, a ram's head cabossed argent attired or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "313", 
+    "name": "House Rambton", 
+    "overlord": 372, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a flagon Or within a bordure chequy Or and argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "315", 
+    "name": "House Redding", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1423, 
+    "diedOut": "", 
+    "founded": "300 AC", 
+    "id": "314", 
+    "name": "House Redbeard", 
+    "overlord": 15, 
+    "region": "Beyond the Wall", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A flaming red and yellow saltire between four white skulls, on a black field(Sable, a saltire rayonn\u00e9 gules, tipped or, between four skulls argent)", 
+    "diedOut": "37 AC or shortly after", 
+    "founded": "ca. 1 AC", 
+    "founder": 841, 
+    "id": "310", 
+    "name": "House Qoherys of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, three scorpions sable.", 
+    "currentLord": 845, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 441, 
+    "id": "311", 
+    "name": "House Qorgyle of Sandstone", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      834, 
+      441, 
+      138
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "31", 
+    "name": "House Boggs of Crackclaw Point", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "309", 
+    "name": "House Pyne", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A grey iron greathelm on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "308", 
+    "name": "House Pyle", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "White, a roundel azure, a tressure cendr\u00e9e", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "305", 
+    "name": "House Poole", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      1069
+    ]
+  }, 
+  {
+    "coatOfArms": "A partial eclipse, black moon over yellow sun, on a dusty pink field(Carnation, a sun-in-splendour or surmounted by a moon in her complement sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "307", 
+    "name": "House Pryor of Pebble", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red ox, on an ermine field(Ermine, an ox passant gules)", 
+    "currentLord": 403, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "306", 
+    "name": "House Prester of Feastfires", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      394
+    ]
+  }, 
+  {
+    "coatOfArms": "A red pomegranate on white, a double tressure red", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "304", 
+    "name": "House Pommingham", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A pink dancing maiden in a swirl of white silk, on a blue field(Azure, a maiden dancing proper enwrapped with silk argent)", 
+    "currentLord": 245, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 721, 
+    "id": "302", 
+    "name": "House Piper of Pinkmaiden", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      633, 
+      245
+    ]
+  }, 
+  {
+    "coatOfArms": "Three purple roundels, on a gold field(Or, three golpes)", 
+    "currentLord": 826, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 299, 
+    "id": "303", 
+    "name": "House Plumm", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      822, 
+      803, 
+      732, 
+      485, 
+      299, 
+      1358, 
+      1078
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "301", 
+    "name": "House Perryn", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "White crossed quills, on a russet field(Tenn\u00e9, two quills saltirewise argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "300", 
+    "name": "House Penrose of Parchments", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      48, 
+      254, 
+      1358
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "30", 
+    "name": "House Boggs", 
+    "overlord": 318, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "3", 
+    "name": "House Amber", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Ten purple stars, on a yellow field(Or, ten mullets, 4, 3, 2, 1, purpure)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "299", 
+    "name": "House Peckledon", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gold coins in the checks of a checkered purple and white field(Chequy purpure and argent, each chequer charged with a bezant)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "295", 
+    "name": "House Payne", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      521, 
+      233
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "298", 
+    "name": "House Peat", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, three castles sable", 
+    "currentLord": 1027, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "296", 
+    "name": "House Peake of Starpike", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      431, 
+      1027
+    ]
+  }, 
+  {
+    "coatOfArms": "A green pea pod, burst open, on a white field, bordered by three rows of green peas(Argent, a pea pod open within a bordure of three rows of peas vert)", 
+    "currentLord": 908, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "297", 
+    "name": "House Peasebury of Poddingfield", 
+    "overlord": 15, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per saltire: burgundy and white stripes; a black lion's head on a gold field(Per saltire, the first paly gules and argent, the second or, a lion's head erased sable)", 
+    "diedOut": "after 209 AC", 
+    "founded": "", 
+    "id": "294", 
+    "name": "House Parren", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Twining red-and-white snakes, on a black field(Sable, two serpents argent and gules entwined palewise)", 
+    "currentLord": 462, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "293", 
+    "name": "House Paege", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      902, 
+      464, 
+      462, 
+      402, 
+      286, 
+      1000
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a lion rampant chequy vert and or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "291", 
+    "name": "House Osgrey of Standfast", 
+    "overlord": 326, 
+    "region": "The Reach", 
+    "swornMembers": [
+      791, 
+      478, 
+      388, 
+      353, 
+      32, 
+      186, 
+      1308, 
+      1108, 
+      104
+    ]
+  }, 
+  {
+    "coatOfArms": "Sable, a fess chequy argent and Or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "292", 
+    "name": "House Overton", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red bend sinister between two black porcupines, on a green field(Vert, a bend sinister gules between two porcupines sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "29", 
+    "name": "House Blount", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "before 210 AC", 
+    "founded": "", 
+    "id": "290", 
+    "name": "House Osgrey of Leafy Lake", 
+    "overlord": 291, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per fess sable and bendy Or and argent, in chief three harps in fess of the seocnd", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "289", 
+    "name": "House Orme", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, semy of pines vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "288", 
+    "name": "House Orkwood of Orkmont", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Vert, ten hands couped argent surmounted by a bend sinister gules", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "287", 
+    "name": "House Oldflowers", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, three oak leaves vert", 
+    "currentLord": 147, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 570, 
+    "id": "286", 
+    "name": "House Oakheart of Old Oak", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      74, 
+      570, 
+      343, 
+      149, 
+      147
+    ]
+  }, 
+  {
+    "coatOfArms": "Tenny, a sun in splendour gules transfixed by a spear bendwise Or", 
+    "currentLord": 326, 
+    "diedOut": "", 
+    "founded": "1,000 years ago", 
+    "founder": 1718, 
+    "heir": 130, 
+    "id": "285", 
+    "name": "House Nymeros Martell of Sunspear", 
+    "overlord": 16, 
+    "region": "Dorne", 
+    "swornMembers": [
+      782, 
+      763, 
+      719, 
+      709, 
+      705, 
+      631, 
+      364, 
+      361, 
+      326, 
+      271, 
+      1414, 
+      1362, 
+      1339, 
+      130, 
+      1261, 
+      1253, 
+      1230, 
+      1197, 
+      1166, 
+      1043
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "284", 
+    "name": "House Nutt", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a cross embattled sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "281", 
+    "name": "House Norcross", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      73, 
+      545, 
+      500, 
+      296, 
+      172
+    ]
+  }, 
+  {
+    "coatOfArms": "Azure, six arrows in bend sable heads flaming gules", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "283", 
+    "name": "House Norridge", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or,six thistles slipped vert", 
+    "currentLord": 205, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "282", 
+    "name": "House Norrey", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      205, 
+      136
+    ]
+  }, 
+  {
+    "coatOfArms": "Green and brown maple leaves, strewn across a yellow field(Or, sem\u00e9 of maple leaves vert and tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "28", 
+    "name": "House Blanetree", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "280", 
+    "name": "House Netley", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "10 nooses, 4-3-2-1, black on white with a border of blood", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "278", 
+    "name": "House Myre of Harlaw", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "279", 
+    "name": "House Nayland of Hag's Mire", 
+    "overlord": 143, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A golden crown studded with emeralds, on a red-brown field(Tenn\u00e9, an ancient crown or studded with emeralds vert)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "274", 
+    "name": "House Mudd of Oldstones", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Quarterly: A golden pavilion on a blue field, a green laurel crown on a white field(Quarterly, first and fourth, azure, a pavilion or, second and third, argent, a garland of laurel vert)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "276", 
+    "name": "House Musgood", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A spotted yellow-and-black treecat, on a mud-brown field(Tenn\u00e9, a treecat or pellet\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "277", 
+    "name": "House Myatt", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Black-and-orange butterflies on white", 
+    "currentLord": 726, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "275", 
+    "name": "House Mullendore of Uplands", 
+    "overlord": 195, 
+    "region": "The Reach", 
+    "swornMembers": [
+      713
+    ]
+  }, 
+  {
+    "coatOfArms": "A bend orange on vairy grey and green", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "273", 
+    "name": "House Moss", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per pale barry russet and green(Per pale barry tenn\u00e9 and vert)", 
+    "currentLord": 907, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 813, 
+    "id": "270", 
+    "name": "House Moreland", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      813
+    ]
+  }, 
+  {
+    "coatOfArms": "A wood vert, a bear sable", 
+    "currentLord": 692, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 99, 
+    "id": "271", 
+    "name": "House Mormont of Bear Island", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      692, 
+      687, 
+      667, 
+      594, 
+      547, 
+      264
+    ]
+  }, 
+  {
+    "coatOfArms": "A black crow in flight on a storm-green field(Vert, a crow volant sable)", 
+    "currentLord": 630, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 883, 
+    "id": "272", 
+    "name": "House Morrigen of Crow's Nest", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      630, 
+      446, 
+      437
+    ]
+  }, 
+  {
+    "coatOfArms": "White, upon a pile vert a snowy pine tree proper", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "267", 
+    "name": "House Mollen", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three bronze spearheads, on a white field, within a bronze embattled border(Argent, three spearheads within a bordure embattled tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "268", 
+    "name": "House Moore", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red salmon within a gold tressure, on a white field(Argent, a salmon gules within a tressure or)", 
+    "currentLord": 1118, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "269", 
+    "name": "House Mooton of Maidenpool", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      359, 
+      1118
+    ]
+  }, 
+  {
+    "coatOfArms": "A black pitchfork on a gold bend sinister, on a russet field(Tenn\u00e9, on a bend sinister or a pitchfork sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "172", 
+    "name": "House Haigh", 
+    "overlord": 143, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      819, 
+      629, 
+      486, 
+      320, 
+      1095
+    ]
+  }, 
+  {
+    "coatOfArms": "A flock of ravens surrounding a black shield charged with a dead weirwood, on a scarlet field(Gules, on an escutcheon sable a dead weirwood tree proper, all within an orle of ravens volant sable)", 
+    "currentLord": 2045, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "heir": 1241, 
+    "id": "27", 
+    "name": "House Blackwood of Raventree Hall", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      744, 
+      737, 
+      195, 
+      1241, 
+      108
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, Twining waterspouts vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "263", 
+    "name": "House Merlyn of Pebbleton", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Quarterly, a black saltire on yellow, green and white diamonds", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "266", 
+    "name": "House Middlebury", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "White, a cornucopia Or spilling foods proper within a bordure Or", 
+    "currentLord": 796, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 943, 
+    "id": "264", 
+    "name": "House Merryweather of Longtable", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      796, 
+      1006
+    ]
+  }, 
+  {
+    "coatOfArms": "A white great horned owl on a grey field(Cendr\u00e9e, a great-horned owl close affront\u00e9 argent)", 
+    "currentLord": 728, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "265", 
+    "name": "House Mertyns of Mistwood", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      728
+    ]
+  }, 
+  {
+    "coatOfArms": "Vairy vert and sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "26", 
+    "name": "House Blacktyde of Blacktyde", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      158
+    ]
+  }, 
+  {
+    "coatOfArms": "A rusty anchor, on a turquoise field, beneath yellow chief with three blue plates(Azure, an anchor tenn\u00e9, on a chief or three hurts)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "262", 
+    "name": "House Melcolm of Old Anchor", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A triple spiral; red, green and blue, on white", 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "founder": 698, 
+    "id": "260", 
+    "name": "House Massey of Stonedance", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      601
+    ]
+  }, 
+  {
+    "coatOfArms": "a border of flowers of many colors and varieties on green", 
+    "currentLord": 369, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "261", 
+    "name": "House Meadows of Grassy Vale", 
+    "overlord": 17, 
+    "region": "The Reach", 
+    "swornMembers": [
+      369
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, ten frogs vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "259", 
+    "name": "House Marsh", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, a skull argent crowned or.", 
+    "currentLord": 279, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 762, 
+    "id": "257", 
+    "name": "House Manwoody of Kingsgrave", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      762, 
+      312, 
+      279, 
+      1358
+    ]
+  }, 
+  {
+    "coatOfArms": "An orange burning tree, on a smoky field(Cendr\u00e9e, a tree in flame tenn\u00e9)", 
+    "currentLord": 285, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 31, 
+    "id": "258", 
+    "name": "House Marbrand of Ashemark", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      556, 
+      31, 
+      292, 
+      285
+    ]
+  }, 
+  {
+    "coatOfArms": "Purpure, six mullets argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "253", 
+    "name": "House Mallery", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red sea lion between two black pallets on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "256", 
+    "name": "House Manning", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A silver eagle, displayed, on an indigo field(Purpure, an eagle displayed argent)", 
+    "currentLord": 539, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 814, 
+    "id": "254", 
+    "name": "House Mallister of Seagard", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      675, 
+      596, 
+      544, 
+      539, 
+      303
+    ]
+  }, 
+  {
+    "coatOfArms": "A white merman with dark green hair, beard and tail, carrying a black trident, on a blue-green field", 
+    "currentLord": 1124, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1122, 
+    "id": "255", 
+    "name": "House Manderly of White Harbor", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      715, 
+      627, 
+      317, 
+      1126, 
+      1124, 
+      1122, 
+      1123, 
+      1106
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a lobster vert holding a harpoon sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "252", 
+    "name": "House Magnar of Kingshouse", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white badger on a per pale green and brown field(Per pale vert and tenn\u00e9, a badger passant argent)", 
+    "currentLord": 632, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "250", 
+    "name": "House Lydden of Deep Den", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      555
+    ]
+  }, 
+  {
+    "coatOfArms": "A black field strewn with green vipers(Sable, sem\u00e9 of snakes vert)", 
+    "currentLord": 579, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1012, 
+    "id": "251", 
+    "name": "House Lynderly of the Snakewood", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      1012
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "25", 
+    "name": "House Blackmyre", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black talon, on an orange and white gyronny field(Gyronny tenn\u00e9 and argent, an eagle's leg erased sable)", 
+    "currentLord": 674, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "249", 
+    "name": "House Lychester", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per bend sinister: a grey cat's face on black, a brown jug on white", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "248", 
+    "name": "House Lyberr", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Quartered of six: red lips strewn on a yellow field, yellow skulls strewn on a black field(Quarterly of six, first, third and fifth, or, sem\u00e9 of lips gules, second, fourth and sixth, sable, sem\u00e9 of skulls of the first)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "244", 
+    "name": "House Lonmouth", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      567
+    ]
+  }, 
+  {
+    "coatOfArms": "A silver dolphin on a blue-green field", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "247", 
+    "name": "House Lowther", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black manticore on a white field, beneath a crimson chief with three gold coins(Argent, a manticore passant sable, on a chief gules three bezants)", 
+    "currentLord": 645, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "245", 
+    "name": "House Lorch", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      115
+    ]
+  }, 
+  {
+    "coatOfArms": "A black bat on a field per bend, silver and gold(Per bend argent and or, a bat displayed sable\")", 
+    "diedOut": "After 212 AC", 
+    "founded": "151 AC (House Lothston of Harrenhal)", 
+    "founder": 656, 
+    "id": "246", 
+    "name": "House Lothston of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      703, 
+      656, 
+      554, 
+      391, 
+      289
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "243", 
+    "name": "House Longwaters", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1895, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "242", 
+    "name": "House Longthorpe of Longsister", 
+    "overlord": 370, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "241", 
+    "name": "House Long", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three oaken barrels, on a white field(Argent, three oaken barrels proper)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "240", 
+    "name": "House Lolliston", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two bronze keys crossed on an argent pale on purpure.", 
+    "currentLord": 788, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "239", 
+    "name": "House Locke of Oldcastle", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      788, 
+      716, 
+      321
+    ]
+  }, 
+  {
+    "coatOfArms": "A black vulture with a pink infant in its claws, on yellow", 
+    "currentLord": 1607, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1574, 
+    "id": "24", 
+    "name": "House Blackmont of Blackmont", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two large pink lips, on a dark blue field(Azure, a pair of lips carnation)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "238", 
+    "name": "House Lipps", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, three thunderbolts in fess sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "235", 
+    "name": "House Leygood", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, a trail of footprints in bend sinister argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "237", 
+    "name": "House Lightfoot", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A golden inverted pile on a sky-blue field, a yellow sun in the first(Bleu celeste, a pile reversed or, in canton a sun-in-splendor of the same)", 
+    "currentLord": 103, 
+    "diedOut": "", 
+    "founded": "Andal invasion", 
+    "id": "234", 
+    "name": "House Lefford of the Golden Tooth", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      628, 
+      622, 
+      103
+    ]
+  }, 
+  {
+    "coatOfArms": "Per pale argent and vert, a fir tree line between, three brown pinecones on the argent", 
+    "currentLord": 1031, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "236", 
+    "name": "House Liddle", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "233", 
+    "name": "House Lantell", 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "232", 
+    "name": "House Lanny", 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A gold lion, on a crimson field(Gules, a lion or)", 
+    "currentLord": 238, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "founder": 615, 
+    "id": "229", 
+    "name": "House Lannister of Casterly Rock", 
+    "overlord": 16, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      973, 
+      955, 
+      778, 
+      773, 
+      725, 
+      708, 
+      662, 
+      616, 
+      615, 
+      613, 
+      605, 
+      568, 
+      562, 
+      556, 
+      538, 
+      531, 
+      529, 
+      422, 
+      418, 
+      415, 
+      377, 
+      382, 
+      367, 
+      363, 
+      294, 
+      292, 
+      284, 
+      282, 
+      283, 
+      27, 
+      236, 
+      238, 
+      235, 
+      177, 
+      1504, 
+      1483, 
+      1442, 
+      1430, 
+      1349, 
+      1338, 
+      1309, 
+      1275, 
+      1272, 
+      1251, 
+      1233, 
+      1207, 
+      115, 
+      1116, 
+      1057, 
+      1052, 
+      1051, 
+      1050, 
+      1049, 
+      1048, 
+      1044, 
+      1026, 
+      1025, 
+      101
+    ]
+  }, 
+  {
+    "coatOfArms": "Gules, a three headed dragon breathing flames sable", 
+    "diedOut": "260 AC", 
+    "founded": "184 AC", 
+    "founder": 267, 
+    "id": "23", 
+    "name": "House Blackfyre of King's Landing", 
+    "overlord": 378, 
+    "region": "", 
+    "swornMembers": [
+      83, 
+      8, 
+      697, 
+      50, 
+      47, 
+      35, 
+      267, 
+      268, 
+      226, 
+      1462
+    ]
+  }, 
+  {
+    "coatOfArms": "Quarterly, a gold lion on a red field; a black plowman on a brown field(Quarterly, first and fourth gules a lion rampant or (for Lannister), second and third tenn\u00e9 a plowman sable (for Darry))", 
+    "currentLord": 613, 
+    "diedOut": "", 
+    "founded": "299 AC", 
+    "founder": 613, 
+    "id": "230", 
+    "name": "House Lannister of Darry", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      114
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "231", 
+    "name": "House Lannister of Lannisport", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "228", 
+    "name": "House Lannett", 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per fess undy: A crown of white stars on burgundy above black", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "227", 
+    "name": "House Langward", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, seven pommes arranged 2-2-2-1", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "226", 
+    "name": "House Lake", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "225", 
+    "name": "House Lake", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "224", 
+    "name": "House Ladybright", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "223", 
+    "name": "House Kyndall", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a saltire surmounted by a fret tenny", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "222", 
+    "name": "House Knott", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, issuant from a cloud bank in chief the Storm God's hand cendr\u00e9e with lightning flashing from its fingertip Or", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "218", 
+    "name": "House Kenning of Harlaw", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      830, 
+      492
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a fess sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "22", 
+    "name": "House Blackbar of Bandallon", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a kettle within an orle sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "220", 
+    "name": "House Kettleblack", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      802, 
+      801, 
+      799
+    ]
+  }, 
+  {
+    "coatOfArms": "Cendr\u00e9e masoned sable, semy of ivy leaves vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "221", 
+    "name": "House Kidwell of Ivy Hall", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Four sunbursts counterchanged on a quartered orange and black field(Quarterly tenn\u00e9 and sable, four suns-in-splendour counterchanged)", 
+    "currentLord": 1013, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 492, 
+    "id": "219", 
+    "name": "House Kenning of Kayce", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      1013
+    ]
+  }, 
+  {
+    "coatOfArms": "A black book bound in bronze, locked, on a pale blue field(Azure, a locked book sable, edged and garnished tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "217", 
+    "name": "House Kellington", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Quarterly of nine; a white fish on a grey field; a gold fish hook on a white field(Quarterly of nine, first, third, fifth, seventh and ninth cendr\u00e9e, a fish argent; second, fourth, sixth and eight argent, a fish-hook or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "216", 
+    "name": "House Keath", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, a sunburst argent", 
+    "currentLord": 476, 
+    "diedOut": "", 
+    "founded": "One thousand years ago", 
+    "founder": 603, 
+    "heir": 96, 
+    "id": "215", 
+    "name": "House Karstark of Karhold", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      97, 
+      96, 
+      884, 
+      603, 
+      476, 
+      338, 
+      258, 
+      140, 
+      134, 
+      1033
+    ]
+  }, 
+  {
+    "coatOfArms": "An inverted yellow pall between three yellow lions' heads, on a black field(Sable, a pall reversed between three lions' heads erased or)", 
+    "currentLord": 124, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "212", 
+    "name": "House Jast", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      124
+    ]
+  }, 
+  {
+    "coatOfArms": "Chequy light and dark green, a quill or.", 
+    "currentLord": 1035, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 776, 
+    "id": "213", 
+    "name": "House Jordayne of the Tor", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      1035
+    ]
+  }, 
+  {
+    "coatOfArms": "Golden scales within a blue a double tressure, on a white field(Argent, a pair of balances or within a double-tressure azure)", 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 178, 
+    "id": "214", 
+    "name": "House Justman", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, a sword palewise between four horseshoes sable all within a bordure vert", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "211", 
+    "name": "House Ironsmith", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1372, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "210", 
+    "name": "House Ironmaker", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      1372, 
+      1307
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "21", 
+    "name": "House Bigglestone", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Cendr\u00e9e, a bend sinister chequy sable and argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "209", 
+    "name": "House Inchfield", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      655
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a deer bound and slung on a pole fesswise tenny", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "206", 
+    "name": "House Hunt", 
+    "overlord": 379, 
+    "region": "The Reach", 
+    "swornMembers": [
+      518
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, two bendlets between in base dexter a hand pointing to chief sinister, and in chief sinister a sun in splendour gules", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "208", 
+    "name": "House Hutcheson", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Five silver arrows, fanned, on a brown field(Tenn\u00e9, a sheaf of five arrows, points to chief, argent)", 
+    "currentLord": 426, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 387, 
+    "id": "207", 
+    "name": "House Hunter of Longbow Hall", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      466, 
+      426, 
+      387, 
+      380
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "205", 
+    "name": "House Humble", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "204", 
+    "name": "House Hull", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, a bull moose trippant proper", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "202", 
+    "name": "House Hornwood of Hornwood", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      463, 
+      317, 
+      293, 
+      189
+    ]
+  }, 
+  {
+    "coatOfArms": "Per chevron engrailed grey and bone, three death's head moths counterchanged(Per chevron reversed engrailed cendr\u00e9e and argent, three death's head moths counterchanged)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "203", 
+    "name": "House Horpe", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "201", 
+    "name": "House Hook", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three blue beetles, on a gold field(Or, three beetles azure)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "20", 
+    "name": "House Bettley", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "200", 
+    "name": "House Holt", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gyronny Gules and Sable, a hand couped Or", 
+    "currentLord": 298, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 1922, 
+    "id": "2", 
+    "name": "House Allyrion of Godsgrace", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": [
+      1301, 
+      1129
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "199", 
+    "name": "House Holt", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Barry gules and carnation, a chief azure with three crowns Or", 
+    "diedOut": "300 AC", 
+    "founded": "", 
+    "id": "198", 
+    "name": "House Hollard", 
+    "overlord": 95, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      906, 
+      578, 
+      325, 
+      1001
+    ]
+  }, 
+  {
+    "coatOfArms": "Per saltire, two heavy silver chains crossing between a gold longship on a black field, a dark green pine on a white field, a cluster of red grapes on a gold field, and a black raven flying in a blue sky(Per saltire sable, azure, argent and or, two chains throughout saltirewise argent between in chief a longship or, in dexter a raven volant sable, in sinister a pine-tree vert and in base a bunch of grapes gules)", 
+    "diedOut": "2 BC", 
+    "founded": "", 
+    "id": "196", 
+    "name": "House Hoare of Orkmont", 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1887, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "197", 
+    "name": "House Hogg of Sow's Horn", 
+    "overlord": 189, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An oak spoon within a white cartouche, on a field of orange and black diamonds(Lozengy tenn\u00e9 and sable, on a cartouche argent a spoon or)", 
+    "currentLord": 1047, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "193", 
+    "name": "House Hetherspoon", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      1047
+    ]
+  }, 
+  {
+    "coatOfArms": "an oaken escutcheon studded with iron on a field bendy of undulating blue and white", 
+    "currentLord": 515, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "194", 
+    "name": "House Hewett of Oakenshield", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      1428, 
+      1382
+    ]
+  }, 
+  {
+    "coatOfArms": "Cendr\u00e9e, a tower argent with a beacon on fire gules", 
+    "currentLord": 635, 
+    "diedOut": "", 
+    "founded": "Age of Dawn", 
+    "founder": 2062, 
+    "heir": 159, 
+    "id": "195", 
+    "name": "House Hightower of the Hightower", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      877, 
+      871, 
+      840, 
+      808, 
+      76, 
+      69, 
+      678, 
+      635, 
+      634, 
+      449, 
+      444, 
+      421, 
+      407, 
+      305, 
+      29, 
+      239, 
+      159, 
+      102
+    ]
+  }, 
+  {
+    "coatOfArms": "A white winged chalice, on a pink field(Carnation, a winged cup displayed argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "192", 
+    "name": "House Hersy of Newkeep", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A yellow rooster's head with red comb, within a white escutcheon, on a red field(Gules, on an escutcheon argent, a cock's head or, combed and wattled of the field)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "191", 
+    "name": "House Herston", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "190", 
+    "name": "House Heddle", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Green fretty over gold, a green pale wavy", 
+    "currentLord": 382, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "189", 
+    "name": "House Hayford of Hayford", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Six silver bells, 3, 2, 1, on a purple field(Purpure, six bells, 3, 2, 1, argent)", 
+    "currentLord": 176, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "19", 
+    "name": "House Belmore of Strongsong", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      176
+    ]
+  }, 
+  {
+    "coatOfArms": "Barry olive and ivory", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "185", 
+    "name": "House Hastwyck", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white bend cotised, on a purple field(Purpure, a bend cotised argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "186", 
+    "name": "House Hasty", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "White seabirds strewn across a blue field(Azure, sem\u00e9 of seabirds argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "187", 
+    "name": "House Hawick of Saltpans", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A ring of black thorns and a ring of pink flowers, interlocked, on a green field(Vert, two interlocking annulets, one composed of thorns sable, the other of flowers carnation)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "188", 
+    "name": "House Hawthorne", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three red hart's heads caboshed on a white bend on vair", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "184", 
+    "name": "House Harte", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per bend sinister orange and sable rayonn\u00e9, a castle counterchanged(Per bend sinister rayonn\u00e9 tenn\u00e9 and sable, a castle counterchanged)", 
+    "diedOut": "44 AC", 
+    "founded": "", 
+    "id": "183", 
+    "name": "House Harroway of Harrenhal", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A field of red and white diamonds(Lozengy argent and gules)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "176", 
+    "name": "House Hardyng", 
+    "overlord": 417, 
+    "region": "The Vale", 
+    "swornMembers": [
+      477, 
+      295
+    ]
+  }, 
+  {
+    "coatOfArms": "A silver tree on green", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "182", 
+    "name": "House Harlton", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, a scythe argent", 
+    "currentLord": 914, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 473, 
+    "id": "178", 
+    "name": "House Harlaw of Harlaw", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      66, 
+      451, 
+      423, 
+      335, 
+      1021
+    ]
+  }, 
+  {
+    "coatOfArms": "Paly or and sable, on a pale of the last three beehives of the first", 
+    "currentLord": 1103, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 366, 
+    "id": "18", 
+    "name": "House Beesbury of Honeyholt", 
+    "overlord": 195, 
+    "region": "The Reach", 
+    "swornMembers": [
+      671, 
+      549, 
+      513, 
+      509, 
+      366, 
+      193, 
+      187, 
+      1103
+    ]
+  }, 
+  {
+    "coatOfArms": "Quartered: a silver scythe on black, a peacock on cream", 
+    "currentLord": 473, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "177", 
+    "name": "House Harlaw of Grey Garden", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per bend black and silver, two scythes counterchanged", 
+    "currentLord": 979, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "179", 
+    "name": "House Harlaw of Harlaw Hall", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "the Harlaw scythe on a pale blue field", 
+    "currentLord": 201, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "180", 
+    "name": "House Harlaw of Harridan Hill", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "The Harlaw scythe girdled within an embattled border.", 
+    "currentLord": 505, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "181", 
+    "name": "House Harlaw of the Tower of Glimmering", 
+    "overlord": 178, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Azure, on a bend argent a hurt between an increscent and decrescent of the first", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "174", 
+    "name": "House Harclay", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An erminois maunch, on a pink field with an erminois border(Carnation, a maunch within a bordure erminois)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "173", 
+    "name": "House Hamell", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "An iron escutcheon with silver studs on a grey-green field strewn with longships proper", 
+    "currentLord": 445, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "171", 
+    "name": "House Grimm of Greyshield", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "170", 
+    "name": "House Greystark of Wolf's Den", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Sable, a kraken Or", 
+    "currentLord": 385, 
+    "diedOut": "", 
+    "founded": "Age of Heroes", 
+    "heir": 1022, 
+    "id": "169", 
+    "name": "House Greyjoy of Pyke", 
+    "overlord": 16, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      904, 
+      839, 
+      836, 
+      718, 
+      66, 
+      60, 
+      469, 
+      316, 
+      278, 
+      150, 
+      1495, 
+      1461, 
+      1416, 
+      1372, 
+      1345, 
+      1306, 
+      1292, 
+      1250, 
+      1226, 
+      1141, 
+      1074, 
+      1072, 
+      1062, 
+      1022
+    ]
+  }, 
+  {
+    "coatOfArms": "A black crowned stag, on a gold field(Or, a stag salient, crowned, sable)", 
+    "currentLord": 1029, 
+    "diedOut": "", 
+    "founded": "1 AC", 
+    "founder": 797, 
+    "heir": 775, 
+    "id": "17", 
+    "name": "House Baratheon of Storm's End", 
+    "overlord": 16, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      870, 
+      862, 
+      797, 
+      794, 
+      679, 
+      435, 
+      315, 
+      249, 
+      230, 
+      216, 
+      1473, 
+      1355, 
+      128, 
+      1233, 
+      1188, 
+      110, 
+      1044
+    ]
+  }, 
+  {
+    "coatOfArms": "The sea king's head, white with dark green seaweed beard and hair, a black crown on a grey field", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "168", 
+    "name": "House Greyiron of Orkmont", 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "167", 
+    "name": "House Grey", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three red martlets on a white bend, on a blue field(Azure, on a bend argent three martlets gules)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "166", 
+    "name": "House Grell", 
+    "overlord": 395, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "165", 
+    "name": "House Greenwood", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "164", 
+    "name": "House Greengood", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A white double-tressure, on a green field(Vert, a double-tressure argent)", 
+    "currentLord": 405, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "163", 
+    "name": "House Greenfield of Greenfield", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      405
+    ]
+  }, 
+  {
+    "coatOfArms": "Nine yellow trefoils on a black cross, on an ermine field(Ermine, on a cross sable nine trefoils or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "158", 
+    "name": "House Gower", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Green and white gyronny, a double-headed eagle counter-charged, gold beak and talons", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "162", 
+    "name": "House Graves", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Tenny, on a pale wavy argent the Mother's face proper", 
+    "currentLord": 81, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "159", 
+    "name": "House Graceford of Holyhall", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black crowned stag and a gold lion, combatant, on a per pale gold and crimson field(Per pale or and gules, a stag, crowned, sable and a lion of the first combatant)", 
+    "currentLord": 1029, 
+    "diedOut": "", 
+    "founded": "283 AC", 
+    "founder": 901, 
+    "heir": 775, 
+    "id": "16", 
+    "name": "House Baratheon of King's Landing", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      355, 
+      1325, 
+      1009
+    ]
+  }, 
+  {
+    "coatOfArms": "A yellow tower, burning, on a black pile, on a flame-red field(Gules, on a pile sable a tower or with flames issuant from the battlements proper)", 
+    "currentLord": 420, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "160", 
+    "name": "House Grafton of Gulltown", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      420
+    ]
+  }, 
+  {
+    "coatOfArms": "A black sleeping lion, on a yellow field(Or, a lion dormant sable)", 
+    "currentLord": 510, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "161", 
+    "name": "House Grandison of Grandview", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      510, 
+      465
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 1762, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "157", 
+    "name": "House Goodbrother of Shatterstone", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "156", 
+    "name": "House Goodbrother of Orkmont", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a warhorn sable banded or.", 
+    "currentLord": 434, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 440, 
+    "id": "155", 
+    "name": "House Goodbrother of Hammerhorn", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      450, 
+      440, 
+      436, 
+      434, 
+      433
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "154", 
+    "name": "House Goodbrother of Downdelving", 
+    "overlord": 155, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "153", 
+    "name": "House Goodbrother of Crow Spike Keep", 
+    "overlord": 155, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "152", 
+    "name": "House Goodbrother of Corpse Lake", 
+    "overlord": 155, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a gauntlet argent", 
+    "currentLord": 397, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 903, 
+    "id": "150", 
+    "name": "House Glover of Deepwood Motte", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": [
+      903, 
+      411, 
+      397, 
+      384, 
+      381
+    ]
+  }, 
+  {
+    "coatOfArms": "A blue wavy bend, on a gold field(Or, a bend wavy azure)", 
+    "currentLord": 673, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "151", 
+    "name": "House Goodbrook", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      553, 
+      404, 
+      1094
+    ]
+  }, 
+  {
+    "coatOfArms": "Or, a heart gules enflamed proper charged with a stag's head sable crowned of the field", 
+    "currentLord": 1963, 
+    "diedOut": "", 
+    "founded": "284 AC", 
+    "founder": 1963, 
+    "heir": 975, 
+    "id": "15", 
+    "name": "House Baratheon of Dragonstone", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      925, 
+      908, 
+      881, 
+      795, 
+      7, 
+      601, 
+      430, 
+      369, 
+      308, 
+      3, 
+      243, 
+      220, 
+      1467, 
+      1325, 
+      1319, 
+      1312, 
+      1285
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "149", 
+    "name": "House Glenmore", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Purpure, three lances palewise in fess between two flaunches sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "148", 
+    "name": "House Gaunt", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three grey owls upon white plates, on a green field(Vert, three plates, each charged with an owl close affront\u00e9 cendr\u00e9e)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "147", 
+    "name": "House Garner", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Argent, a hand couped vert", 
+    "diedOut": "1 AC in the War of Conquest", 
+    "founded": "Age of Heroes", 
+    "founder": 410, 
+    "id": "145", 
+    "name": "House Gardener of Highgarden", 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, a cockatrice gules, in its beak a serpent sable", 
+    "currentLord": 1036, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "146", 
+    "name": "House Gargalen of Salt Shore", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "144", 
+    "name": "House Frost", 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, an apple gules", 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 395, 
+    "id": "139", 
+    "name": "House Fossoway of Cider Hall", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      395, 
+      350, 
+      218, 
+      1011
+    ]
+  }, 
+  {
+    "coatOfArms": "Fretty argent and white, a swordfish embowed haurient azure", 
+    "currentLord": 332, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "14", 
+    "name": "House Bar Emmon of Sharp Point", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Or, an apple vert", 
+    "currentLord": 577, 
+    "diedOut": "", 
+    "founded": "209 AC", 
+    "founder": 853, 
+    "id": "140", 
+    "name": "House Fossoway of New Barrel", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": [
+      577, 
+      552, 
+      532
+    ]
+  }, 
+  {
+    "coatOfArms": "Argent, a hooded hawk trussed azure", 
+    "currentLord": 396, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "141", 
+    "name": "House Fowler of Skyreach", 
+    "overlord": 285, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 377, 
+    "diedOut": "", 
+    "founded": "299 AC", 
+    "founder": 377, 
+    "heir": 1058, 
+    "id": "142", 
+    "name": "House Frey of Riverrun", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      415, 
+      377, 
+      1115, 
+      1092, 
+      1058
+    ]
+  }, 
+  {
+    "coatOfArms": "Two blue towers, united by a bridge, on a silver-grey field(Cendr\u00e9e, a bridge azure, at either end a tower of the same)", 
+    "currentLord": 1093, 
+    "diedOut": "", 
+    "founded": "600 years ago", 
+    "heir": 352, 
+    "id": "143", 
+    "name": "House Frey of the Crossing", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      989, 
+      976, 
+      968, 
+      960, 
+      959, 
+      956, 
+      952, 
+      950, 
+      95, 
+      948, 
+      947, 
+      937, 
+      900, 
+      899, 
+      866, 
+      86, 
+      854, 
+      824, 
+      820, 
+      818, 
+      817, 
+      800, 
+      786, 
+      769, 
+      765, 
+      751, 
+      747, 
+      730, 
+      723, 
+      712, 
+      711, 
+      700, 
+      70, 
+      693, 
+      690, 
+      649, 
+      628, 
+      619, 
+      609, 
+      602, 
+      600, 
+      590, 
+      56, 
+      549, 
+      535, 
+      534, 
+      530, 
+      53, 
+      528, 
+      502, 
+      501, 
+      486, 
+      417, 
+      375, 
+      37, 
+      368, 
+      36, 
+      352, 
+      311, 
+      30, 
+      297, 
+      295, 
+      291, 
+      263, 
+      262, 
+      252, 
+      251, 
+      237, 
+      219, 
+      204, 
+      199, 
+      187, 
+      180, 
+      173, 
+      146, 
+      145, 
+      1392, 
+      1275, 
+      1234, 
+      123, 
+      122, 
+      1217, 
+      114, 
+      1136, 
+      1134, 
+      112, 
+      1115, 
+      111, 
+      1107, 
+      1105, 
+      1102, 
+      1100, 
+      1096, 
+      1093, 
+      1091, 
+      1090, 
+      1089, 
+      1087, 
+      1086, 
+      1085, 
+      1084, 
+      1083, 
+      1082, 
+      1081, 
+      108, 
+      1059, 
+      1058, 
+      1056, 
+      1054, 
+      1053, 
+      1045, 
+      1025, 
+      1004, 
+      1000
+    ]
+  }, 
+  {
+    "coatOfArms": "an ironwood tree outline with a sword outline drawn inside it, pointing down. (Telltale)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "138", 
+    "name": "House Forrester", 
+    "overlord": 150, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A copper dagger across a black chevron, on a white field(Argent, a chevron reversed sable, surmounted by a dagger erect tenn\u00e9)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "135", 
+    "name": "House Foote", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "a field of silver caltrops on black", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "137", 
+    "name": "House Footly of Tumbleton", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 825, 
+    "diedOut": "", 
+    "founded": "299 AC", 
+    "founder": 825, 
+    "id": "136", 
+    "name": "House Foote of Nightsong", 
+    "overlord": 16, 
+    "region": "The Stormlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gyronny gules and argent, on a canton Or a fool's cap two peaked of the first and second", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "134", 
+    "name": "House Follard", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Azure, semy of whitecaps argent on a chief wavy Or two eyes of the second irised of the first and pupiled sable", 
+    "currentLord": 669, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "132", 
+    "name": "House Flint of Widow's Watch", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red fox in a circle of blue flowers on ermine", 
+    "currentLord": 68, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1388, 
+    "heir": 742, 
+    "id": "133", 
+    "name": "House Florent of Brightwater Keep", 
+    "overlord": 15, 
+    "region": "The Reach", 
+    "swornMembers": [
+      944, 
+      877, 
+      750, 
+      742, 
+      738, 
+      72, 
+      68, 
+      522, 
+      383, 
+      296, 
+      250, 
+      153
+    ]
+  }, 
+  {
+    "coatOfArms": "Paly sable and cendr\u00e9e on a pall inverted argent a hand couped of the second", 
+    "currentLord": 1882, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "131", 
+    "name": "House Flint of Flint's Finger", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "130", 
+    "name": "House Flint of Breakstone Hill", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black hooded man, on a grey field, within a fiery tressure(Cendr\u00e9e, a hooded man sable within a tressure rayonn\u00e9 along the outer edge gules)", 
+    "currentLord": 837, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 497, 
+    "id": "13", 
+    "name": "House Banefort of Banefort", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      497
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 2023, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "129", 
+    "name": "House Flint  of the mountains", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "128", 
+    "name": "House Fisher of the Stony Shore", 
+    "overlord": 362, 
+    "region": "The North", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A crowned catfish, spotted grey, on a blue field(Azure, a catfish cendr\u00e9e, crowned or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "127", 
+    "name": "House Fisher", 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per saltire, checkered red and gold, a silver and black ferret on a green field(Per saltire chequy gules and or and vert, in each flank point a ferret argent and sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "126", 
+    "name": "House Ferren", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per fess, a white crescent moon on a black field above a green field, a sprucetree line between(Per fess sapinag\u00e9 vert and sable, in dexter chief a moon increscent argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "124", 
+    "name": "House Fell of Felwood", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      1119
+    ]
+  }, 
+  {
+    "coatOfArms": "Purpure, three water lilies sable", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "125", 
+    "name": "House Fenn", 
+    "overlord": 318, 
+    "region": "The Neck", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per fess wavy tenny and sable, a demi-torteaux gules issuant from the division surmounted by a longship sailing upon the division of the second", 
+    "currentLord": 453, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 455, 
+    "id": "123", 
+    "name": "House Farwynd of the Lonely Light", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      453, 
+      1130, 
+      1128
+    ]
+  }, 
+  {
+    "coatOfArms": "Three white plates upon a chevron red on a white field", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "12", 
+    "name": "House Ball", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Per pale purpure and argent, two knights combatant crossing swords counterchanged", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "121", 
+    "name": "House Farring", 
+    "overlord": 15, 
+    "region": "The Crownlands", 
+    "swornMembers": [
+      424, 
+      222, 
+      123
+    ]
+  }, 
+  {
+    "coatOfArms": "Three silver ships on a blue field with a border of crimson and gold(Azure, three galleys argent within a bordure compony gules and or)", 
+    "currentLord": 963, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "120", 
+    "name": "House Farman of Faircastle", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": [
+      551, 
+      101
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "currentLord": 2033, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "122", 
+    "name": "House Farwynd of Sealskin Point", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A golden heron, beak and legs black, standing with a silver fish in its beak, on a pink field(Carnation, a heron or, beaked and membered sable, clasped in its mouth a fish argent)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "115", 
+    "name": "House Erenford", 
+    "overlord": 143, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A fool in red and gold motley juggling five suns, on a black field(Sable, a fool proper clothed in motley gules and or, juggling five suns-in-splendour of the last)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "119", 
+    "name": "House Falwell", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A yellow haystack, on an orange field(Tenn\u00e9, a haystack or)", 
+    "currentLord": 962, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "116", 
+    "name": "House Errol of Haystack Hall", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      962
+    ]
+  }, 
+  {
+    "coatOfArms": "A dark-green sea-turtle on a pale-green field(Vert, a sea-turtle tergiant of the field)", 
+    "currentLord": 357, 
+    "diedOut": "", 
+    "founded": "", 
+    "heir": 52, 
+    "id": "117", 
+    "name": "House Estermont of Greenstone", 
+    "overlord": 16, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      85, 
+      639, 
+      52, 
+      357, 
+      230, 
+      118
+    ]
+  }, 
+  {
+    "coatOfArms": "A green saltire between four red double-headed eagles, on a white field(Argent, a saltire vert between four double-headed eagles displayed gules)", 
+    "currentLord": 860, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "118", 
+    "name": "House Estren of Wyndhall", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A yellow sun, white crescent moon, and silver star on a blue chief, above a white field(Argent, on a chief azure a moon increscent of the first between a sun-in-splendour or and a mullet of the first)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "113", 
+    "name": "House Egen", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black star between an inverted stone-coloured double-pile, on a pink field(Carnation, a mullet sable between two piles issuant from base cendr\u00e9e)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "114", 
+    "name": "House Elesham of the Paps", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Purpure, a wheel flaming tenny quartered with half-fusilly sable and argent", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "112", 
+    "name": "House Edgerton", 
+    "overlord": 16, 
+    "region": "The Crownlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Two rusted longaxes with black shafts crossed, a black crown between their points, on yellow", 
+    "currentLord": 166, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "111", 
+    "name": "House Dustin of Barrowton", 
+    "overlord": 34, 
+    "region": "The North", 
+    "swornMembers": [
+      166, 
+      1110
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "110", 
+    "name": "House Durwell", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A black crowned stag, on a gold field(Or, a stag salient, crowned, sable)", 
+    "diedOut": "1 AC", 
+    "founded": "Age of Heroes", 
+    "founder": 333, 
+    "id": "109", 
+    "name": "House Durrandon", 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      128
+    ]
+  }, 
+  {
+    "coatOfArms": "A grey stone head with fiery eyes, on a light green field(Vert, a stone head cendr\u00e9e, orbed gules)", 
+    "currentLord": 823, 
+    "diedOut": "", 
+    "founded": "", 
+    "founder": 1182, 
+    "id": "11", 
+    "name": "House Baelish of the Fingers", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": [
+      688, 
+      1448, 
+      1249, 
+      1240
+    ]
+  }, 
+  {
+    "coatOfArms": "per pale black and pink, a countercharged two-headed pelican", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "108", 
+    "name": "House Dunn", 
+    "overlord": 398, 
+    "region": "The Reach", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "Rhoynar migration", 
+    "founded": "", 
+    "id": "107", 
+    "name": "House Dryland", 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Gules, a bone hand argent", 
+    "currentLord": 331, 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "106", 
+    "name": "House Drumm of Old Wyk", 
+    "overlord": 169, 
+    "region": "Iron Islands", 
+    "swornMembers": [
+      493, 
+      432, 
+      331, 
+      319, 
+      302, 
+      281, 
+      1164
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "104", 
+    "name": "House Drinkwater", 
+    "overlord": 444, 
+    "region": "Dorne", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "Three black crossbows, on a gold field with a black border(Or, three crossbows within a bordure sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "105", 
+    "name": "House Drox", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A red sun rising from a grey-green sea, against a yellow sky(Per fesse wavy or and vert-cendr\u00e9e, a demi-sun-in-splendour issuant from the line of division gules)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "103", 
+    "name": "House Donniger", 
+    "overlord": 7, 
+    "region": "The Vale", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A forked purple lightning bolt, on black field speckled with four-pointed stars(Sable, sem\u00e9 of mullets of four points argent, a lightning bolt forked purpure)", 
+    "currentLord": 190, 
+    "diedOut": "", 
+    "founded": "Before 1 AC", 
+    "id": "102", 
+    "name": "House Dondarrion of Blackhaven", 
+    "overlord": 17, 
+    "region": "The Stormlands", 
+    "swornMembers": [
+      546, 
+      190
+    ]
+  }, 
+  {
+    "coatOfArms": "Per bend, a white unicorn on a green field, a black raven on a white field(Per bend vert and argent, in sinister chief a unicorn rampant of the second, and in dexter base a raven closed sable)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "101", 
+    "name": "House Doggett", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A field of silver mockingbirds, on a green field(Vert, sem\u00e9 of mockingbirds argent)", 
+    "currentLord": 823, 
+    "diedOut": "", 
+    "founded": "299 AC", 
+    "founder": 823, 
+    "id": "10", 
+    "name": "House Baelish of Harrenhal", 
+    "overlord": 16, 
+    "region": "The Riverlands", 
+    "swornMembers": [
+      957, 
+      823, 
+      804, 
+      651
+    ]
+  }, 
+  {
+    "coatOfArms": "", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "100", 
+    "name": "House Deddings", 
+    "overlord": 10, 
+    "region": "The Riverlands", 
+    "swornMembers": []
+  }, 
+  {
+    "coatOfArms": "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)", 
+    "diedOut": "", 
+    "founded": "", 
+    "id": "1", 
+    "name": "House Algood", 
+    "overlord": 229, 
+    "region": "The Westerlands", 
+    "swornMembers": []
+  }
+]

@@ -6,6 +6,10 @@ body {
     background-color: #f7f7f7;
 }
 
+html,body{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
 .center-cropped {
   width: 200px;
   height: 200px;
@@ -170,24 +174,24 @@ footer {
   padding-bottom: 3rem;
 }
 
-footer p {
-  margi
-
-
 /* D3.JS */
 
-circle {
-  fill: rgb(31, 119, 180);
-  fill-opacity: .25;
-  stroke: rgb(31, 119, 180);
-  stroke-width: 1px;
+.links line {
+  stroke: #999;
+  stroke-opacity: 1;
 }
 
-.leaf circle {
-  fill: #ff7f0e;
-  fill-opacity: 1;
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
 }
 
-text {
-  font: 10px sans-serif;
-}
+
+/*  DESIGN */
+/*.navbar .container { min-height: 83px; }
+
+
+.navbar-fixed-top {
+    position:static;
+    margin-bottom:20px;
+    }*/

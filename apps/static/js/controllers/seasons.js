@@ -1,30 +1,16 @@
 routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   $scope.seasons = {};
-  $scope.propertyName = 'name'; // set the default sort type
+  $scope.propertyName = 'year'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.totalSeasons = 0;
   $scope.pointer = 0;
   $scope.offset = 0;
   $scope.endIndex = 6;
   $scope.startIndex = 0;
+  var LIMIT = 10; 
 
   //search variables
-  $scope.searchKeys = "";
-  $scope.loadedSearch = false; 
-  $scope.cacheSeasons = {}; 
-  $scope.cacheTotalSeasons = 0;
-  $scope.loading = false; 
-  $scope.found = 0; 
-
-  $scope.$watch('searchKeys', function(newValue, oldValue) {
-    if( $scope.searchKeys == ""){
-        $scope.found = $scope.cacheTotalSeasons; 
-        $scope.loadedSearch = false;
-        $scope.seasons = $scope.cacheSeasons;
-        $scope.totalSeasons = $scope.cacheTotalSeasons;
-    }
-  });
 
   $scope.range = function(n) {
         if ( n == undefined || n == null || isNaN(n))
@@ -64,15 +50,24 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
 
   //later change to url = /seasons
   var fetchData = function(){
-    $http.get('/seasons/'+$scope.offset).then(function(response){
+
+    $http.get('/seasons/'+$scope.pointer*LIMIT).then(function(response){
       console.log(response);
       var res = response.data;
       var seasons = res.seasons;
-
-      $scope.found = seasons.length;
+      console.log($scope.pointer*LIMIT);
       $scope.totalSeasons = Math.ceil(res.totalNumberOfSeasons / 10);
       $scope.offset += seasons.length;
       $scope.seasons[$scope.pointer] = [];
+
+      seasons = seasons.slice(0);
+
+      console.log("HERE");
+      console.log(seasons);
+          
+      seasons.sort(function(a,b) {
+          return a.year - b.year;
+      })
 
       for (var i = 0; i < seasons.length; i++) {
           var element = seasons[i];
@@ -89,6 +84,8 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
           };
           $scope.seasons[$scope.pointer].push(season);
       }
+
+
       console.log($scope.seasons);
     });
   }; 
@@ -136,12 +133,6 @@ routes.controller('seasons',['$scope', '$http', function($scope, $http){
             }
 
             console.log($scope.seasons);
-            $scope.pointer = 0; 
-            $scope.found = seasons.length;
-            if(seasons.length > 0){
-              loadedSearch = true;
-            }
-
 
           }); 
 

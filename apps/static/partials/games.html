@@ -34,7 +34,7 @@
               <td>{{game.date | date:'HH:mm:ss'}}</td>
               <td><a class="link" href="/#/team/{{game.away_team_id}}">{{game.awayTeamName}}</a></td>
               <td><a class="link" href="/#/team/{{game.home_team_id}}">{{game.homeTeamName}}</a></td>
-              <td>{{game.away_team_score + " - " + game.home_team_score }}</td>
+              <td>{{(game.away_team_score || '0' ) + " - " + (game.home_team_score || '0') }}</td>
             </tr>
           </tbody>
           </table>

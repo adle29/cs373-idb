@@ -28,7 +28,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="team in teams[pointer] | orderBy:propertyName:sortReverse">
-            <td> <img class="img" src="{{team.logo}}" /> <a class ="link" href="/#/team/{{team.id}}">{{team.name}}</a></td>
+            <td> <img class="img" src="{{team.logo || 'static/img/domo.jpg' }}" /> <a class ="link" href="/#/team/{{team.id}}">{{team.name}}</a></td>
             <td> {{team.shortName}}</td>
             <td> {{team.squadMarketValue}}</td>
           </tr>
@@ -46,7 +46,7 @@
           <!-- numbers in pagination -->
 
           <li ng-repeat="n in range(totalTeams) track by $index" ng-class="{'active':pointer == $index} " class="page-item">
-            <a class="page-link" ng-show="($index >= startIndex && $index < endIndex) || ($index - totalPlayers + 1 == 0) || ($index == 0)"  ng-click="goToPage($index)" href="">{{$index+1}}</a>
+            <a class="page-link" ng-show="($index >= startIndex && $index < endIndex) || ($index - totalTeams + 1 == 0) || ($index == 0)"  ng-click="goToPage($index)" href="">{{$index+1}}</a>
           </li>
 
           <li class="page-item">

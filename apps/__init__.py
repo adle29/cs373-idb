@@ -35,7 +35,7 @@ def index():
 @app.route('/seasons/<offset>')
 def seasons(offset=0):
     count = len(db.session.query(Season).all())
-    query = db.session.query(Season).limit(10).offset(offset).all()
+    query = db.session.query(Season).order_by(Season.year.desc()).limit(10).offset(offset).all()
     seasons = [season.display() for season in query]
     data = {"totalNumberOfSeasons":count, "seasons":seasons}
     db.session.close()
@@ -76,7 +76,7 @@ def season_standings(season_id):
 @app.route('/players/<offset>')
 def player(offset=0):
     count = len(db.session.query(Player).all())
-    query = db.session.query(Player).order_by(Player.name).limit(10).offset(offset).all()
+    query = db.session.query(Player).order_by(Player.name.asc()).limit(10).offset(offset).all()
     players = [player.display() for player in query]
 
     for player in players: 
@@ -143,8 +143,8 @@ def team_games(team_id):
 @app.route('/games')
 @app.route('/games/<offset>')
 def games(offset=0):
-    count = len(db.session.query(Game).order_by(Game.date).all())
-    query = db.session.query(Game).order_by(Game.date).limit(10).offset(offset).all()
+    count = len(db.session.query(Game).all())
+    query = db.session.query(Game).order_by(Game.date.desc()).limit(10).offset(offset).all()
     games = [game.display() for game in query]
 
     for game in games:
@@ -223,22 +223,22 @@ def search_site():
     games = [game.display() for game in query]
     sgames = []
 
-    for game in games:
-        home_team_id = game["home_team_id"]
-        away_team_id = game["away_team_id"]
-        homeTeam = db.session.query(Team).filter(Team.team_id == home_team_id).first()
-        awayTeam = db.session.query(Team).filter(Team.team_id == away_team_id).first()
-        game["home_team_name"] = homeTeam.display()["team_name"]
-        game["away_team_name"] = awayTeam.display()["team_name"]
+    # for game in games:
+    #     home_team_id = game["home_team_id"]
+    #     away_team_id = game["away_team_id"]
+    #     homeTeam = db.session.query(Team).filter(Team.team_id == home_team_id).first()
+    #     awayTeam = db.session.query(Team).filter(Team.team_id == away_team_id).first()
+    #     game["home_team_name"] = homeTeam.display()["team_name"]
+    #     game["away_team_name"] = awayTeam.display()["team_name"]
 
-        if string in game["home_team_name"] or string in game["away_team_name"]:
-            sgames.append(game)
+    #     if string in game["home_team_name"] or string in game["away_team_name"]:
+    #         sgames.append(game)
 
     data = {
        'seasons' : seasons,
        'players' : players,
        'teams'   : teams,
-       'games'   : sgames
+       'games'   : []#sgames
     }
 
     db.session.close()
@@ -251,7 +251,38 @@ def search_site():
 
 @app.route('/runtests')
 def run_tests():
-    return send_file('test.log')
+
+    test_out = []
+    line = "-------------------------"
+
+    tout = io.StringIO()
+
+    cmd = 'python apps/tests.py'
+    try:
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception as e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    cmd = 'pylint apps/tests.py'
+
+    try:
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception as e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    cmd = 'coverage apps/tests.py'
+    try:
+        output = subprocess.check_output("{}".format(cmd), shell = True)
+        # test_out.append("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+        tout.write("{0}\n{1}\n{2}\n{3}\n".format(line,cmd,line,output))
+    except Exception as e:
+        tout.write("Exception when running {0}\n{1}\n{2}\n{3}\n".format(cmd, type(e), e.args, e))
+
+    return tout.getvalue()
 
 
 ## utils ##

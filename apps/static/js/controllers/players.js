@@ -11,6 +11,7 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
   $scope.offset = 0;
   $scope.endIndex = 6;
   $scope.startIndex = 0;
+  var LIMIT = 10;
 
 
   $scope.range = function(n) {
@@ -51,7 +52,7 @@ routes.controller('players',['$scope', '$http', '$timeout', function($scope, $ht
   // PAGINATION
 
   var fetchData = function(){
-      $http.get('/players/'+$scope.offset).then(function(response){
+      $http.get('/players/'+$scope.pointer*LIMIT).then(function(response){
         console.log(response);
         var res = response.data;
         var players = res.players;

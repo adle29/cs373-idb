@@ -11,6 +11,7 @@ routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http
   $scope.offset = 0;
   $scope.endIndex = 6;
   $scope.startIndex = 0;
+  var LIMIT = 10;
 
   $scope.range = function(n) {
         return new Array(n);
@@ -44,7 +45,7 @@ routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http
   // PAGINATION
 
   var fetchData = function(){
-      $http.get('/teams/'+$scope.offset).then(function(response){
+      $http.get('/teams/'+$scope.pointer*LIMIT).then(function(response){
         console.log(response);
         var res = response.data;
         var teams = res.teams;
@@ -59,9 +60,9 @@ routes.controller('teams',['$scope', '$http', '$timeout', function($scope, $http
           var newTeam = {
             logo:team.logo_url,
             id:team.team_id,
-            name:team.team_name,
-            shortName:team.nickname,
-            squadMarketValue: team.market_val
+            name:team.team_name || "NOT AVAILABLE",
+            shortName:team.nickname || "NOT AVAILABLE",
+            squadMarketValue: team.market_val || "NOT AVAILABLE"
           };
           $scope.teams[$scope.pointer].push(newTeam);
         }

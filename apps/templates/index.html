@@ -39,34 +39,35 @@
 
   <body  ng-app="golazoApp">
       <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-        <a class="navbar-brand" href="/#/">Golazo</a>
+        <!-- <a class="navbar-brand" href="/#/">Golazo</a> -->
+        <a class="navbar-brand" href="/#/"><img class="logo" src="/static/img/ball.png"/> GOLAZO</a>
         <ul class="nav navbar-nav">
-          <li class="nav-item">
+     <!--      <li class="nav-item">
             <a class="nav-link" href="/#/">Home <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/#/seasons">SEASONS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#/seasons">Seasons</a>
+            <a class="nav-link" href="/#/players">PLAYERS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#/players">Players</a>
+            <a class="nav-link" href="/#/teams">TEAMS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#/teams">Teams</a>
+            <a class="nav-link" href="/#/games">GAMES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#/games">Games</a>
+            <a class="nav-link" href="/#/visual">VISUAL</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#/visual">Visual</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/#/about">About</a>
+            <a class="nav-link" href="/#/about">ABOUT</a>
           </li>
 
 
-          <form class="form-inline pull-xs-right">
-            <input class="form-control" ng-model="searchBarArguments" type="text" placeholder="Search">
-            <a  href="/#/search" class="btn btn-success-outline" type="button">Search</a>
+          <form class="form-inline pull-xs-right bar-search">
+            <input class="form-control form-control-sm" ng-model="searchBarArguments" type="text" placeholder="Search">
+            <a  href="/#/search" class="btn btn-success-outline btn-sm" type="button">Search</a>
           </form>
         </ul>
       </nav>

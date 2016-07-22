@@ -16,12 +16,12 @@ import config
 
 class DBTestCases(TestCase):
 
-    # Tests that every player is readable
+        # Tests that every player is readable
 
     def test_players_readable_1(self):
-        test_player = db.session.query(Player).get(2739)
+        test_player = db.session.query(Player).get(3238)
 
-        self.assertEqual(test_player.player_id, 2739)
+        self.assertEqual(test_player.player_id, 3238)
         self.assertEqual(test_player.name, "Fabian Johnson")
         self.assertEqual(test_player.nation, "United States")
         self.assertEqual(test_player.birth, "1987-12-11")
@@ -29,9 +29,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_player.jersey_num, 19)
 
     def test_players_readable_2(self):
-        test_player = db.session.query(Player).get(3027)
+        test_player = db.session.query(Player).get(2605)
 
-        self.assertEqual(test_player.player_id, 3027)
+        self.assertEqual(test_player.player_id, 2605)
         self.assertEqual(test_player.name, "Kenan Karaman")
         self.assertEqual(test_player.nation, "Turkey")
         self.assertEqual(test_player.birth, "1994-03-05")
@@ -39,9 +39,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_player.jersey_num, 26)
 
     def test_players_readable_3(self):
-        test_player = db.session.query(Player).get(2971)
+        test_player = db.session.query(Player).get(3300)
 
-        self.assertEqual(test_player.player_id, 2971)
+        self.assertEqual(test_player.player_id, 3300)
         self.assertEqual(test_player.name, "Claudio Pizarro")
         self.assertEqual(test_player.nation, "Peru")
         self.assertEqual(test_player.birth, "1978-10-03")
@@ -51,27 +51,27 @@ class DBTestCases(TestCase):
     # Tests that every team is readable
 
     def test_teams_readable_1(self):
-        test_team = db.session.query(Team).get(222)
+        test_team = db.session.query(Team).get(184)
 
-        self.assertEqual(test_team.team_id, 222)
+        self.assertEqual(test_team.team_id, 184)
         self.assertEqual(test_team.team_name, "Werder Bremen")
         self.assertEqual(test_team.nickname, "Bremen")
         self.assertEqual(test_team.market_val, "55,550,000 €")
         self.assertEqual(test_team.logo_url, "http://upload.wikimedia.org/wikipedia/commons/b/be/SV-Werder-Bremen-Logo.svg")
 
     def test_teams_readable_2(self):
-        test_team = db.session.query(Team).get(197)
+        test_team = db.session.query(Team).get(190)
 
-        self.assertEqual(test_team.team_id, 197)
+        self.assertEqual(test_team.team_id, 190)
         self.assertEqual(test_team.team_name, "Hertha BSC")
         self.assertEqual(test_team.nickname, "Hertha")
         self.assertEqual(test_team.market_val, "62,050,000 €")
         self.assertEqual(test_team.logo_url, "http://upload.wikimedia.org/wikipedia/de/8/81/Hertha_BSC_Logo_2012.svg")
 
     def test_teams_readable_3(self):
-        test_team = db.session.query(Team).get(198)
+        test_team = db.session.query(Team).get(179)
 
-        self.assertEqual(test_team.team_id, 198)
+        self.assertEqual(test_team.team_id, 179)
         self.assertEqual(test_team.team_name, "Bayer Leverkusen")
         self.assertEqual(test_team.nickname, "Leverkusen")
         self.assertEqual(test_team.market_val, "202,500,000 €")
@@ -81,44 +81,47 @@ class DBTestCases(TestCase):
     # Tests that every game is readable
 
     def test_games_readable_1(self):
-        test_game = db.session.query(Game).get(14585)
+        test_game = db.session.query(Game).get(13233)
 
-        self.assertEqual(test_game.game_id, 14585)
-        self.assertEqual(test_game.date, "2015-08-14T18:30:00Z")
-        self.assertEqual(test_game.home_team_id, 186) 
-        self.assertEqual(test_game.away_team_id, 214) 
-        self.assertEqual(test_game.home_team_score, 5)
-        self.assertEqual(test_game.away_team_score, 0)
+        self.assertEqual(test_game.game_id, 13233)
+        self.assertEqual(test_game.date, "2014-06-11T22:00:00Z")
+        self.assertEqual(test_game.home_team_id, 348) 
+        self.assertEqual(test_game.away_team_id, 349) 
+        self.assertEqual(test_game.home_team_score, 3)
+        self.assertEqual(test_game.away_team_score, 1)
         self.assertEqual(test_game.match_day, 1)
+        self.assertEqual(test_game.season_id, 38)
 
     def test_games_readable_2(self):
-        test_game = db.session.query(Game).get(2482)
+        test_game = db.session.query(Game).get(2330)
 
-        self.assertEqual(test_game.game_id, 2482)
-        self.assertEqual(test_game.date, "2015-08-15T12:00:00Z")
-        self.assertEqual(test_game.home_team_id, 135) 
-        self.assertEqual(test_game.away_team_id, 126) 
-        self.assertEqual(test_game.home_team_score, 3)
-        self.assertEqual(test_game.away_team_score, 0)
-        self.assertEqual(test_game.match_day, 3)
-
-    def test_games_readable_3(self):
-        test_game = db.session.query(Game).get(21402)
-
-        self.assertEqual(test_game.game_id, 21402)
-        self.assertEqual(test_game.date, "2015-08-22T14:00:00Z")
-        self.assertEqual(test_game.home_team_id, 53) 
-        self.assertEqual(test_game.away_team_id, 4) 
-        self.assertEqual(test_game.home_team_score, 2)
+        self.assertEqual(test_game.game_id, 2330)
+        self.assertEqual(test_game.date, "2014-09-13T13:00:00Z")
+        self.assertEqual(test_game.home_team_id, 64) 
+        self.assertEqual(test_game.away_team_id, 79) 
+        self.assertEqual(test_game.home_team_score, 1)
         self.assertEqual(test_game.away_team_score, 1)
         self.assertEqual(test_game.match_day, 3)
+        self.assertEqual(test_game.season_id, 15)
+
+    def test_games_readable_3(self):
+        test_game = db.session.query(Game).get(4098)
+
+        self.assertEqual(test_game.game_id, 4098)
+        self.assertEqual(test_game.date, "2014-10-04T22:00:00Z")
+        self.assertEqual(test_game.home_team_id, 98) 
+        self.assertEqual(test_game.away_team_id, 109) 
+        self.assertEqual(test_game.home_team_score, 4)
+        self.assertEqual(test_game.away_team_score, 0)
+        self.assertEqual(test_game.match_day, 7)
+        self.assertEqual(test_game.season_id, 16)
 
     # Tests that every season is readable
 
     def test_season_readable_1(self):
-        test_season = db.session.query(Season).get(72)
+        test_season = db.session.query(Season).get(18)
 
-        self.assertEqual(test_season.season_id, 72)
+        self.assertEqual(test_season.season_id, 18)
         self.assertEqual(test_season.season_name, "1. Bundesliga 2015/16")
         self.assertEqual(test_season.league, "BL1")
         self.assertEqual(test_season.year, 2015)
@@ -128,9 +131,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_season.cur_match_day, 34)
 
     def test_season_readable_2(self):
-        test_season = db.session.query(Season).get(15)
+        test_season = db.session.query(Season).get(30)
 
-        self.assertEqual(test_season.season_id, 15) #399
+        self.assertEqual(test_season.season_id, 30) 
         self.assertEqual(test_season.season_name, "Primera Division 2015/16")
         self.assertEqual(test_season.league, "PD")
         self.assertEqual(test_season.year, 2015)
@@ -140,9 +143,9 @@ class DBTestCases(TestCase):
         self.assertEqual(test_season.cur_match_day, 38)
 
     def test_season_readable_3(self):
-        test_season = db.session.query(Season).get(78)
+        test_season = db.session.query(Season).get(27)
 
-        self.assertEqual(test_season.season_id, 78)
+        self.assertEqual(test_season.season_id, 27)
         self.assertEqual(test_season.season_name, "Eredivisie 2015/16")
         self.assertEqual(test_season.league, "DED")
         self.assertEqual(test_season.year, 2015)
@@ -159,13 +162,13 @@ class DBTestCases(TestCase):
         self.assertEqual(test_standing.standing_id, 1)
         self.assertEqual(test_standing.rank, 1)
         self.assertEqual(test_standing.group, "A")
-        self.assertEqual(test_standing.match_day, 1)
+        self.assertEqual(test_standing.match_day, 34)
         self.assertEqual(test_standing.matches_played, 0)
         self.assertEqual(test_standing.points, 0)
         self.assertEqual(test_standing.goals_for, 0)
         self.assertEqual(test_standing.goals_against, 0)
         self.assertEqual(test_standing.team_id, 66)
-        self.assertEqual(test_standing.season_id, 34)
+        self.assertEqual(test_standing.season_id, 1)
 
     def test_standings_readable_2(self):
         test_standing = db.session.query(Standing).get(538)

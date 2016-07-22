@@ -36,7 +36,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="player in players[pointer] | orderBy:propertyName:sortReverse">
-            <td> <a class="link" href="/#/team/{{player.team.id}}">{{player.team.team_name}}</a> </td>
+            <td> <a class="link" href="/#/team/{{player.team.team_id}}">{{player.team.team_name}}</a> </td>
             <td> {{player.name}} </td>
             <td> {{player.nationality}}</td>
             <td> {{player.dateOfBirth}}</td>

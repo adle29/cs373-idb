@@ -58,10 +58,10 @@
         </thead>
         <tbody>
           <tr ng-repeat="game in games">
-            <td> {{game.season.season_name}} </td>
+            <td> <a class="link" href="/#/season/{{game.season.season_id}}">{{game.season.season_name}}</a> </td>
             <td> {{game.matchday}} </td>
             <td> {{game.away_team_name}}</td>
-            <td> {{game.home_team_name}}</td>
+            <td> <a class="link" href="/#/team/{{game.home_team_id}}">{{game.home_team_name}}</a> </td>
             <td> {{game.date | date:'yyyy-MM-dd'}}</td>
             <td> {{game.away_team_score + " - " + game.home_team_score }}</td>
           </tr>
